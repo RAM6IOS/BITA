@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>BITA — Digital Solutions</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap');
 
@@ -76,73 +78,25 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-weight: 800;
-            font-size: 20px;
-            letter-spacing: -.05em;
             color: var(--ink)
         }
 
-        .mark {
-            position: relative;
-            width: 31px;
-            height: 36px;
-            flex: 0 0 31px
-        }
-
-        .mark i {
-            position: absolute;
-            display: block
-        }
-
-        .mark .top {
-            top: 0;
-            left: 0;
-            width: 25px;
-            height: 15px;
-            background: var(--ink);
-            clip-path: polygon(0 0, 76% 0, 100% 50%, 76% 100%, 0 100%)
-        }
-
-        .mark .bot {
-            bottom: 0;
-            left: 0;
-            width: 25px;
-            height: 15px;
-            background: var(--ink);
-            clip-path: polygon(0 0, 76% 0, 100% 50%, 76% 100%, 0 100%)
-        }
-
-        .mark .blue {
-            top: 10px;
-            left: 0;
-            width: 14px;
-            height: 16px;
-            background: var(--blue);
-            clip-path: polygon(0 0, 100% 50%, 0 100%);
-            z-index: 2
-        }
-
-        .mark:after {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 8px;
-            width: 18px;
-            height: 20px;
-            border: 2px solid var(--paper);
-            border-right: 0;
-            clip-path: polygon(0 0, 100% 50%, 0 100%);
-            z-index: 3
-        }
-
-        .brand-sub {
-            font-size: 7px;
-            letter-spacing: .18em;
-            font-weight: 700;
+        .logo svg {
             display: block;
-            margin-top: -4px;
-            color: var(--muted)
+            width: auto;
+            height: 36px
+        }
+
+        .mark-foot,
+        .mark-hero {
+            display: block;
+            flex: 0 0 auto
+        }
+
+        .mark-foot svg {
+            display: block;
+            width: auto;
+            height: 26px
         }
 
         header {
@@ -287,35 +241,19 @@
             background-size: 42px 42px
         }
 
-        .module {
+        .mark-hero {
             position: absolute;
-            background: var(--blue);
-            clip-path: polygon(0 0, 100% 0, 100% 65%, 47% 100%, 0 100%)
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: auto;
+            height: 190px
         }
 
-        .module.a {
-            width: 60%;
-            height: 67%;
-            right: 0;
-            bottom: 0
-        }
-
-        .module.b {
-            width: 37%;
-            height: 42%;
-            right: 19%;
-            top: 13%;
-            background: #fff;
-            opacity: .95
-        }
-
-        .module.c {
-            width: 28%;
-            height: 31%;
-            left: 0;
-            bottom: 0;
-            background: #10131b;
-            outline: 1px solid rgba(255, 255, 255, .45)
+        .mark-hero svg {
+            display: block;
+            width: auto;
+            height: 100%
         }
 
         .corner-note {
@@ -838,6 +776,8 @@
 
         footer .wrap {
             display: flex;
+            align-items: center;
+            gap: 16px;
             justify-content: space-between;
             font-size: 11px;
             color: #bdc2cc
@@ -948,6 +888,10 @@
                 height: 280px
             }
 
+            .mark-hero {
+                height: 120px
+            }
+
             .hero h1 {
                 font-size: 51px
             }
@@ -1033,8 +977,8 @@
                 min-height: 300px
             }
 
-            .logo {
-                font-size: 18px
+            .logo svg {
+                height: 30px
             }
         }
 
@@ -1054,8 +998,24 @@
     <header>
         <div class="wrap">
             <div class="logo" data-i18n="BITA Digital Solutions|BITA للحلول الرقمية|BITA Solutions digitales"
-                aria-label="BITA Digital Solutions"><span class="mark"><i class="top"></i><i class="blue"></i><i
-                        class="bot"></i></span><span>BITA<span class="brand-sub">DIGITAL SOLUTIONS</span></span></div>
+                aria-label="BITA Digital Solutions">
+                <svg viewBox="0 0 450 110" width="450" height="110" aria-hidden="true" focusable="false">
+                    <g transform="translate(20 4) scale(.93)">
+                        <path fill="#111318" d="M0 0H61L88 28L75 46H30L0 18Z" />
+                        <path fill="#111318" d="M30 56H75L88 74L61 102H0V84Z" />
+                        <path fill="#3157FF" d="M0 25L30 51L0 77Z" />
+                        <path fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="miter"
+                            d="M0 20L36 52L0 82" />
+                    </g>
+                    <g transform="translate(130 17) scale(1.05)" fill="#111318">
+                        <path
+                            d="M0 0H34L44 10V28L36 35L46 43V64L35 74H0V0ZM12 12V29H30L33 26V15L30 12H12ZM12 41V62H31L34 59V46L31 41H12Z" />
+                        <path d="M55 0H68V74H55Z" />
+                        <path d="M77 0H125V12H108V74H95V12H77Z" />
+                        <path d="M150 0H164L188 74H175L170 59H144L139 74H126L150 0ZM157 16L148 47H166L157 16Z" />
+                    </g>
+                </svg>
+            </div>
             <nav class="nav" data-i18n="Primary navigation|التنقل الرئيسي|Navigation principale"
                 aria-label="Primary navigation"><button data-go="services"><span class="en">Services</span><span
                         class="ar">الخدمات</span><span class="fr">Services</span></button><button
@@ -1100,8 +1060,18 @@
                     data-i18n="Abstract BITA modular visual|تمثيل بصري تجريدي من BITA|Visuel modulaire abstrait BITA"
                     aria-label="Abstract BITA modular visual">
                     <div class="gridlines"></div>
-                    <div class="corner-note">SYSTEM / 01</div><i class="module a"></i><i class="module b"></i><i
-                        class="module c"></i>
+                    <div class="corner-note">SYSTEM / 01</div>
+                    <div class="mark-hero">
+                        <svg viewBox="0 0 128 142" width="128" height="142" aria-hidden="true" focusable="false">
+                            <g transform="translate(20 20)">
+                                <path fill="#FFFFFF" d="M0 0H61L88 28L75 46H30L0 18Z" />
+                                <path fill="#FFFFFF" d="M30 56H75L88 74L61 102H0V84Z" />
+                                <path fill="#3157FF" d="M0 25L30 51L0 77Z" />
+                                <path fill="none" stroke="#111318" stroke-width="3" stroke-linejoin="miter"
+                                    d="M0 20L36 52L0 82" />
+                            </g>
+                        </svg>
+                    </div>
                     <div class="axis">PRECISION IN MOTION</div>
                 </div>
             </div>
@@ -1431,7 +1401,19 @@
         </section>
     </main>
     <footer>
-        <div class="wrap"><span>© BITA AGENCY</span><span class="en">DIGITAL SOLUTIONS / 2026</span><span
+        <div class="wrap">
+            <span class="mark-foot">
+                <svg viewBox="0 0 128 142" width="128" height="142" aria-hidden="true" focusable="false">
+                    <g transform="translate(20 20)">
+                        <path fill="#FFFFFF" d="M0 0H61L88 28L75 46H30L0 18Z" />
+                        <path fill="#FFFFFF" d="M30 56H75L88 74L61 102H0V84Z" />
+                        <path fill="#3157FF" d="M0 25L30 51L0 77Z" />
+                        <path fill="none" stroke="#111318" stroke-width="3" stroke-linejoin="miter"
+                            d="M0 20L36 52L0 82" />
+                    </g>
+                </svg>
+            </span>
+            <span>© BITA AGENCY</span><span class="en">DIGITAL SOLUTIONS / 2026</span><span
                 class="ar">حلول رقمية / 2026</span><span class="fr">SOLUTIONS DIGITALES / 2026</span></div>
     </footer>
     <script>

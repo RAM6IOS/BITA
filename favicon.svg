@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img"
+    aria-label="BITA">
+    <rect width="128" height="128" fill="#F7F7F5" />
+    <g transform="translate(21 14) scale(.98)">
+        <path fill="#111318" d="M0 0H61L88 28L75 46H30L0 18Z" />
+        <path fill="#111318" d="M30 56H75L88 74L61 102H0V84Z" />
+        <path fill="#3157FF" d="M0 25L30 51L0 77Z" />
+        <path fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="miter" d="M0 20L36 52L0 82" />
+    </g>
+</svg>

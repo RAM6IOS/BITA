@@ -489,7 +489,9 @@
             position: relative;
             padding: 24px;
             overflow: hidden;
-            background: #1a1e27
+            background: #1a1e27;
+            display: flex;
+            flex-direction: column
         }
 
         .case.light {
@@ -504,13 +506,9 @@
         }
 
         .case h3 {
-            position: absolute;
-            bottom: 21px;
-            left: 24px;
-            margin: 0;
+            margin: auto 0 0;
             font-size: 27px;
-            letter-spacing: -.05em;
-            z-index: 2
+            letter-spacing: -.05em
         }
 
         .case .sample {
@@ -528,12 +526,14 @@
         }
 
         .screen {
-            position: absolute;
-            inset: 77px 35px 0;
+            position: relative;
+            flex: 0 0 auto;
+            height: 228px;
+            margin: 22px 11px 18px;
             background: #fff;
             color: var(--ink);
             padding: 14px;
-            border-radius: 4px 4px 0 0
+            border-radius: 4px
         }
 
         .screen-nav {
@@ -977,6 +977,11 @@
                 min-height: 300px
             }
 
+            .screen {
+                height: 190px;
+                margin: 18px 0 16px
+            }
+
             .logo svg {
                 height: 30px
             }
@@ -1413,8 +1418,9 @@
                     </g>
                 </svg>
             </span>
-            <span>© BITA AGENCY</span><span class="en">DIGITAL SOLUTIONS / 2026</span><span
-                class="ar">حلول رقمية / 2026</span><span class="fr">SOLUTIONS DIGITALES / 2026</span></div>
+            <span>© BITA AGENCY</span><span class="en">DIGITAL SOLUTIONS / 2026</span><span class="ar">حلول رقمية /
+                2026</span><span class="fr">SOLUTIONS DIGITALES / 2026</span>
+        </div>
     </footer>
     <script>
         const LANGS = { en: 'ltr', ar: 'rtl', fr: 'ltr' }, ORDER = Object.keys(LANGS), TITLES = { en: 'BITA — Digital Solutions', ar: 'BITA — حلول رقمية', fr: 'BITA — Solutions digitales' }, root = document.documentElement, tr = c => ORDER.indexOf(c), btns = document.querySelectorAll('.lang [data-lang]'); const setLang = c => { if (!(c in LANGS)) c = 'en'; root.dataset.lang = c; root.lang = c; root.dir = LANGS[c]; document.title = TITLES[c]; btns.forEach(x => { x.classList.toggle('active', x.dataset.lang === c); x.setAttribute('aria-current', x.dataset.lang === c ? 'true' : 'false') }); document.querySelectorAll('[data-i18n]').forEach(x => x.setAttribute('aria-label', x.dataset.i18n.split('|')[tr(c)])); document.querySelectorAll('[data-t]').forEach(x => x.textContent = x.dataset.t.split('|')[tr(c)]); document.querySelectorAll('[data-ph]').forEach(x => x.placeholder = x.dataset.ph.split('|')[tr(c)]) }; document.querySelectorAll('[data-go]').forEach(b => b.addEventListener('click', () => document.getElementById(b.dataset.go).scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }))); btns.forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang))); document.querySelector('[data-contact]').addEventListener('click', function () { const a = document.createElement('a'); a.href = 'mailto:'; a.setAttribute('aria-label', this.dataset.i18n.split('|')[tr(root.dataset.lang)]); document.body.append(a); a.click(); a.remove() }); document.querySelector('.contact-form').addEventListener('submit', e => e.preventDefault()); setLang(root.dataset.lang);

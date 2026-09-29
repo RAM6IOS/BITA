@@ -1,0 +1,1782 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <script>
+        /* The chosen language is stored so it follows the reader across pages.
+           It is applied here, before the stylesheet renders, because applying
+           it later would paint the English copy first and then swap every
+           string, which reads as a flash and shifts the layout. */
+        try {
+            var bitaLang = localStorage.getItem('bita-lang');
+            if (bitaLang === 'en' || bitaLang === 'ar' || bitaLang === 'fr') {
+                var bitaRoot = document.documentElement;
+                bitaRoot.dataset.lang = bitaLang;
+                bitaRoot.lang = bitaLang;
+                bitaRoot.dir = bitaLang === 'ar' ? 'rtl' : 'ltr';
+            }
+        } catch (e) { }
+    </script>
+    <title>Automation &amp; Integrations | BITA Agency</title>
+    <meta name="description"
+        content="BITA connects the systems your business already uses and automates the workflows between them: data synchronization, API integrations, approvals, notifications, error handling, and monitoring.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Automation &amp; Integrations | BITA Agency">
+    <meta property="og:description"
+        content="BITA connects the systems your business already uses and automates the workflows between them: data synchronization, API integrations, approvals, notifications, error handling, and monitoring.">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+    <link rel="stylesheet" href="../../assets/css/bita.css">
+    <link rel="stylesheet" href="../../assets/css/service.css">
+    <script type="application/json" id="page-meta">
+        {
+            "titles": {
+                "en": "Automation & Integrations | BITA Agency",
+                "ar": "الأتمتة والتكاملات | BITA",
+                "fr": "Automatisation & Intégrations | BITA"
+            },
+            "descriptions": {
+                "en": "BITA connects the systems your business already uses and automates the workflows between them: data synchronization, API integrations, approvals, notifications, error handling, and monitoring.",
+                "ar": "تربط BITA الأنظمة التي تستخدمها شركتك بالفعل وتؤتمت مسارات العمل بينها: مزامنة البيانات وتكاملات واجهات API والموافقات والإشعارات ومعالجة الأخطاء والمراقبة.",
+                "fr": "BITA relie les systèmes que votre entreprise utilise déjà et automatise les workflows qui les séparent : synchronisation des données, intégrations API, approbations, notifications, gestion des erreurs et supervision."
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="wrap">
+            <a class="logo" href="../../index.html" data-i18n="BITA Digital Solutions|BITA للحلول الرقمية|BITA Solutions digitales"
+                aria-label="BITA Digital Solutions">
+                <svg viewBox="0 0 450 110" width="450" height="110" aria-hidden="true" focusable="false">
+                    <g transform="translate(20 4) scale(.93)">
+                        <path fill="#111318" d="M0 0H61L88 28L75 46H30L0 18Z" />
+                        <path fill="#111318" d="M30 56H75L88 74L61 102H0V84Z" />
+                        <path fill="#3157FF" d="M0 25L30 51L0 77Z" />
+                        <path fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="miter"
+                            d="M0 20L36 52L0 82" />
+                    </g>
+                    <g transform="translate(130 17) scale(1.05)" fill="#111318">
+                        <path
+                            d="M0 0H34L44 10V28L36 35L46 43V64L35 74H0V0ZM12 12V29H30L33 26V15L30 12H12ZM12 41V62H31L34 59V46L31 41H12Z" />
+                        <path d="M55 0H68V74H55Z" />
+                        <path d="M77 0H125V12H108V74H95V12H77Z" />
+                        <path d="M150 0H164L188 74H175L170 59H144L139 74H126L150 0ZM157 16L148 47H166L157 16Z" />
+                    </g>
+                </svg>
+            </a>
+            <nav class="nav" data-i18n="Primary navigation|التنقل الرئيسي|Navigation principale"
+                aria-label="Primary navigation"><a class="nav-link" href="../../index.html#services"><span class="en">Services</span><span
+                        class="ar">الخدمات</span><span class="fr">Services</span></a><a class="nav-link"
+                    href="../../index.html#solutions"><span class="en">Solutions</span><span class="ar">الحلول</span><span
+                        class="fr">Solutions</span></a><a class="nav-link" href="../../index.html#process"><span
+                        class="en">Process</span><span class="ar">المنهجية</span><span
+                        class="fr">Méthode</span></a><a class="nav-link" href="../../index.html#about"><span
+                        class="en">About</span><span class="ar">من نحن</span><span
+                        class="fr">À propos</span></a><a class="nav-link" href="../../index.html#contact"><span
+                        class="en">Contact</span><span class="ar">تواصل</span><span
+                        class="fr">Contact</span></a>
+                <div class="lang" role="group" data-i18n="Language|اللغة|Langue" aria-label="Language"><button
+                        class="active" data-lang="en" lang="en">EN</button><button data-lang="ar"
+                        lang="ar">AR</button><button data-lang="fr" lang="fr">FR</button></div>
+            </nav><a class="menu" href="../../index.html#contact" style="text-decoration:none;color:inherit"
+                data-i18n="Jump to contact|الانتقال إلى التواصل|Accéder à la section contact"
+                aria-label="Jump to contact">↗</a>
+        </div>
+    </header>
+    <main>
+        <div class="svc-breadcrumb">
+            <div class="wrap"><a class="crumb" href="../../index.html#services"><span aria-hidden="true">←</span><span
+                        class="en">All services</span><span class="ar">كل الخدمات</span><span
+                        class="fr">Tous les services</span></a></div>
+        </div>
+
+        <!-- ============================== 01 HERO ============================== -->
+        <section class="svc-hero">
+            <div class="wrap svc-hero-grid">
+                <div>
+                    <div class="eyebrow en">01 / AUTOMATION &amp; INTEGRATIONS</div>
+                    <div class="eyebrow ar">01 / الأتمتة والتكاملات</div>
+                    <div class="eyebrow fr">01 / AUTOMATISATION &amp; INTÉGRATIONS</div>
+                    <h1 class="en">Make your systems work together — and your workflows run automatically.</h1>
+                    <h1 class="ar">اجعل أنظمتك تعمل معًا — وتدعم مسارات عملك تلقائيًا.</h1>
+                    <h1 class="fr">Faites travailler vos systèmes ensemble — et vos flux automatiquement.</h1>
+                    <p class="en">We connect the tools your business already uses and automate the repetitive
+                        workflows between them, from data synchronization and API integrations to approvals,
+                        notifications, and operational processes.</p>
+                    <p class="ar">نربط الأدوات التي تستخدمها شركتك بالفعل ونؤتمت مسارات العمل المتكررة بينها، من
+                        مزامنة البيانات وتكاملات واجهات API إلى الموافقات والإشعارات والعمليات التشغيلية.</p>
+                    <p class="fr">Nous relions les outils que votre entreprise utilise déjà et automatisons les
+                        flux répétitifs qui les séparent, de la synchronisation des données et des intégrations
+                        API aux approbations, notifications et processus opérationnels.</p>
+                    <div class="actions"><a class="button primary" href="#start"><span class="en">Start a
+                                conversation →</span><span class="ar">اتصل بنا →</span><span
+                                class="fr">Démarrer une conversation →</span></a></div>
+                </div>
+                <div class="svc-art" role="img"
+                    data-i18n="Three business systems — CRM, ERP and e-commerce — connected through a BITA integration layer. The layer resolves each event into a workflow, and the workflow produces payment, shipping and notification actions.|ثلاثة أنظمة أعمال — إدارة العملاء وتخطيط موارد المؤسسات والتجارة الإلكترونية — متصلة عبر طبقة تكامل من BITA. تحوّل الطبقة كل حدث إلى مسار عمل، وينتج عن المسار إجراءات دفع وشحن وإشعار.|Trois systèmes métiers — CRM, ERP et e-commerce — reliés par une couche d'intégration BITA. La couche transforme chaque événement en workflow, et le workflow produit des actions de paiement, d'expédition et de notification."
+                    aria-label="Three business systems — CRM, ERP and e-commerce — connected through a BITA integration layer. The layer resolves each event into a workflow, and the workflow produces payment, shipping and notification actions.">
+                    <div class="wedge" aria-hidden="true"></div>
+                    <div class="art-frame" aria-hidden="true"></div>
+
+                    <div class="int-diagram" aria-hidden="true">
+                        <div class="int-hub">BITA INTEGRATION LAYER</div>
+                        <i class="int-drop"></i>
+                        <i class="int-rail"></i>
+                        <div class="int-systems">
+                            <article class="int-sys">
+                                <div class="int-sys-top"><b>CRM</b><i></i></div>
+                                <div class="int-fields">
+                                    <div class="int-field"><span>Contact</span><em class="hot"></em></div>
+                                    <div class="int-field"><span>Company</span><em></em></div>
+                                </div>
+                                <div class="int-sync"><i class="p85"></i></div>
+                            </article>
+                            <article class="int-sys">
+                                <div class="int-sys-top"><b>ERP</b><i></i></div>
+                                <div class="int-fields">
+                                    <div class="int-field"><span>Order</span><em class="hot"></em></div>
+                                    <div class="int-field"><span>Stock</span><em></em></div>
+                                </div>
+                                <div class="int-sync"><i class="p70"></i></div>
+                            </article>
+                            <article class="int-sys">
+                                <div class="int-sys-top"><b>E-COMMERCE</b><i class="idle"></i></div>
+                                <div class="int-fields">
+                                    <div class="int-field"><span>Order</span><em class="hot"></em></div>
+                                    <div class="int-field"><span>SKU</span><em></em></div>
+                                </div>
+                                <div class="int-sync"><i class="p40"></i></div>
+                            </article>
+                        </div>
+                        <i class="int-rail bot"></i>
+                        <i class="int-drop"></i>
+                        <div class="int-flow">
+                            <b>Trigger</b><i></i><b>Rule</b><i></i><b class="on">Action</b>
+                        </div>
+                        <i class="int-drop"></i>
+                        <i class="int-rail bot"></i>
+                        <div class="int-actions">
+                            <article class="int-act"><i></i><b>Payment</b><em>Captured</em></article>
+                            <article class="int-act"><i class="wait"></i><b>Shipping</b><em>Pending</em></article>
+                            <article class="int-act"><i></i><b>Notification</b><em>Sent</em></article>
+                        </div>
+                    </div>
+
+                    <div class="corner-note">INTEGRATION / 05</div>
+                    <div class="axis">SYSTEMS · DATA · WORKFLOW · ACTION</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================= 02 BUSINESS NEED ========================= -->
+        <section class="section" id="need">
+            <div class="wrap">
+                <div class="section-head">
+                    <div class="eyebrow en">02 / BUSINESS NEED</div>
+                    <div class="eyebrow ar">02 / حاجة العمل</div>
+                    <div class="eyebrow fr">02 / BESOIN MÉTIER</div>
+                    <h2 class="section-title en">Your tools work. They just don't work together.</h2>
+                    <h2 class="section-title ar">أدواتك تعمل. لكنها لا تعمل معًا.</h2>
+                    <h2 class="section-title fr">Vos outils fonctionnent. Ils ne fonctionnent pas ensemble.</h2>
+                    <p class="section-intro en">Most businesses do not have a software problem. They have a connection
+                        problem. Each system was chosen for a reason and works well on its own, but the information
+                        between them still moves by hand.</p>
+                    <p class="section-intro ar">معظم الشركات ليست لديها مشكلة في البرمجيات، بل مشكلة في الاتصال. فقد
+                        اختير كل نظام لسبب منطقي ويعمل جيدًا بمفرده، لكن المعلومات بين الأنظمة ما زالت تنتقل يدويًا.</p>
+                    <p class="section-intro fr">La plupart des entreprises n'ont pas un problème logiciel. Elles ont un
+                        problème de connexion. Chaque système a été choisi pour une raison et fonctionne bien seul,
+                        mais les informations entre les systèmes circulent encore à la main.</p>
+                </div>
+                <div class="need-list">
+                    <article class="need">
+                        <div class="need-no">01</div>
+                        <div>
+                            <h3 class="en">Information is re-entered by hand</h3>
+                            <h3 class="ar">المعلومات تُعاد كتابتها يدويًا</h3>
+                            <h3 class="fr">L'information est ressaisie à la main</h3>
+                            <p class="en">The same order, customer, or invoice is typed into two or three systems by
+                                different people, and the copies slowly stop matching.</p>
+                            <p class="ar">الطلب أو العميل أو الفاتورة نفسها تُكتب في نظامين أو ثلاثة يدويًا من قِبل
+                                أشخاص مختلفين، ثم تبدأ النسخ بالتباعد ببطء.</p>
+                            <p class="fr">La même commande, le même client ou la même facture est saisie dans deux ou
+                                trois systèmes par des personnes différentes, et les copies finissent par diverger.</p>
+                        </div>
+                    </article>
+                    <article class="need">
+                        <div class="need-no">02</div>
+                        <div>
+                            <h3 class="en">Each system is correct on its own</h3>
+                            <h3 class="ar">كل نظام صحيح بمفرده</h3>
+                            <h3 class="fr">Chaque système est exact seul</h3>
+                            <p class="en">The CRM is accurate, the ERP is accurate, the store is accurate. The gaps
+                                appear between them, not inside them.</p>
+                            <p class="ar">نظام إدارة العملاء دقيق، ونظام تخطيط موارد المؤسسات دقيق، والمتجر دقيق.
+                                الثغرات تظهر بينهم لا في داخلهم.</p>
+                            <p class="fr">Le CRM est exact, l'ERP est exact, la boutique est exacte. Les écarts
+                                apparaissent entre eux, pas à l'intérieur.</p>
+                        </div>
+                    </article>
+                    <article class="need">
+                        <div class="need-no">03</div>
+                        <div>
+                            <h3 class="en">Updates arrive late</h3>
+                            <h3 class="ar">التحديثات تصل متأخرة</h3>
+                            <h3 class="fr">Les mises à jour arrivent en retard</h3>
+                            <p class="en">A paid invoice, a stock change, or a shipped order reaches the next system
+                                minutes or hours late, and decisions are made on information that has already
+                                changed.</p>
+                            <p class="ar">الفاتورة المدفوعة أو تغيير المخزون أو الشحنة المُرسلة تصل إلى النظام التالي
+                                متأخرة بدقائق أو ساعات، ثم تُتخذ قرارات على معلومات تغيرت بالفعل.</p>
+                            <p class="fr">Une facture payée, un changement de stock ou une commande expédiée arrive au
+                                système suivant avec minutes ou heures de retard, et les décisions se prennent sur des
+                                informations déjà périmées.</p>
+                        </div>
+                    </article>
+                    <article class="need">
+                        <div class="need-no">04</div>
+                        <div>
+                            <h3 class="en">Nobody owns the process</h3>
+                            <h3 class="ar">لا أحد يملك العملية</h3>
+                            <h3 class="fr">Personne ne porte le processus</h3>
+                            <p class="en">When something breaks between two systems, it is not clear who is
+                                responsible: the person who owns the process, the IT team, or the vendor of either
+                                system.</p>
+                            <p class="ar">عندما يتعطل شيء بين نظامين، ليس واضحًا من المسؤول: من يملك العملية، أم فريق
+                                تقنية المعلومات، أم مورّد أحد النظامين.</p>
+                            <p class="fr">Lorsqu'une rupture survient entre deux systèmes, on ne sait pas qui est
+                                responsable : la personne qui porte le processus, l'équipe informatique, ou l'éditeur
+                                de l'un des systèmes.</p>
+                        </div>
+                    </article>
+                    <article class="need">
+                        <div class="need-no">05</div>
+                        <div>
+                            <h3 class="en">Manual work scales badly</h3>
+                            <h3 class="ar">العمل اليدوي لا يتوسّع جيدًا</h3>
+                            <h3 class="fr">Le travail manuel passe mal à l'échelle</h3>
+                            <p class="en">Order volume, leads, and invoices grow faster than the team can process them
+                                by hand, and the errors grow at the same rate.</p>
+                            <p class="ar">ينمو حجم الطلبات والعملاء المحتملين والفواتير أسرع من قدرة الفريق على
+                                معالجتها يدويًا، وتنمو الأخطاء بالمعدل نفسه.</p>
+                            <p class="fr">Le volume des commandes, des prospects et des factures croît plus vite que
+                                l'équipe ne peut le traiter manuellement, et les erreurs croissent au même rythme.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="principle">
+                    <div class="eyebrow en">A USEFUL TEST</div>
+                    <div class="eyebrow ar">اختبار مفيد</div>
+                    <div class="eyebrow fr">UN TEST UTILE</div>
+                    <div>
+                        <p class="en">If people are repeatedly moving information from one system to another, there
+                            may be an integration or automation opportunity.</p>
+                        <p class="ar">إذا كان الأشخاص ينقلون المعلومات بين نظام وآخر بشكل متكرر، فقد تكون هناك فرصة
+                            للتكامل أو الأتمتة.</p>
+                        <p class="fr">Si des personnes déplacent régulièrement des informations d'un système à un
+                            autre, il y a peut-être une opportunité d'intégration ou d'automatisation.</p>
+                    </div>
+                    <p class="side en">This is a starting point, not a diagnosis. The useful next step is to find where
+                        the information actually stops, and who is moving it by hand.</p>
+                    <p class="side ar">هذه نقطة بداية لا تشخيص. الخطوة المفيدة التالية هي تحديد الموضع الذي تتوقف
+                        فيه المعلومات فعليًا، ومن ينقلها يدويًا.</p>
+                    <p class="side fr">C'est un point de départ, pas un diagnostic. L'étape utile suivante consiste à
+                        repérer où l'information s'arrête réellement, et qui la déplace à la main.</p>
+                </div>
+                <div class="section-cta"><a class="button ghost" href="#start"><span class="en">Contact us
+                                        →</span><span class="ar">اتصل بنا →</span><span class="fr">Nous contacter
+                                        →</span></a></div>
+            </div>
+        </section>
+
+        <!-- =========================== 03 SOLUTION =========================== -->
+        <section class="section" id="solution">
+            <div class="wrap">
+                <div class="section-head">
+                    <div class="eyebrow en">03 / THE SOLUTION</div>
+                    <div class="eyebrow ar">03 / الحل</div>
+                    <div class="eyebrow fr">03 / LA SOLUTION</div>
+                    <h2 class="section-title en">Connect the systems, then automate the process between them.</h2>
+                    <h2 class="section-title ar">اربط الأنظمة، ثم أتمِت العملية التي بينها.</h2>
+                    <h2 class="section-title fr">Reliez les systèmes, puis automatisez le processus qui les sépare.</h2>
+                    <p class="section-intro en">BITA starts from the business process, not from the tools. Once the
+                        process is mapped, the connections, the data rules, and the automation are defined to serve
+                        it.</p>
+                    <p class="section-intro ar">تبدأ BITA من العملية التجارية، لا من الأدوات. وبعد رسم العملية، تُحدد
+                        الاتصالات وقواعد البيانات والأتمتة لخدمتها.</p>
+                    <p class="section-intro fr">BITA part du processus métier, pas des outils. Une fois le processus
+                        cartographié, les connexions, les règles de données et l'automatisation sont définies pour le
+                        servir.</p>
+                    <p class="section-intro en">The technology is the mechanism. The workflow is the reason.</p>
+                    <p class="section-intro ar">التقنية هي الآلية، ومسار العمل هو السبب.</p>
+                    <p class="section-intro fr">La technologie est le mécanisme. Le processus est la raison.</p>
+                    <p class="section-intro en">Every connection is designed to be observable, reversible, and
+                        understandable to the team that operates it — not a black box that only the person who built
+                        it can repair.</p>
+                    <p class="section-intro ar">كل اتصال مصمم ليكون قابلًا للملاحظة والعكس والفهم من الفريق الذي
+                        يشغّله — لا صندوقًا أسود لا يملك إصلاحه إلا من بناه.</p>
+                    <p class="section-intro fr">Chaque connexion est conçue pour être observable, réversible et
+                        compréhensible par l'équipe qui l'exploite — pas une boîte noire que seule la personne qui
+                        l'a construite sait réparer.</p>
+                </div>
+                <div class="solutions svc-solutions">
+                    <article class="solution">
+                        <div class="num">01</div>
+                        <h3 class="en">Connect</h3>
+                        <h3 class="ar">نُصلِح</h3>
+                        <h3 class="fr">Relier</h3>
+                        <p class="en">Give every system a reliable way to reach the others. APIs, webhooks,
+                            scheduled synchronization, file exchange, and direct database access are used where each
+                            one fits, chosen for the tools you already run rather than imposed on them.</p>
+                        <p class="ar">امنح كل نظام وسيلة موثوقة للوصول إلى الأنظمة الأخرى. تُستخدم واجهات API
+                            وwebhooks والمزامنة المجدولة وتبادل الملفات والوصول المباشر إلى قاعدة البيانات حيث
+                            يناسب كل منها، ويُختار ذلك استنادًا إلى أدواتك القائمة لا مفروضًا عليها.</p>
+                        <p class="fr">Donner à chaque système un moyen fiable d'atteindre les autres. API, webhooks,
+                            synchronisations planifiées, échange de fichiers et accès direct à la base de données
+                            sont utilisés selon ce qui convient, choisis pour les outils que vous utilisez déjà
+                            plutôt qu'imposés.</p>
+                    </article>
+                    <article class="solution">
+                        <div class="num">02</div>
+                        <h3 class="en">Synchronize</h3>
+                        <h3 class="ar">نُزامن</h3>
+                        <h3 class="fr">Synchroniser</h3>
+                        <p class="en">Keep the same information consistent everywhere it appears. Field mapping,
+                            deduplication, validation, and conflict rules decide which system is authoritative and
+                            what happens when two systems disagree.</p>
+                        <p class="ar">حافظ على اتساق المعلومة نفسها في كل مكان تظهر فيه. قواعد ربط الحقول وإزالة
+                            التكرار والتحقق وقواعد التعارض تحدد النظام المرجعي وما يحدث حين يختلف نظامان.</p>
+                        <p class="fr">Garder la même information cohérente partout où elle apparaît. Mappage des
+                            champs, déduplication, validation et règles de conflit déterminent le système de
+                            référence et ce qui se passe quand deux systèmes divergent.</p>
+                    </article>
+                    <article class="solution">
+                        <div class="num">03</div>
+                        <h3 class="en">Automate</h3>
+                        <h3 class="ar">نُؤتمت</h3>
+                        <h3 class="fr">Automatiser</h3>
+                        <p class="en">Move the repeatable steps into the workflow. Notifications, assignments,
+                            status changes, approvals, documents, and scheduled reports run on the event instead of
+                            on a person remembering to run them.</p>
+                        <p class="ar">انقل الخطوات القابلة للتكرار إلى مسار العمل. تعمل الإشعارات والإسنادات
+                            وتغييرات الحالة والموافقات والمستندات والتقارير المجدولة عند وقوع الحدث، لا حين يتذكر
+                            شخص تنفيذها.</p>
+                        <p class="fr">Déplacer les étapes répétitives dans le workflow. Notifications, affectations,
+                            changements de statut, approbations, documents et rapports planifiés s'exécutent sur
+                            l'événement, au lieu d'attendre qu'une personne pense à les lancer.</p>
+                    </article>
+                    <article class="solution">
+                        <div class="num">04</div>
+                        <h3 class="en">Monitor</h3>
+                        <h3 class="ar">نُراقب</h3>
+                        <h3 class="fr">Superviser</h3>
+                        <p class="en">Assume something will fail, and make it visible. Retries, queues, health
+                            checks, run logs, and alerts mean a failed synchronization is noticed and handled rather
+                            than discovered weeks later.</p>
+                        <p class="ar">افترض أن شيئًا سيفشل، واجعله مرئيًا. المحاولات والصفوف وفحوصات الصحة
+                            وسجلات التشغيل والتنبيهات تجعل فشل المزامنة ملحوظًا ومعالَجًا، لا مكتشفًا بعد أسابيع.</p>
+                        <p class="fr">Supposer que quelque chose échouera, et le rendre visible. Nouvelles tentatives,
+                            files d'attente, contrôles de santé, journaux d'exécution et alertes font qu'une
+                            synchronisation en échec est repérée et traitée, plutôt que découverte des semaines
+                            plus tard.</p>
+                    </article>
+                </div>
+                <div class="section-cta"><a class="button ghost" href="#start"><span class="en">Contact us
+                                        →</span><span class="ar">اتصل بنا →</span><span class="fr">Nous contacter
+                                        →</span></a></div>
+            </div>
+        </section>
+
+        <!-- ========================= 04 CAPABILITIES ========================= -->
+        <section class="section dark" id="capabilities">
+            <div class="wrap">
+                <div class="section-head">
+                    <div class="eyebrow en">04 / CAPABILITIES</div>
+                    <div class="eyebrow ar">04 / القدرات</div>
+                    <div class="eyebrow fr">04 / COMPÉTENCES</div>
+                    <h2 class="section-title en">What an integration actually requires.</h2>
+                    <h2 class="section-title ar">ما الذي يتطلبه التكامل فعليًا.</h2>
+                    <h2 class="section-title fr">Ce qu'une intégration exige réellement.</h2>
+                    <p class="section-intro en">Connecting two systems is the visible part. The work that makes an
+                        integration dependable — mapping, events, error handling, monitoring, security, and the
+                        rules that decide who owns a field — is the rest of this section.</p>
+                    <p class="section-intro ar">ربط نظامين هو الجزء الظاهر. أما العمل الذي يجعل التكامل موثوقًا —
+                        الربط والأحداث ومعالجة الأخطاء والمراقبة والأمان والقواعد التي تحدد من يملك كل حقل — فهو ما
+                        تغطي بقية هذا القسم.</p>
+                    <p class="section-intro fr">Relier deux systèmes est la partie visible. Le travail qui rend une
+                        intégration fiable — mappage, événements, gestion des erreurs, supervision, sécurité et règles
+                        déterminant la propriété d'un champ — est le reste de cette section.</p>
+                </div>
+                <div class="cap-grid ten four dense">
+                    <article class="cap">
+                        <div class="cap-no">01</div>
+                        <h3 class="en">System &amp; Data Mapping</h3>
+                        <h3 class="ar">ربط الأنظمة والبيانات</h3>
+                        <h3 class="fr">Cartographie des systèmes et des données</h3>
+                        <ul>
+                            <li class="en">System inventory</li>
+                            <li class="ar">جرد الأنظمة</li>
+                            <li class="fr">Inventaire des systèmes</li>
+                            <li class="en">Existing connections</li>
+                            <li class="ar">الاتصالات القائمة</li>
+                            <li class="fr">Connexions existantes</li>
+                            <li class="en">Data ownership</li>
+                            <li class="ar">ملكية البيانات</li>
+                            <li class="fr">Propriété des données</li>
+                            <li class="en">Field mapping</li>
+                            <li class="ar">ربط الحقول</li>
+                            <li class="fr">Mappage des champs</li>
+                            <li class="en">Value formats</li>
+                            <li class="ar">صيغ القيم</li>
+                            <li class="fr">Formats des valeurs</li>
+                            <li class="en">Normalization</li>
+                            <li class="ar">التوحيد القياسي</li>
+                            <li class="fr">Normalisation</li>
+                            <li class="en">Source of truth</li>
+                            <li class="ar">النظام المرجعي</li>
+                            <li class="fr">Source de référence</li>
+                            <li class="en">Update frequency</li>
+                            <li class="ar">تكرار التحديث</li>
+                            <li class="fr">Fréquence de mise à jour</li>
+                        </ul>
+                    </article>
+                    <article class="cap">
+                        <div class="cap-no">02</div>
+                        <h3 class="en">APIs &amp; Connectors</h3>
+                        <h3 class="ar">واجهات API والموصّلات</h3>
+                        <h3 class="fr">API et connecteurs</h3>
+                        <ul>
+                            <li class="en">REST APIs</li>
+                            <li class="ar">واجهات REST</li>
+                            <li class="fr">API REST</li>
+                            <li class="en">Webhooks</li>
+                            <li class="ar">Webhooks</li>
+                            <li class="fr">Webhooks</li>
+                            <li class="en">OAuth</li>
+                            <li class="ar">OAuth</li>
+                            <li class="fr">OAuth</li>
+                            <li class="en">Rate limits</li>
+                            <li class="ar">حدود المعدل</li>
+                            <li class="fr">Limites de débit</li>
+                            <li class="en">Pagination</li>
+                            <li class="ar">الترقيم</li>
+                            <li class="fr">Pagination</li>
+                            <li class="en">API versioning</li>
+                            <li class="ar">إصدارات الواجهة</li>
+                            <li class="fr">Versionnement de l'API</li>
+                            <li class="en">Custom connectors</li>
+                            <li class="ar">موصّلات مخصصة</li>
+                            <li class="fr">Connecteurs sur mesure</li>
+                            <li class="en">Legacy endpoints</li>
+                            <li class="ar">نقاط نهاية قديمة</li>
+                            <li class="fr">Points de terminaison hérités</li>
+                            <li class="en">Sandbox testing</li>
+                            <li class="ar">الاختبار في بيئة تجريبية</li>
+                            <li class="fr">Tests en bac à sable</li>
+                        </ul>
+                    </article>
+                    <article class="cap">
+                        <div class="cap-no">03</div>
+                        <h3 class="en">Data Synchronization</h3>
+                        <h3 class="ar">مزامنة البيانات</h3>
+                        <h3 class="fr">Synchronisation des données</h3>
+                        <ul>
+                            <li class="en">Two-way sync</li>
+                            <li class="ar">مزامنة ثنائية الاتجاه</li>
+                            <li class="fr">Bidirectionnelle</li>
+                            <li class="en">One-way sync</li>
+                            <li class="ar">مزامنة أحادية الاتجاه</li>
+                            <li class="fr">Unidirectionnelle</li>
+                            <li class="en">Scheduled sync</li>
+                            <li class="ar">مزامنة مجدولة</li>
+                            <li class="fr">Planifiée</li>
+                            <li class="en">Real-time sync</li>
+                            <li class="ar">مزامنة فورية</li>
+                            <li class="fr">En temps réel</li>
+                            <li class="en">Deduplication</li>
+                            <li class="ar">إزالة التكرار</li>
+                            <li class="fr">Déduplication</li>
+                            <li class="en">Validation rules</li>
+                            <li class="ar">قواعد التحقق</li>
+                            <li class="fr">Règles de validation</li>
+                            <li class="en">Conflict resolution</li>
+                            <li class="ar">حل التعارض</li>
+                            <li class="fr">Résolution des conflits</li>
+                            <li class="en">Manual override</li>
+                            <li class="ar">التعديل اليدوي</li>
+                            <li class="fr">Correction manuelle</li>
+                            <li class="en">Incremental loads</li>
+                            <li class="ar">التحميلات التزاونية</li>
+                            <li class="fr">Chargements incrémentaux</li>
+                        </ul>
+                    </article>
+                    <article class="cap">
+                        <div class="cap-no">04</div>
+                        <h3 class="en">Events &amp; Triggers</h3>
+                        <h3 class="ar">الأحداث والمشغّلات</h3>
+                        <h3 class="fr">Événements et déclencheurs</h3>
+                        <ul>
+                            <li class="en">Order created</li>
+                            <li class="ar">إنشاء طلب</li>
+                            <li class="fr">Commande créée</li>
+                            <li class="en">Payment received</li>
+                            <li class="ar">استلام دفعة</li>
+                            <li class="fr">Paiement reçu</li>
+                            <li class="en">Form submitted</li>
+                            <li class="ar">إرسال نموذج</li>
+                            <li class="fr">Formulaire soumis</li>
+                            <li class="en">Stock changed</li>
+                            <li class="ar">تغير المخزون</li>
+                            <li class="fr">Stock modifié</li>
+                            <li class="en">Shipment updated</li>
+                            <li class="ar">تحديث الشحنة</li>
+                            <li class="fr">Expédition mise à jour</li>
+                            <li class="en">Record updated</li>
+                            <li class="ar">تحديث سجل</li>
+                            <li class="fr">Enregistrement modifié</li>
+                            <li class="en">Time-based schedules</li>
+                            <li class="ar">الجداول الزمنية</li>
+                            <li class="fr">Planifications horaires</li>
+                            <li class="en">Event payload design</li>
+                            <li class="ar">تصميم حمولة الحدث</li>
+                            <li class="fr">Structure de l'événement</li>
+                        </ul>
+                    </article>
+                    <article class="cap">
+                        <div class="cap-no">05</div>
+                        <h3 class="en">Workflow Automation</h3>
+                        <h3 class="ar">أتمتة مسارات العمل</h3>
+                        <h3 class="fr">Automatisation des workflows</h3>
+                        <ul>
+                            <li class="en">Trigger conditions</li>
+                            <li class="ar">شروط التشغيل</li>
+                            <li class="fr">Conditions de déclenchement</li>
+                            <li class="en">Branching logic</li>
+                            <li class="ar">منطق التفرع</li>
+                            <li class="fr">Logique de branchement</li>
+                            <li class="en">Multi-step actions</li>
+                            <li class="ar">إجراءات متعددة الخطوات</li>
+                            <li class="fr">Actions en plusieurs étapes</li>
+                            <li class="en">Approval steps</li>
+                            <li class="ar">خطوات الموافقة</li>
+                            <li class="fr">Étapes d'approbation</li>
+                            <li class="en">Escalations</li>
+                            <li class="ar">التصعيد</li>
+                            <li class="fr">Escalades</li>
+                            <li class="en">Task creation</li>
+                            <li class="ar">إنشاء المهام</li>
+                            <li class="fr">Création de tâches</li>
+                            <li class="en">Document generation</li>
+                            <li class="ar">توليد المستندات</li>
+                            <li class="fr">Génération de documents</li>
+                            <li class="en">Status changes</li>
+                            <li class="ar">تغييرات الحالة</li>
+                            <li class="fr">Changements de statut</li>
+                            <li class="en">Actions across systems</li>
+                            <li class="ar">إجراءات عبر الأنظمة</li>
+                            <li class="fr">Actions entre systèmes</li>
+                        </ul>
+                    </article>
+                    <article class="cap">
+                        <div class="cap-no">06</div>
+                        <h3 class="en">Migration &amp; Import</h3>
+                        <h3 class="ar">ترحيل البيانات والاستيراد</h3>
+                        <h3 class="fr">Migration et import</h3>
+                        <ul>
+                            <li class="en">Historical import</li>
+                            <li class="ar">الاستيراد التاريخي</li>
+                            <li class="fr">Import d'historique</li>
+                            <li class="en">Field transformation</li>
+                            <li class="ar">تحويل الحقول</li>
+                            <li class="fr">Transformation des champs</li>
+                            <li class="en">Pre-load validation</li>
+                            <li class="ar">التحقق قبل التحميل</li>
+                            <li class="fr">Validation avant chargement</li>
+                            <li class="en">Incremental migration</li>
+                            <li class="ar">الترحيل التزاوني</li>
+                            <li class="fr">Migration incrémentale</li>
+                            <li class="en">Data cleanup</li>
+                            <li class="ar">تنظيف البيانات</li>
+                            <li class="fr">Nettoyage des données</li>
+                            <li class="en">Trial runs</li>
+                            <li class="ar">التشغيل التجريبي</li>
+                            <li class="fr">Répétitions à blanc</li>
+                            <li class="en">Rollback plan</li>
+                            <li class="ar">خطة التراجع</li>
+                            <li class="fr">Plan de retour arrière</li>
+                            <li class="en">Cutover</li>
+                            <li class="ar">التحول</li>
+                            <li class="fr">Bascule</li>
+                        </ul>
+                    </article>
+                    <article class="cap">
+                        <div class="cap-no">07</div>
+                        <h3 class="en">Error Handling &amp; Reliability</h3>
+                        <h3 class="ar">معالجة الأخطاء والموثوقية</h3>
+                        <h3 class="fr">Gestion des erreurs et fiabilité</h3>
+                        <ul>
+                            <li class="en">Automatic retries</li>
+                            <li class="ar">إعادة المحاولة التلقائية</li>
+                            <li class="fr">Nouvelles tentatives</li>
+                            <li class="en">Exponential backoff</li>
+                            <li class="ar">تراجع أُسّي</li>
+                            <li class="fr">Back-off exponentiel</li>
+                            <li class="en">Dead-letter queue</li>
+                            <li class="ar">قائمة رسائل التعذّر</li>
+                            <li class="fr">File d'attente d'échecs</li>
+                            <li class="en">Idempotency</li>
+                            <li class="ar">تكرار الأمان</li>
+                            <li class="fr">Idempotence</li>
+                            <li class="en">Failure alerts</li>
+                            <li class="ar">تنبيهات الفشل</li>
+                            <li class="fr">Alertes d'échec</li>
+                            <li class="en">Fallback behaviour</li>
+                            <li class="ar">سلوك بديل</li>
+                            <li class="fr">Comportement de repli</li>
+                            <li class="en">Timeouts</li>
+                            <li class="ar">مهل الانتظار</li>
+                            <li class="fr">Délais d'expiration</li>
+                            <li class="en">Partial failures</li>
+                            <li class="ar">الأعطال الجزئية</li>
+                            <li class="fr">Pannes partielles</li>
+                        </ul>
+                    </article>
+                    <article class="cap">
+                        <div class="cap-no">08</div>
+                        <h3 class="en">Monitoring &amp; Visibility</h3>
+                        <h3 class="ar">المراقبة والرؤية</h3>
+                        <h3 class="fr">Supervision et visibilité</h3>
+                        <ul>
+                            <li class="en">Run logs</li>
+                            <li class="ar">سجلات التشغيل</li>
+                            <li class="fr">Journaux d'exécution</li>
+                            <li class="en">Sync status</li>
+                            <li class="ar">حالة المزامنة</li>
+                            <li class="fr">État des synchronisations</li>
+                            <li class="en">Health checks</li>
+                            <li class="ar">فحوصات الصحة</li>
+                            <li class="fr">Contrôles de santé</li>
+                            <li class="en">Failure dashboard</li>
+                            <li class="ar">لوحة الأعطال</li>
+                            <li class="fr">Tableau des pannes</li>
+                            <li class="en">Execution history</li>
+                            <li class="ar">سجل التنفيذ</li>
+                            <li class="fr">Historique d'exécution</li>
+                            <li class="en">Audit trail</li>
+                            <li class="ar">سجل التدقيق</li>
+                            <li class="fr">Piste d'audit</li>
+                            <li class="en">Alert routing</li>
+                            <li class="ar">توجيه التنبيهات</li>
+                            <li class="fr">Routage des alertes</li>
+                            <li class="en">Performance tracking</li>
+                            <li class="ar">تتبع الأداء</li>
+                            <li class="fr">Suivi des performances</li>
+                        </ul>
+                    </article>
+                    <article class="cap">
+                        <div class="cap-no">09</div>
+                        <h3 class="en">Security &amp; Access</h3>
+                        <h3 class="ar">الأمان والوصول</h3>
+                        <h3 class="fr">Sécurité et accès</h3>
+                        <ul>
+                            <li class="en">API credentials</li>
+                            <li class="ar">بيانات اعتماد API</li>
+                            <li class="fr">Identifiants d'API</li>
+                            <li class="en">Secrets management</li>
+                            <li class="ar">إدارة الأسرار</li>
+                            <li class="fr">Gestion des secrets</li>
+                            <li class="en">Encryption</li>
+                            <li class="ar">التشفير</li>
+                            <li class="fr">Chiffrement</li>
+                            <li class="en">Data in transit</li>
+                            <li class="ar">البيانات أثناء النقل</li>
+                            <li class="fr">Données en transit</li>
+                            <li class="en">Least privilege</li>
+                            <li class="ar">أقل امتياز</li>
+                            <li class="fr">Moindre privilège</li>
+                            <li class="en">Access logging</li>
+                            <li class="ar">تسجيل الوصول</li>
+                            <li class="fr">Journalisation des accès</li>
+                            <li class="en">Rate limiting</li>
+                            <li class="ar">تحديد المعدل</li>
+                            <li class="fr">Limitation de débit</li>
+                            <li class="en">Compliance requirements</li>
+                            <li class="ar">متطلبات الامتثال</li>
+                            <li class="fr">Exigences de conformité</li>
+                            <li class="en">Vendor access review</li>
+                            <li class="ar">مراجعة وصول المورّدين</li>
+                            <li class="fr">Revue des accès fournisseurs</li>
+                        </ul>
+                    </article>
+                    <article class="cap">
+                        <div class="cap-no">10</div>
+                        <h3 class="en">Notifications &amp; Reporting</h3>
+                        <h3 class="ar">الإشعارات والتقارير</h3>
+                        <h3 class="fr">Notifications et rapports</h3>
+                        <ul>
+                            <li class="en">Transactional email</li>
+                            <li class="ar">البريد الإلكتروني المعاملي</li>
+                            <li class="fr">E-mails transactionnels</li>
+                            <li class="en">Internal alerts</li>
+                            <li class="ar">التنبيهات الداخلية</li>
+                            <li class="fr">Alertes internes</li>
+                            <li class="en">Scheduled reports</li>
+                            <li class="ar">التقارير المجدولة</li>
+                            <li class="fr">Rapports planifiés</li>
+                            <li class="en">Operational dashboards</li>
+                            <li class="ar">لوحات التشغيل</li>
+                            <li class="fr">Tableaux de bord</li>
+                            <li class="en">Daily digests</li>
+                            <li class="ar">الملخصات اليومية</li>
+                            <li class="fr">Résumés quotidiens</li>
+                            <li class="en">Chat and SMS</li>
+                            <li class="ar">المحادثات والرسائل النصية</li>
+                            <li class="fr">Chat et SMS</li>
+                            <li class="en">Document delivery</li>
+                            <li class="ar">تسليم المستندات</li>
+                            <li class="fr">Envoi de documents</li>
+                            <li class="en">Distribution lists</li>
+                            <li class="ar">قوائم التوزيع</li>
+                            <li class="fr">Listes de diffusion</li>
+                        </ul>
+                    </article>
+                </div>
+                <p class="cap-note en">Automation is not a replacement for people. The steps that carry judgement — a
+                    discount above a threshold, a refund, a supplier exception — stay with the team and are built as
+                    explicit approval points in the workflow. What is removed is the copying, not the decision.</p>
+                <p class="cap-note ar">الأتمتة ليست بديلًا عن الناس. فالخطوات التي تحمل حكمًا — خصم فوق حد، أو
+                    استرداد مبلغ، أو استثناء مورد — تبقى مع الفريق وتُبنى كنقاط موافقة صريحة في مسار العمل. ما
+                    يُزال هو النسخ، لا القرار.</p>
+                <p class="cap-note fr">L'automatisation ne remplace pas les personnes. Les étapes qui portent du
+                    jugement — une remise au-delà d'un seuil, un remboursement, une exception fournisseur — restent
+                    avec l'équipe et sont construites comme des points d'approbation explicites dans le workflow. Ce
+                    qui disparaît, c'est la copie, pas la décision.</p>
+                <div class="section-cta"><a class="button ghost" href="#start"><span class="en">Contact us
+                                        →</span><span class="ar">اتصل بنا →</span><span class="fr">Nous contacter
+                                        →</span></a></div>
+            </div>
+        </section>
+
+        <!-- =========================== 05 USE CASES =========================== -->
+        <section class="section" id="use-cases">
+            <div class="wrap">
+                <div class="section-head">
+                    <div class="eyebrow en">05 / USE CASES</div>
+                    <div class="eyebrow ar">05 / حالات الاستخدام</div>
+                    <div class="eyebrow fr">05 / CAS D'USAGE</div>
+                    <h2 class="section-title en">The connections businesses ask for most.</h2>
+                    <h2 class="section-title ar">الاتصالات التي تطلبها الشركات الأكثر.</h2>
+                    <h2 class="section-title fr">Les connexions les plus demandées.</h2>
+                    <p class="section-intro en">These are common patterns, not a fixed package. Each one is scoped
+                        against your actual systems and process, and the number of them in any project varies.</p>
+                    <p class="section-intro ar">هذه أنماط شائعة وليست حزمة ثابتة. يُحدَّد كل منها وفق أنظمتك وعمليتك
+                        الفعليين، ويختلف عددها من مشروع إلى آخر.</p>
+                    <p class="section-intro fr">Ce sont des schémas courants, pas une offre fixe. Chacun est cadré
+                        selon vos systèmes et votre processus réels, et leur nombre varie d'un projet à l'autre.</p>
+                </div>
+                <div class="models three">
+                    <article class="model">
+                        <div class="model-code">CRM ↔ ERP</div>
+                        <h3 class="en">CRM ↔ ERP</h3>
+                        <h3 class="ar">العملاء ↔ التخطيط</h3>
+                        <h3 class="fr">CRM ↔ ERP</h3>
+                        <p class="en">An opportunity or customer record created in the CRM becomes a quote, order, or
+                            project in the ERP, and its status travels back without anyone retyping it.</p>
+                        <p class="ar">يصبح سجل فرصة أو عميل أُنشئ في نظام إدارة العملاء عرض سعر أو طلبًا أو مشروعًا
+                            في نظام تخطيط الموارد، وتعود حالته دون أن يعيد أحد كتابتها.</p>
+                        <p class="fr">Une opportunité ou une fiche client créée dans le CRM devient un devis, une
+                            commande ou un projet dans l'ERP, et son statut revient sans que personne ne le
+                            retape.</p>
+                    </article>
+                    <article class="model">
+                        <div class="model-code">STORE ↔ STOCK</div>
+                        <h3 class="en">Store ↔ Inventory</h3>
+                        <h3 class="ar">المتجر ↔ المخزون</h3>
+                        <h3 class="fr">Boutique ↔ Stock</h3>
+                        <p class="en">Stock levels, prices, and product variants stay consistent between the
+                            storefront and the inventory system, including the changes that happen outside both.</p>
+                        <p class="ar">تبقى مستويات المخزون والأسعار ومتغيرات المنتج متسقة بين المتجر ونظام المخزون،
+                            بما في ذلك التغييرات التي تحدث خارجهما.</p>
+                        <p class="fr">Les niveaux de stock, les prix et les variantes produits restent cohérents entre
+                            la boutique et le système d'inventaire, y compris les changements survenus en dehors
+                            des deux.</p>
+                    </article>
+                    <article class="model">
+                        <div class="model-code">PAY ↔ ORDER</div>
+                        <h3 class="en">Payment ↔ Order</h3>
+                        <h3 class="ar">الدفع ↔ الطلب</h3>
+                        <h3 class="fr">Paiement ↔ Commande</h3>
+                        <p class="en">A successful payment marks the order as paid, releases it for fulfilment, and
+                            updates the accounting record — driven by the provider's event rather than by someone
+                            checking a dashboard.</p>
+                        <p class="ar">يعلِّم الدفع الناجح الطلب كمدفوع، ويحرره للتنفيذ، ويحدّث السجل المحاسبي —
+                            استنادًا إلى حدث مزوّد الدفع لا إلى شخص يتفقد لوحة تحكم.</p>
+                        <p class="fr">Un paiement réussi marque la commande comme payée, la libère pour le traitement
+                            et met à jour l'écriture comptable — déclenché par l'événement du prestataire plutôt
+                            que par une consultation de tableau de bord.</p>
+                    </article>
+                    <article class="model">
+                        <div class="model-code">SHIP ↔ ORDER</div>
+                        <h3 class="en">Shipping ↔ Order</h3>
+                        <h3 class="ar">الشحن ↔ الطلب</h3>
+                        <h3 class="fr">Expédition ↔ Commande</h3>
+                        <p class="en">Dispatch, tracking, and delivery status from the carrier or shipping system
+                            update the order and notify the customer and the internal team at the same time.</p>
+                        <p class="ar">تُحدِّث حالات الإرسال والتتبع والتسليم من شركة الشحن أو نظام الشحن الطلب،
+                            وتُشعر العميل والفريق الداخلي في الوقت نفسه.</p>
+                        <p class="fr">Les statuts d'expédition, de suivi et de livraison du transporteur ou du système
+                            logistique mettent à jour la commande et notifient le client et l'équipe interne en
+                            même temps.</p>
+                    </article>
+                    <article class="model">
+                        <div class="model-code">LEAD → CRM</div>
+                        <h3 class="en">Leads into the CRM</h3>
+                        <h3 class="ar">العملاء المحتملون في النظام</h3>
+                        <h3 class="fr">Des prospects dans le CRM</h3>
+                        <p class="en">Forms, ads, calls, and events create or update one CRM record, with source,
+                            campaign, and consent carried across, so no lead is worked twice or lost.</p>
+                        <p class="ar">تنشئ النماذج والإعلانات والمكالمات والفعاليات سجلًا واحدًا في نظام إدارة العملاء
+                            أو تحدّثه، مع نقل المصدر والحملة والموافقة، فلا يُعالَج عميل محتمل مرتين ولا يُفقد.</p>
+                        <p class="fr">Formulaires, publicités, appels et événements créent ou mettent à jour une
+                            seule fiche CRM, avec source, campagne et consentement conservés : aucun prospect
+                            n'est traité deux fois ni perdu.</p>
+                    </article>
+                    <article class="model">
+                        <div class="model-code">APPROVALS</div>
+                        <h3 class="en">Approvals &amp; internal flow</h3>
+                        <h3 class="ar">الموافقات والتدفق الداخلي</h3>
+                        <h3 class="fr">Approbations et flux interne</h3>
+                        <p class="en">Requests, discounts, expenses, and exceptions follow a defined path, notify the
+                            right person, wait for a decision, and return a clear status to the system that raised
+                            them.</p>
+                        <p class="ar">تتبع الطلبات والخصومات والمصروفات والاستثناءات مسارًا محددًا، وتُشعر الشخص
+                            المناسب، وتنتظر قرارًا، وتعيد حالة واضحة إلى النظام الذي أنشأها.</p>
+                        <p class="fr">Demandes, remises, dépenses et exceptions suivent un chemin défini, préviennent
+                            la bonne personne, attendent une décision et renvoient un statut clair au système qui
+                            les a créées.</p>
+                    </article>
+                    <article class="model">
+                        <div class="model-code">LEGACY</div>
+                        <h3 class="en">Legacy systems &amp; unreliable connections</h3>
+                        <h3 class="ar">أنظمة قديمة واتصالات غير موثوقة</h3>
+                        <h3 class="fr">Systèmes hérités et connexions peu fiables</h3>
+                        <p class="en">Older software often has no API at all, and an existing connection may fail
+                            silently, lose records, or depend on one person who understands it. Both cases are
+                            assessed before anything is built: a database-level or file-based connection may be the
+                            honest answer for a system with no modern interface, and an unreliable integration is
+                            often cheaper to replace than to keep diagnosing.</p>
+                        <p class="ar">كثيرًا ما تفتقر البرمجيات الأقدم إلى واجهة API، وقد يفشل الاتصال القائم بصمت
+                            أو يفقد سجلات أو يعتمد على شخص واحد يفهمه. ويُقيَّم كلا الحالتين قبل أي بناء: فقد يكون
+                            الاتصال على مستوى قاعدة البيانات أو عبر الملفات هو الإجابة الواقعية لنظام بلا واجهة
+                            حديثة، وغالبًا ما يكون استبدال التكامل غير الموثوق أقل كلفة من تشخيصه المستمر.</p>
+                        <p class="fr">Les logiciels anciens n'ont souvent aucune API, et une connexion existante peut
+                            échouer en silence, perdre des enregistrements ou dépendre d'une seule personne qui la
+                            comprend. Les deux cas sont évalués avant toute construction : une connexion au niveau
+                            de la base de données ou par fichiers peut être la réponse honnête pour un système
+                            sans interface moderne, et une intégration peu fiable coûte souvent moins cher à
+                            remplacer qu'à diagnostiquer indéfiniment.</p>
+                    </article>
+                </div>
+                <div class="section-cta"><a class="button ghost" href="#start"><span class="en">Contact us
+                                        →</span><span class="ar">اتصل بنا →</span><span class="fr">Nous contacter
+                                        →</span></a></div>
+            </div>
+        </section>
+
+        <!-- ========================= 06 DELIVERABLES ========================= -->
+        <section class="section" id="deliverables">
+            <div class="wrap">
+                <div class="section-head">
+                    <div class="eyebrow en">06 / DELIVERABLES</div>
+                    <div class="eyebrow ar">06 / المخرجات</div>
+                    <div class="eyebrow fr">06 / LIVRABLES</div>
+                    <h2 class="section-title en">What you get.</h2>
+                    <h2 class="section-title ar">ما الذي تحصل عليه.</h2>
+                    <h2 class="section-title fr">Ce que vous obtenez.</h2>
+                    <p class="section-intro en">Each engagement is scoped, so the exact set is confirmed during
+                        discovery. These are the parts of the integration work BITA is responsible for.</p>
+                    <p class="section-intro ar">يُحدَّد نطاق كل مشروع، لذا تُؤكَّد القائمة الدقيقة خلال مرحلة الاستكشاف.
+                        وهذه هي أجزاء عمل التكامل التي تتحمل BITA مسؤوليتها.</p>
+                    <p class="section-intro fr">Chaque mission est cadrée : le périmètre exact est confirmé pendant
+                        la phase de découverte. Voici les parties du travail d'intégration dont BITA est
+                        responsable.</p>
+                </div>
+                <div class="deliver-grid">
+                    <article class="deliver"><i aria-hidden="true"></i>
+                        <div>
+                            <h3 class="en">System Map &amp; Integration Audit</h3>
+                            <h3 class="ar">خريطة الأنظمة وتدقيق التكامل</h3>
+                            <h3 class="fr">Carte des systèmes et audit</h3>
+                            <p class="en">A written view of the systems in use, what each one owns, where data is
+                                entered more than once, and which connections already exist.</p>
+                            <p class="ar">عرض مكتوب للأنظمة المستخدمة، وما يملكه كل نظام، وأين تُدخل البيانات أكثر
+                                من مرة، وأي الاتصالات موجودة بالفعل.</p>
+                            <p class="fr">Une vue écrite des systèmes utilisés, de ce que chacun détient, des endroits
+                                où la donnée est saisie plusieurs fois et des connexions déjà en place.</p>
+                        </div>
+                    </article>
+                    <article class="deliver"><i aria-hidden="true"></i>
+                        <div>
+                            <h3 class="en">Integration Architecture</h3>
+                            <h3 class="ar">بنية التكامل</h3>
+                            <h3 class="fr">Architecture d'intégration</h3>
+                            <p class="en">How the systems will communicate: patterns, direction of flow, data
+                                ownership, synchronization frequency, and the failure strategy for each connection.</p>
+                            <p class="ar">كيف ستتواصل الأنظمة: الأنماط واتجاه التدفق وملكية البيانات وتكرار المزامنة
+                                واستراتيجية الفشل لكل اتصال.</p>
+                            <p class="fr">Comment les systèmes communiqueront : schémas, sens du flux, propriété des
+                                données, fréquence de synchronisation et stratégie d'échec pour chaque
+                                connexion.</p>
+                        </div>
+                    </article>
+                    <article class="deliver"><i aria-hidden="true"></i>
+                        <div>
+                            <h3 class="en">Connectors &amp; API Layer</h3>
+                            <h3 class="ar">الموصّلات وطبقة API</h3>
+                            <h3 class="fr">Connecteurs et couche API</h3>
+                            <p class="en">The connections themselves, with authentication, rate limits, and the
+                                handling each provider actually supports.</p>
+                            <p class="ar">الاتصالات نفسها، مع المصادقة وحدود المعدل ومعالجة ما يدعمه كل مزوّد
+                                فعليًا.</p>
+                            <p class="fr">Les connexions elles-mêmes, avec authentification, limites de débit et la
+                                gestion que chaque fournisseur prend réellement en charge.</p>
+                        </div>
+                    </article>
+                    <article class="deliver"><i aria-hidden="true"></i>
+                        <div>
+                            <h3 class="en">Data Mapping &amp; Sync Logic</h3>
+                            <h3 class="ar">ربط البيانات ومنطق المزامنة</h3>
+                            <h3 class="fr">Mappage et logique de synchronisation</h3>
+                            <p class="en">The rules that decide how a record in one system becomes a record in
+                                another, and what happens when the two disagree.</p>
+                            <p class="ar">القواعد التي تحدد كيف يصبح سجل في نظام سجلًا في نظام آخر، وما يحدث حين
+                                يختلفان.</p>
+                            <p class="fr">Les règles qui déterminent comment un enregistrement dans un système devient
+                                un enregistrement dans un autre, et ce qui se passe en cas de divergence.</p>
+                        </div>
+                    </article>
+                    <article class="deliver"><i aria-hidden="true"></i>
+                        <div>
+                            <h3 class="en">Automated Workflows</h3>
+                            <h3 class="ar">مسارات عمل مؤتمتة</h3>
+                            <h3 class="fr">Workflows automatisés</h3>
+                            <p class="en">The processes themselves: triggers, conditions, approvals, notifications,
+                                and the actions each event produces.</p>
+                            <p class="ar">العمليات نفسها: المشغّلات والشروط والموافقات والإشعارات والإجراءات
+                                التي ينتجها كل حدث.</p>
+                            <p class="fr">Les processus eux-mêmes : déclencheurs, conditions, approbations,
+                                notifications et actions produites par chaque événement.</p>
+                        </div>
+                    </article>
+                    <article class="deliver"><i aria-hidden="true"></i>
+                        <div>
+                            <h3 class="en">Migration &amp; Initial Import</h3>
+                            <h3 class="ar">الترحيل والاستيراد الأولي</h3>
+                            <h3 class="fr">Migration et import initial</h3>
+                            <p class="en">Where historical data has to move, the mapping, trial runs, validation,
+                                and a rollback plan before anything is switched over.</p>
+                            <p class="ar">حيث يلزم نقل بيانات تاريخية، يُعدّ الربط والتشغيل التجريبي والتحقق وخطة
+                                التراجع قبل أي تحوّل.</p>
+                            <p class="fr">Lorsque des données historiques doivent être déplacées : le mappage, les
+                                répétitions, la validation et un plan de retour arrière avant toute bascule.</p>
+                        </div>
+                    </article>
+                    <article class="deliver"><i aria-hidden="true"></i>
+                        <div>
+                            <h3 class="en">Error Handling &amp; Recovery</h3>
+                            <h3 class="ar">معالجة الأخطاء والتعافي</h3>
+                            <h3 class="fr">Gestion des erreurs et reprise</h3>
+                            <p class="en">Retries, queues, timeouts, and alerting, so a failed transfer is retried or
+                                reported instead of disappearing.</p>
+                            <p class="ar">إعادة المحاولة والصفوف ومهل الانتظار والتنبيهات، حتى تُعاد المحاولة
+                                على التحويل الفاشل أو يُبلَّغ عنه بدل أن يختفي.</p>
+                            <p class="fr">Nouvelles tentatives, files d'attente, délais et alertes, afin qu'un
+                                transfert en échec soit retenté ou signalé au lieu de disparaître.</p>
+                        </div>
+                    </article>
+                    <article class="deliver"><i aria-hidden="true"></i>
+                        <div>
+                            <h3 class="en">Monitoring &amp; Alerting</h3>
+                            <h3 class="ar">المراقبة والتنبيهات</h3>
+                            <h3 class="fr">Supervision et alertes</h3>
+                            <p class="en">Execution logs, connection health, and an alert route to the person
+                                responsible — from day one rather than at the end of the project.</p>
+                            <p class="ar">سجلات التنفيذ وحالة الاتصال ومسار تنبيه يصل إلى المسؤول — منذ اليوم
+                                الأول لا في نهاية المشروع.</p>
+                            <p class="fr">Journaux d'exécution, santé des connexions et un chemin d'alerte vers la
+                                personne responsable — dès le premier jour et non à la fin du projet.</p>
+                        </div>
+                    </article>
+                    <article class="deliver"><i aria-hidden="true"></i>
+                        <div>
+                            <h3 class="en">Security &amp; Access Controls</h3>
+                            <h3 class="ar">ضوابط الأمان والوصول</h3>
+                            <h3 class="fr">Contrôles de sécurité et d'accès</h3>
+                            <p class="en">Credential handling, data protection, and access boundaries for every
+                                connection added.</p>
+                            <p class="ar">إدارة بيانات الاعتماد وحماية البيانات وحدود الوصول لكل اتصال يُضاف.</p>
+                            <p class="fr">Gestion des identifiants, protection des données et frontières d'accès
+                                pour chaque connexion ajoutée.</p>
+                        </div>
+                    </article>
+                    <article class="deliver"><i aria-hidden="true"></i>
+                        <div>
+                            <h3 class="en">Reporting &amp; Notifications</h3>
+                            <h3 class="ar">التقارير والإشعارات</h3>
+                            <h3 class="fr">Rapports et notifications</h3>
+                            <p class="en">Scheduled reports, dashboards, and the notifications each workflow sends,
+                                delivered where the team already works.</p>
+                            <p class="ar">التقارير المجدولة ولوحات التحكم والإشعارات التي يرسلها كل مسار عمل، في
+                                المكان الذي يعمل فيه الفريق بالفعل.</p>
+                            <p class="fr">Rapports planifiés, tableaux de bord et notifications envoyées par chaque
+                                workflow, là où l'équipe travaille déjà.</p>
+                        </div>
+                    </article>
+                    <article class="deliver wide"><i aria-hidden="true"></i>
+                        <div>
+                            <h3 class="en">Documentation &amp; Handover</h3>
+                            <h3 class="ar">التوثيق وتسليم المشروع</h3>
+                            <h3 class="fr">Documentation et transmission</h3>
+                            <p class="en">A written record of every connection — systems, fields, triggers, failure
+                                behaviour, and how to change it — so the integration can be maintained, reviewed,
+                                or handed to another team without having to reverse-engineer it.</p>
+                            <p class="ar">سجل مكتوب لكل اتصال — الأنظمة والحقول والمشغّلات وسلوك الفشل وكيف
+                                يُعدَّل — بحيث يمكن صيانة التكامل أو مراجعته أو تسليمه إلى فريق آخر دون الحاجة إلى
+                                تحليل عكسي له.</p>
+                            <p class="fr">Une trace écrite de chaque connexion — systèmes, champs, déclencheurs,
+                                comportement en cas d'échec et mode de modification — afin que l'intégration puisse
+                                être maintenue, revue ou transmise à une autre équipe sans avoir à la comprendre
+                                à l'envers.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="section-cta"><a class="button ghost" href="#start"><span class="en">Contact us
+                                        →</span><span class="ar">اتصل بنا →</span><span class="fr">Nous contacter
+                                        →</span></a></div>
+            </div>
+        </section>
+
+        <!-- =========================== 07 PROCESS =========================== -->
+        <section class="section" id="process">
+            <div class="wrap">
+                <div class="section-head">
+                    <div class="eyebrow en">07 / PROCESS</div>
+                    <div class="eyebrow ar">07 / المنهجية</div>
+                    <div class="eyebrow fr">07 / MÉTHODE</div>
+                    <h2 class="section-title en">From duplicated work to running process.</h2>
+                    <h2 class="section-title ar">من العمل المكرر إلى عملية تعمل فعليًا.</h2>
+                    <h2 class="section-title fr">Du travail en double à un processus qui tourne.</h2>
+                    <p class="section-intro en">Five stages. The first two understand the process and decide what
+                        should be connected, the next two build it, and the last one runs it in production with
+                        monitoring in place.</p>
+                    <p class="section-intro ar">خمس مراحل. تفهم الأولى والثانية العملية وتقرّران ما ينبغي ربطه، وتبني
+                        التاليتان ذلك، والأخيرة تشغّله في بيئة الإنتاج مع المراقبة.</p>
+                    <p class="section-intro fr">Cinq étapes. Les deux premières comprennent le processus et décident de
+                        ce qui doit être relié, les deux suivantes le construisent, la dernière l'exploite en
+                        production avec la supervision en place.</p>
+                </div>
+                <div class="process five dense">
+                    <article class="step"><b>01</b>
+                        <h3 class="en">Map</h3>
+                        <h3 class="ar">نرسم العملية</h3>
+                        <h3 class="fr">Cartographier</h3>
+                        <p class="en">Understand the process before touching the systems.</p>
+                        <p class="ar">افهم العملية قبل لمس الأنظمة.</p>
+                        <p class="fr">Comprendre le processus avant de toucher aux systèmes.</p>
+                        <ul class="step-list">
+                            <li class="en">Systems in use</li>
+                            <li class="ar">الأنظمة المستخدمة</li>
+                            <li class="fr">Systèmes utilisés</li>
+                            <li class="en">Current workflow</li>
+                            <li class="ar">مسار العمل الحالي</li>
+                            <li class="fr">Processus actuel</li>
+                            <li class="en">Manual steps</li>
+                            <li class="ar">الخطوات اليدوية</li>
+                            <li class="fr">Étapes manuelles</li>
+                            <li class="en">Data entry points</li>
+                            <li class="ar">نقاط إدخال البيانات</li>
+                            <li class="fr">Points de saisie</li>
+                            <li class="en">Existing connections</li>
+                            <li class="ar">الاتصالات القائمة</li>
+                            <li class="fr">Connexions existantes</li>
+                            <li class="en">Failure history</li>
+                            <li class="ar">سجل الأعطال</li>
+                            <li class="fr">Historique des pannes</li>
+                            <li class="en">Volume and frequency</li>
+                            <li class="ar">الحجم والتكرار</li>
+                            <li class="fr">Volume et fréquence</li>
+                            <li class="en">Access constraints</li>
+                            <li class="ar">قيود الوصول</li>
+                            <li class="fr">Contraintes d'accès</li>
+                        </ul>
+                        <div class="step-out"><span class="en">Deliverable</span><span class="ar">المخرج</span><span
+                                class="fr">Livrable</span>
+                            <div class="en">Process map and system inventory.</div>
+                            <div class="ar">خريطة العملية وجرد الأنظمة.</div>
+                            <div class="fr">Carte du processus et inventaire des systèmes.</div>
+                        </div>
+                    </article>
+                    <article class="step"><b>02</b>
+                        <h3 class="en">Design</h3>
+                        <h3 class="ar">نصمّم</h3>
+                        <h3 class="fr">Concevoir</h3>
+                        <p class="en">Decide how the systems will talk to each other.</p>
+                        <p class="ar">قرّر كيف ستتحدث الأنظمة فيما بينها.</p>
+                        <p class="fr">Décider comment les systèmes communiqueront.</p>
+                        <ul class="step-list">
+                            <li class="en">Data ownership</li>
+                            <li class="ar">ملكية البيانات</li>
+                            <li class="fr">Propriété des données</li>
+                            <li class="en">Field mapping</li>
+                            <li class="ar">ربط الحقول</li>
+                            <li class="fr">Mappage des champs</li>
+                            <li class="en">Sync direction</li>
+                            <li class="ar">اتجاه المزامنة</li>
+                            <li class="fr">Sens de synchronisation</li>
+                            <li class="en">Sync frequency</li>
+                            <li class="ar">تكرار المزامنة</li>
+                            <li class="fr">Fréquence de synchronisation</li>
+                            <li class="en">Triggers</li>
+                            <li class="ar">المشغّلات</li>
+                            <li class="fr">Déclencheurs</li>
+                            <li class="en">Business rules</li>
+                            <li class="ar">قواعد العمل</li>
+                            <li class="fr">Règles métier</li>
+                            <li class="en">Approval points</li>
+                            <li class="ar">نقاط الموافقة</li>
+                            <li class="fr">Points d'approbation</li>
+                            <li class="en">Failure strategy</li>
+                            <li class="ar">استراتيجية الفشل</li>
+                            <li class="fr">Stratégie d'échec</li>
+                        </ul>
+                        <div class="step-out"><span class="en">Deliverable</span><span class="ar">المخرج</span><span
+                                class="fr">Livrable</span>
+                            <div class="en">Integration architecture and data rules.</div>
+                            <div class="ar">بنية التكامل وقواعد البيانات.</div>
+                            <div class="fr">Architecture d'intégration et règles de données.</div>
+                        </div>
+                    </article>
+                    <article class="step"><b>03</b>
+                        <h3 class="en">Build</h3>
+                        <h3 class="ar">نبني</h3>
+                        <h3 class="fr">Construire</h3>
+                        <p class="en">Build the connections and the workflows.</p>
+                        <p class="ar">ابنِ الاتصالات ومسارات العمل.</p>
+                        <p class="fr">Construire les connexions et les workflows.</p>
+                        <ul class="step-list">
+                            <li class="en">Connectors</li>
+                            <li class="ar">الموصّلات</li>
+                            <li class="fr">Connecteurs</li>
+                            <li class="en">Sync logic</li>
+                            <li class="ar">منطق المزامنة</li>
+                            <li class="fr">Logique de synchronisation</li>
+                            <li class="en">Workflow steps</li>
+                            <li class="ar">خطوات المسار</li>
+                            <li class="fr">Étapes du workflow</li>
+                            <li class="en">Condition logic</li>
+                            <li class="ar">منطق الشروط</li>
+                            <li class="fr">Logique conditionnelle</li>
+                            <li class="en">Migration scripts</li>
+                            <li class="ar">سكربتات الترحيل</li>
+                            <li class="fr">Scripts de migration</li>
+                            <li class="en">Security</li>
+                            <li class="ar">الأمان</li>
+                            <li class="fr">Sécurité</li>
+                            <li class="en">Retries and queues</li>
+                            <li class="ar">إعادة المحاولة والصفوف</li>
+                            <li class="fr">Nouvelles tentatives et files</li>
+                            <li class="en">Logging</li>
+                            <li class="ar">التسجيل</li>
+                            <li class="fr">Journaux</li>
+                        </ul>
+                        <div class="step-out"><span class="en">Deliverable</span><span class="ar">المخرج</span><span
+                                class="fr">Livrable</span>
+                            <div class="en">Working connections and automated flows.</div>
+                            <div class="ar">اتصالات تعمل ومسارات مؤتمتة.</div>
+                            <div class="fr">Connexions fonctionnelles et flux automatisés.</div>
+                        </div>
+                    </article>
+                    <article class="step"><b>04</b>
+                        <h3 class="en">Prove</h3>
+                        <h3 class="ar">نتحقق</h3>
+                        <h3 class="fr">Vérifier</h3>
+                        <p class="en">Test it against real scenarios before it touches live data.</p>
+                        <p class="ar">اختبره على سيناريوهات حقيقية قبل أن يلمس بيانات حية.</p>
+                        <p class="fr">Le tester sur des scénarios réels avant qu'il ne touche aux données en
+                            production.</p>
+                        <ul class="step-list">
+                            <li class="en">Test scenarios</li>
+                            <li class="ar">سيناريوهات الاختبار</li>
+                            <li class="fr">Scénarios de test</li>
+                            <li class="en">Sandbox runs</li>
+                            <li class="ar">تشغيل في بيئة تجريبية</li>
+                            <li class="fr">Exécutions en bac à sable</li>
+                            <li class="en">Edge cases</li>
+                            <li class="ar">الحالات الحدّية</li>
+                            <li class="fr">Cas limites</li>
+                            <li class="en">Failure simulation</li>
+                            <li class="ar">محاكاة الأعطال</li>
+                            <li class="fr">Simulation de pannes</li>
+                            <li class="en">Volume checks</li>
+                            <li class="ar">فحص الأحجام</li>
+                            <li class="fr">Vérification des volumes</li>
+                            <li class="en">User acceptance</li>
+                            <li class="ar">قبول المستخدم</li>
+                            <li class="fr">Recette utilisateur</li>
+                            <li class="en">Rollback plan</li>
+                            <li class="ar">خطة التراجع</li>
+                            <li class="fr">Plan de retour arrière</li>
+                            <li class="en">Go-live checklist</li>
+                            <li class="ar">قائمة إطلاق</li>
+                            <li class="fr">Liste de mise en production</li>
+                        </ul>
+                        <div class="step-out"><span class="en">Deliverable</span><span class="ar">المخرج</span><span
+                                class="fr">Livrable</span>
+                            <div class="en">Tested integration ready for live use.</div>
+                            <div class="ar">تكامل مُختبر جاهز للاستخدام الحي.</div>
+                            <div class="fr">Intégration testée prête pour la production.</div>
+                        </div>
+                    </article>
+                    <article class="step"><b>05</b>
+                        <h3 class="en">Run</h3>
+                        <h3 class="ar">نُشغّل</h3>
+                        <h3 class="fr">Exploiter</h3>
+                        <p class="en">Keep it healthy, and adjust it as the process changes.</p>
+                        <p class="ar">حافظ على صحته وعدّله مع تغير العملية.</p>
+                        <p class="fr">Le maintenir en bon état et l'ajuster selon l'évolution du processus.</p>
+                        <ul class="step-list">
+                            <li class="en">Monitoring</li>
+                            <li class="ar">المراقبة</li>
+                            <li class="fr">Supervision</li>
+                            <li class="en">Alert routing</li>
+                            <li class="ar">توجيه التنبيهات</li>
+                            <li class="fr">Routage des alertes</li>
+                            <li class="en">Failure review</li>
+                            <li class="ar">مراجعة الأعطال</li>
+                            <li class="fr">Revue des pannes</li>
+                            <li class="en">New system versions</li>
+                            <li class="ar">إصدارات الأنظمة الجديدة</li>
+                            <li class="fr">Nouvelles versions</li>
+                            <li class="en">Process changes</li>
+                            <li class="ar">تغييرات العملية</li>
+                            <li class="fr">Évolutions du processus</li>
+                            <li class="en">Documentation</li>
+                            <li class="ar">التوثيق</li>
+                            <li class="fr">Documentation</li>
+                            <li class="en">Improvements</li>
+                            <li class="ar">التحسينات</li>
+                            <li class="fr">Améliorations</li>
+                        </ul>
+                        <div class="step-out"><span class="en">Deliverable</span><span class="ar">المخرج</span><span
+                                class="fr">Livrable</span>
+                            <div class="en">A monitored integration and handover record.</div>
+                            <div class="ar">تكامل تحت المراقبة وسجل تسليم.</div>
+                            <div class="fr">Une intégration supervisée et un dossier de transmission.</div>
+                        </div>
+                    </article>
+                </div>
+                <div class="section-cta"><a class="button ghost" href="#start"><span class="en">Contact us
+                                        →</span><span class="ar">اتصل بنا →</span><span class="fr">Nous contacter
+                                        →</span></a></div>
+            </div>
+        </section>
+
+        <!-- ========================== 08 OUTCOMES ========================== -->
+        <section class="section" id="outcomes">
+            <div class="wrap">
+                <div class="section-head">
+                    <div class="eyebrow en">08 / OUTCOMES</div>
+                    <div class="eyebrow ar">08 / النتائج</div>
+                    <div class="eyebrow fr">08 / RÉSULTATS</div>
+                    <h2 class="section-title en">What changes when systems start talking.</h2>
+                    <h2 class="section-title ar">ما الذي يتغير عندما تبدأ الأنظمة بالتحدث.</h2>
+                    <h2 class="section-title fr">Ce qui change quand les systèmes se parlent.</h2>
+                    <p class="section-intro en">These are the structural outcomes an integration can support. They
+                        describe what removing manual hand-offs makes possible, not a measured result. The time
+                        actually saved depends on your volume, your teams, and how the process runs today.</p>
+                    <p class="section-intro ar">هذه هي النتائج البنيوية التي يمكن للتكامل أن يدعمها. وهي تصف ما
+                        يتيحه إلغاء التسليم اليدوي، لا نتيجة مقاسة. أما الوقت الموفَّر فعليًا فيعتمد على حجمك
+                        وفرقك وكيف تسير العملية اليوم.</p>
+                    <p class="section-intro fr">Voici les résultats structurels qu'une intégration peut soutenir. Ils
+                        décrivent ce que la suppression des passages de main rend possible, pas un résultat mesuré. Le
+                        temps réellement économisé dépend de vos volumes, de vos équipes et du fonctionnement
+                        actuel du processus.</p>
+                </div>
+                <div class="out-grid">
+                    <article class="out">
+                        <div class="out-no">01</div>
+                        <h3 class="en">Less duplicate entry</h3>
+                        <h3 class="ar">إدخال أقل للتكرار</h3>
+                        <h3 class="fr">Moins de double saisie</h3>
+                        <p class="en">A record entered once in the system that owns it can reach the others without
+                            being retyped, which removes a whole category of typo and copy error.</p>
+                        <p class="ar">السجل المُدخل مرة واحدة في النظام الذي يملكه يمكن أن يصل إلى بقية الأنظمة دون
+                            إعادة كتابته، ما يزيل فئة كاملة من أخطاء الإدخال.</p>
+                        <p class="fr">Un enregistrement saisi une fois dans le système qui le détient peut rejoindre
+                            les autres sans être retapé, supprimant une catégorie entière d'erreurs de
+                            saisie.</p>
+                    </article>
+                    <article class="out">
+                        <div class="out-no">02</div>
+                        <h3 class="en">Faster hand-offs</h3>
+                        <h3 class="ar">تسليم أسرع بين الفرق</h3>
+                        <h3 class="fr">Passages de main plus rapides</h3>
+                        <p class="en">When a payment, shipment, or approval moves automatically, the next step
+                            starts without waiting for someone to notice and forward it.</p>
+                        <p class="ar">عندما تنتقل دفعة أو شحنة أو موافقة تلقائيًا، تبدأ الخطوة التالية دون انتظار
+                            شخص لا يلاحظها ويمرّرها.</p>
+                        <p class="fr">Lorsqu'un paiement, une expédition ou une approbation circule
+                            automatiquement, l'étape suivante démarre sans attendre que quelqu'un la remarque et la
+                            transmette.</p>
+                    </article>
+                    <article class="out">
+                        <div class="out-no">03</div>
+                        <h3 class="en">One view of the process</h3>
+                        <h3 class="ar">رؤية واحدة للعملية</h3>
+                        <h3 class="fr">Une seule vue du processus</h3>
+                        <p class="en">A single record and a single status, so the team and the customer read the
+                            same state rather than two versions of it.</p>
+                        <p class="ar">سجل واحد وحالة واحدة، فيقرأ الفريق والعميل الحالة نفسها لا نسختين منها.</p>
+                        <p class="fr">Un enregistrement et un statut uniques : l'équipe et le client lisent le même
+                            état, et non deux versions.</p>
+                    </article>
+                    <article class="out">
+                        <div class="out-no">04</div>
+                        <h3 class="en">Fewer missed steps</h3>
+                        <h3 class="ar">خطوات مفقودة أقل</h3>
+                        <h3 class="fr">Moins d'étapes manquées</h3>
+                        <p class="en">Rules that live in the workflow are applied every time, instead of depending
+                            on one person remembering them consistently.</p>
+                        <p class="ar">القواعد الموجودة في مسار العمل تُطبَّق في كل مرة، بدل الاعتماد على شخص واحد
+                            يتذكرها باستمرار.</p>
+                        <p class="fr">Les règles inscrites dans le workflow s'appliquent à chaque fois, au lieu de
+                            dépendre d'une seule personne qui les retiendrait sans exception.</p>
+                    </article>
+                    <article class="out">
+                        <div class="out-no">05</div>
+                        <h3 class="en">Better reporting</h3>
+                        <h3 class="ar">تقارير أدق</h3>
+                        <h3 class="fr">Des rapports plus fiables</h3>
+                        <p class="en">When the data is captured once, at its source, reports and dashboards can be
+                            read as a shared record rather than rebuilt from several exports.</p>
+                        <p class="ar">حين تُلتقط البيانات مرة واحدة عند مصدرها، يمكن قراءة التقارير ولوحات التحكم
+                            كسجل مشترك بدل إعادة بنائها من عدة تصديرات.</p>
+                        <p class="fr">Lorsque la donnée est capturée une fois, à sa source, rapports et tableaux de
+                            bord se lisent comme un enregistrement partagé plutôt que reconstruits à partir de
+                            plusieurs exports.</p>
+                    </article>
+                    <article class="out">
+                        <div class="out-no">06</div>
+                        <h3 class="en">A maintainable system</h3>
+                        <h3 class="ar">نظام قابل للصيانة</h3>
+                        <h3 class="fr">Un système maintenable</h3>
+                        <p class="en">Documented connections and monitored behaviour make the integration
+                            understandable to the next person, so it does not depend on one maintainer.</p>
+                        <p class="ar">الاتصالات الموثّقة والسلوك المراقَب يجعلان التكامل مفهومًا لمن يأتي بعدك، فلا
+                            يعتمد على صانع واحد.</p>
+                        <p class="fr">Des connexions documentées et un comportement supervisé rendent
+                            l'intégration compréhensible pour la personne suivante : elle ne dépend plus d'un seul
+                            mainteneur.</p>
+                    </article>
+                </div>
+                <p class="cap-note on-light en">The steps that need judgement stay human. A discount beyond a set
+                    threshold, a refund, a supplier exception — those remain explicit approval points in the
+                    workflow, with a person deciding. Automation here removes the copying and chasing, not the
+                    decision.</p>
+                <p class="cap-note on-light ar">الخطوات التي تحتاج حكمًا تبقى بشرية. خصم فوق حد محدد، أو استرداد
+                    مبلغ، أو استثناء مورد — تبقى نقاط موافقة صريحة في مسار العمل، شخص يقرر. الأتمتة هنا تزيل النسخ
+                    والمتابعة، لا القرار.</p>
+                <p class="cap-note on-light fr">Les étapes qui demandent du jugement restent humaines. Une remise au-delà
+                    d'un seuil, un remboursement, une exception fournisseur — cela demeure des points
+                    d'approbation explicites dans le workflow, avec une personne qui décide. L'automatisation
+                    supprime ici la copie et les relances, pas la décision.</p>
+                <div class="section-cta"><a class="button ghost" href="#start"><span class="en">Contact us
+                                        →</span><span class="ar">اتصل بنا →</span><span class="fr">Nous contacter
+                                        →</span></a></div>
+            </div>
+        </section>
+
+                <!-- ============================== 10 FAQ ============================== -->
+        <section class="section" id="faq">
+            <div class="wrap">
+                <div class="section-head">
+                    <div class="eyebrow en">09 / FAQ</div>
+                    <div class="eyebrow ar">09 / الأسئلة الشائعة</div>
+                    <div class="eyebrow fr">09 / FAQ</div>
+                    <h2 class="section-title en">Questions before we connect anything.</h2>
+                    <h2 class="section-title ar">أسئلة قبل أن نربط أي شيء.</h2>
+                    <h2 class="section-title fr">Les questions avant de connecter quoi que ce soit.</h2>
+                    <p class="section-intro en">The questions we are asked most often at the start of an integration
+                        project.</p>
+                    <p class="section-intro ar">الأسئلة التي تُطرح علينا أكثر في بداية مشروع تكامل.</p>
+                    <p class="section-intro fr">Les questions les plus fréquentes au démarrage d'un projet
+                        d'intégration.</p>
+                </div>
+                <div class="faq" data-faq>
+                    <div class="faq-item">
+                        <h3 class="faq-h">
+                            <button class="faq-q" type="button" id="faq1" aria-expanded="false"
+                                aria-controls="faq1-a"><span><span class="faq-no">01</span><span class="en">What is the
+                                        difference between an integration and automation?</span><span
+                                        class="ar">ما الفرق بين التكامل والأتمتة؟</span><span
+                                        class="fr">Quelle est la différence entre une intégration et une
+                                        automatisation ?</span></span><span class="faq-sign"
+                                    aria-hidden="true"></span></button>
+                        </h3>
+                        <div class="faq-a" id="faq1-a" role="region" aria-labelledby="faq1" hidden>
+                            <p class="en">An integration connects systems so that data moves between them without
+                                being retyped. Automation goes further: it uses those connections to run a
+                                process — a trigger, a rule, and an action — without someone performing each step
+                                by hand. Most projects need both, in that order.</p>
+                            <p class="ar">التكامل يربط الأنظمة بحيث تنتقل البيانات بينها دون إعادة كتابتها. أما
+                                الأتمتة فتسير أبعد من ذلك: تستخدم هذه الاتصالات لتشغيل عملية — مشغّل وقاعدة وإجراء —
+                                دون أن يؤدي أحد كل خطوة يدويًا. معظم المشاريع تحتاج إلى الاثنين بهذا الترتيب.</p>
+                            <p class="fr">Une intégration relie des systèmes afin que les données circulent entre
+                                eux sans être ressaisies. L'automatisation va plus loin : elle utilise ces
+                                connexions pour exécuter un processus — un déclencheur, une règle, une action —
+                                sans que quelqu'un fasse chaque étape à la main. La plupart des projets ont besoin
+                                des deux, dans cet ordre.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-h">
+                            <button class="faq-q" type="button" id="faq2" aria-expanded="false"
+                                aria-controls="faq2-a"><span><span class="faq-no">02</span><span class="en">Do our systems
+                                        need an API for this to work?</span><span class="ar">هل تحتاج أنظمتنا إلى واجهة
+                                        API ليعمل هذا؟</span><span class="fr">Nos systèmes ont-ils besoin d'une API
+                                        pour que cela fonctionne ?</span></span><span class="faq-sign"
+                                    aria-hidden="true"></span></button>
+                        </h3>
+                        <div class="faq-a" id="faq2-a" role="region" aria-labelledby="faq2" hidden>
+                            <p class="en">Not always. A modern API is the cleanest route, but scheduled database
+                                access, file exchange, or webhooks can work where no API is published. The
+                                connection method is chosen per system during discovery, based on what the software
+                                actually supports — not on what is easiest to implement.</p>
+                            <p class="ar">ليس دائمًا. واجهة API الحديثة هي الطريق الأنظف، لكن الوصول المجدول إلى
+                                قاعدة البيانات أو تبادل الملفات أو Webhooks قد ينجح حيث لا تُنشر واجهة. تُختار طريقة
+                                الاتصال لكل نظام أثناء الاستكشاف وفق ما يدعمه البرنامج فعليًا، لا وفق الأسهل تنفيذًا.</p>
+                            <p class="fr">Pas toujours. Une API moderne est la voie la plus propre, mais un accès
+                                planifié à la base, un échange de fichiers ou des webhooks peuvent fonctionner là où
+                                aucune API n'est publiée. La méthode est choisie par système pendant la
+                                découverte, selon ce que le logiciel prend réellement en charge — pas selon ce qui
+                                est le plus simple à implémenter.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-h">
+                            <button class="faq-q" type="button" id="faq3" aria-expanded="false"
+                                aria-controls="faq3-a"><span><span class="faq-no">03</span><span class="en">Can you
+                                        integrate with software that has no API?</span><span class="ar">هل يمكنكم التكامل
+                                        مع برنامج بلا واجهة API؟</span><span
+                                        class="fr">Pouvez-vous intégrer un logiciel sans API ?</span></span><span
+                                    class="faq-sign" aria-hidden="true"></span></button>
+                        </h3>
+                        <div class="faq-a" id="faq3-a" role="region" aria-labelledby="faq3" hidden>
+                            <p class="en">Yes, often. Older business software frequently exposes a database or
+                                exports files rather than an API, and a connection at that level is a legitimate
+                                answer. We will say so plainly if the system cannot be connected reliably, and
+                                explain what would have to change first — that is more useful than a connection that
+                                looks finished and loses data in production.</p>
+                            <p class="ar">نعم، غالبًا. فبرمجيات الأعمال الأقدم كثيرًا ما تتيح قاعدة بيانات أو
+                                تصديرات ملفات بدل واجهة API، والاتصال على ذلك المستوى إجابة مشروعة. سنقول ذلك بوضوح
+                                إذا تعذّر ربط النظام بموثوقية، ونشرح ما يلزم تغييره أولًا — وهو أنفع من اتصال يبدو
+                                مكتملًا ويفقد البيانات في بيئة الإنتاج.</p>
+                            <p class="fr">Oui, souvent. Les logiciels de gestion anciens exposent fréquemment une
+                                base de données ou des exports de fichiers plutôt qu'une API, et une connexion à ce
+                                niveau est une réponse légitime. Nous le dirons clairement si le système ne peut
+                                pas être connecté de façon fiable, et expliquer ce qui devrait changer d'abord —
+                                plus utile qu'une connexion qui paraît finie et perd des données en
+                                production.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-h">
+                            <button class="faq-q" type="button" id="faq4" aria-expanded="false"
+                                aria-controls="faq4-a"><span><span class="faq-no">04</span><span class="en">We already
+                                        have an integration that keeps failing. Can you help?</span><span class="ar">لدينا
+                                        تكامل قائم يفشل باستمرار. هل يمكنكم المساعدة؟</span><span
+                                        class="fr">Nous avons déjà une intégration qui échoue sans arrêt. Pouvez-vous
+                                        aider ?</span></span><span class="faq-sign" aria-hidden="true"></span></button>
+                        </h3>
+                        <div class="faq-a" id="faq4-a" role="region" aria-labelledby="faq4" hidden>
+                            <p class="en">Yes, and it is a common starting point. The first step is usually an
+                                assessment: what the connection was meant to do, where it fails, and what has
+                                already been tried. From there it may be a repair, a rebuild on the same
+                                interface, or a replacement. Sometimes the honest recommendation is to replace a
+                                connection that costs more to maintain than to rebuild.</p>
+                            <p class="ar">نعم، وهي نقطة انطلاق شائعة. والخطوة الأولى عادةً هي التقييم: ما المقصود من
+                                الاتصال، وأين يفشل، وما جُرّب بالفعل. ومن ثم قد يكون الأمر إصلاحًا، أو إعادة بناء
+                                على الواجهة نفسها، أو استبدالًا. وأحيانًا تكون التوصية الصادقة باستبدال اتصال يكلّف
+                                أكثر في الصيانة مما يكلّف إعادة بنائه.</p>
+                            <p class="fr">Oui, et c'est un point de départ fréquent. La première étape est
+                                généralement un audit : ce que la connexion devait faire, où elle échoue, ce qui
+                                a déjà été tenté. Ensuite, il peut s'agir d'une réparation, d'une refonte sur la
+                                même interface, ou d'un remplacement. Parfois, la recommandation honnête est de
+                                remplacer une connexion qui coûte plus cher à maintenir qu'à reconstruire.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-h">
+                            <button class="faq-q" type="button" id="faq5" aria-expanded="false"
+                                aria-controls="faq5-a"><span><span class="faq-no">05</span><span class="en">Should our
+                                        data sync in both directions?</span><span class="ar">هل يجب أن تتزامن بياناتنا
+                                        في الاتجاهين؟</span><span
+                                        class="fr">Nos données doivent-elles se synchroniser dans les deux
+                                        sens ?</span></span><span class="faq-sign" aria-hidden="true"></span></button>
+                        </h3>
+                        <div class="faq-a" id="faq5-a" role="region" aria-labelledby="faq5" hidden>
+                            <p class="en">It depends on which system owns the data. A two-way sync is right when each
+                                system is authoritative for different fields, and wrong when two systems both claim
+                                the same field and can disagree about it. In that case we define ownership and
+                                conflict rules explicitly — including whether a person resolves the conflict or the
+                                rule does.</p>
+                            <p class="ar">يعتمد ذلك على النظام الذي يملك البيانات. المزامنة ثنائية الاتجاه صحيحة حين
+                                يكون كل نظام مرجعًا لحقول مختلفة، وسليمة حين يدّعي نظامان الحقل نفسه ويختلفان فيه.
+                                في تلك الحالة نحدد الملكية وقواعد التعارض صراحة — بما في ذلك ما إذا كان الأمر يترك
+                                لشخص ما أم لقاعدة.</p>
+                            <p class="fr">Cela dépend du système qui détient la donnée. Une synchronisation
+                                bidirectionnelle convient quand chaque système fait autorité sur des champs
+                                différents, et convient moins quand deux systèmes revendiquent le même champ et
+                                peuvent diverger. Dans ce cas, nous définissons explicitement la propriété et les
+                                règles de conflit — y compris si une personne tranche, ou si c'est la règle.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-h">
+                            <button class="faq-q" type="button" id="faq6" aria-expanded="false"
+                                aria-controls="faq6-a"><span><span class="faq-no">06</span><span class="en">What happens
+                                        if a system is down or an API call fails?</span><span class="ar">ماذا يحدث إذا
+                                        تعطل نظام أو فشل استدعاء API؟</span><span
+                                        class="fr">Que se passe-t-il si un système est indisponible ou si un appel
+                                        d'API échoue ?</span></span><span class="faq-sign" aria-hidden="true"></span></button>
+                        </h3>
+                        <div class="faq-a" id="faq6-a" role="region" aria-labelledby="faq6" hidden>
+                            <p class="en">Failures are expected and are designed for. Transfers are retried with
+                                controlled backoff, messages that still fail are held rather than discarded, and the
+                                responsible person is alerted with enough detail to act. Nothing is meant to fail
+                                silently — an integration that loses a record quietly is worse than manual
+                                work.</p>
+                            <p class="ar">الأعطال متوقعة ويُصمَّم على أساسها. تُعاد المحاولة بتباعد متحكَّم فيه، وتُحفظ
+                                الرسائل التي تفشل بدل إهمالها، ويُنبَّه المسؤول بتفاصيل كافية للتصرف. لا يُفترض أن
+                                يفشل شيء بصمت — فتكامل يفقد سجلًا بهدوء أسوأ من العمل اليدوي.</p>
+                            <p class="fr">Les pannes sont attendues et la conception en tient compte. Les transferts
+                                sont retentés avec un back-off contrôlé, les messages qui échouent encore sont
+                                conservés plutôt que supprimés, et la personne responsable est alertée avec assez
+                                de détail pour agir. Rien ne doit échouer en silence — une intégration qui perd
+                                discrètement un enregistrement est pire qu'un travail manuel.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-h">
+                            <button class="faq-q" type="button" id="faq7" aria-expanded="false"
+                                aria-controls="faq7-a"><span><span class="faq-no">07</span><span class="en">How much of our
+                                        process can be automated?</span><span class="ar">كم من عمليتنا يمكن
+                                        أتمتته؟</span><span class="fr">Quelle part de notre processus peut être
+                                        automatisée ?</span></span><span class="faq-sign"
+                                    aria-hidden="true"></span></button>
+                        </h3>
+                        <div class="faq-a" id="faq7-a" role="region" aria-labelledby="faq7" hidden>
+                            <p class="en">That is decided with you, process by process, during discovery — and the
+                                answer is usually a mix. Repetitive hand-offs are good candidates. Steps that
+                                carry judgement — a discount beyond a threshold, a refund, a supplier exception —
+                                are usually kept with a person and built as explicit approval points, so the
+                                decision stays human while the copying around it does not.</p>
+                            <p class="ar">يُقرَّر ذلك معك عمليةً تلو الأخرى أثناء الاستكشاف — والإجابة عادةً مزيج.
+                                فالتسليمات المتكررة مرشحة جيدة. أما الخطوات التي تحمل حكمًا — خصم فوق حد، أو
+                                استرداد، أو استثناء مورد — فتُبقي عادةً مع شخص وتُبنى كنقاط موافقة صريحة، فيبقى
+                                القرار بشريًا ولا يبقى النسخ.</p>
+                            <p class="fr">Cela se décide avec vous, processus par processus, pendant la
+                                découverte — et la réponse est généralement mixte. Les passages de main
+                                répétitifs sont de bons candidats. Les étapes qui portent du jugement — une remise
+                                au-delà d'un seuil, un remboursement, une exception fournisseur — restent
+                                généralement avec une personne et deviennent des points d'approbation explicites :
+                                la décision reste humaine, la copie disparaît.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-h">
+                            <button class="faq-q" type="button" id="faq8" aria-expanded="false"
+                                aria-controls="faq8-a"><span><span class="faq-no">08</span><span class="en">Can we start
+                                        with one connection and add more later?</span><span class="ar">هل يمكننا البدء
+                                        باتصال واحد وإضافة المزيد لاحقًا؟</span><span
+                                        class="fr">Pouvons-nous commencer par une connexion et en ajouter d'autres
+                                        plus tard ?</span></span><span class="faq-sign"
+                                    aria-hidden="true"></span></button>
+                        </h3>
+                        <div class="faq-a" id="faq8-a" role="region" aria-labelledby="faq8" hidden>
+                            <p class="en">Yes, and it is often the better approach. The first connection establishes
+                                the field mapping, the error handling, and the monitoring, and later connections
+                                reuse that foundation at a lower cost. The order is chosen by value: the connection
+                                that removes the most manual work usually comes first.</p>
+                            <p class="ar">نعم، وغالبًا ما يكون ذلك الأفضل. يثبت الاتصال الأول ربط الحقول ومعالجة
+                                الأخطاء والمراقبة، وتعيد الاتصالات التالية الاستفادة من تلك القاعدة بتكلفة أقل.
+                                ويُختار الترتيب حسب القيمة: الاتصال الذي يلغي أكثر عمل يدوي يأتي أولًا عادةً.</p>
+                            <p class="fr">Oui, et c'est souvent la meilleure approche. La première connexion établit
+                                le mappage des champs, la gestion des erreurs et la supervision, et les
+                                suivantes réutilisent ce socle à moindre coût. L'ordre est choisi par valeur : la
+                                connexion qui supprime le plus de travail manuel vient en premier.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-h">
+                            <button class="faq-q" type="button" id="faq9" aria-expanded="false"
+                                aria-controls="faq9-a"><span><span class="faq-no">09</span><span class="en">What do you
+                                        need from us to start?</span><span class="ar">ما الذي تحتاجونه منا للبدء؟</span><span
+                                        class="fr">De quoi avez-vous besoin de notre part pour commencer
+                                        ?</span></span><span class="faq-sign" aria-hidden="true"></span></button>
+                        </h3>
+                        <div class="faq-a" id="faq9-a" role="region" aria-labelledby="faq9" hidden>
+                            <p class="en">Access to the systems involved, someone who knows the current process well
+                                enough to answer questions about it, and a clear decision on who owns which data.
+                                For a system without an API, access to its database or export files. That is
+                                usually the whole requirement to begin.</p>
+                            <p class="ar">الوصول إلى الأنظمة المعنية، وشخص يعرف العملية الحالية بما يكفي للإجابة عن
+                                أسئلتها، وقرار واضح حول ملكية كل بيانات. وبالنسبة لنظام بلا واجهة API، فيلزم الوصول
+                                إلى قاعدة بياناته أو ملفات التصدير. وعادةً ما هذا كامل المتطلبات للبدء.</p>
+                            <p class="fr">Un accès aux systèmes concernés, quelqu'un qui connaît assez bien le
+                                processus actuel pour y répondre, et une décision claire sur la propriété de
+                                chaque donnée. Pour un système sans API, un accès à sa base ou à ses exports.
+                                C'est généralement tout ce qu'il faut pour commencer.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-h">
+                            <button class="faq-q" type="button" id="faq10" aria-expanded="false"
+                                aria-controls="faq10-a"><span><span class="faq-no">10</span><span class="en">How is an
+                                        integration maintained after launch?</span><span class="ar">كيف يُصان التكامل بعد
+                                        الإطلاق؟</span><span
+                                        class="fr">Comment une intégration est-elle maintenue après la mise en
+                                        ligne ?</span></span><span class="faq-sign" aria-hidden="true"></span></button>
+                        </h3>
+                        <div class="faq-a" id="faq10-a" role="region" aria-labelledby="faq10" hidden>
+                            <p class="en">It has to be maintainable by someone other than the person who built
+                                it. That means documented connections — systems, fields, triggers, and failure
+                                behaviour — plus monitoring and an alert route that work without supervision. When
+                                a system updates or the process changes, the change is made in the workflow, not
+                                by a workaround held in someone's head.</p>
+                            <p class="ar">يجب أن يكون قابلًا للصيانة من شخص غير من بناه. وهذا يعني اتصالات موثّقة —
+                                الأنظمة والحقول والمشغّلات وسلوك الفشل — إضافة إلى مراقبة ومسار تنبيه يعملان دون
+                                إشراف. وحين يُحدَّث نظام أو تتغير العملية، يجري التعديل في مسار العمل لا بحيلة
+                                محفوظة في ذهن أحد.</p>
+                            <p class="fr">Elle doit être maintenable par quelqu'un d'autre que la personne qui l'a
+                                construite. Cela signifie des connexions documentées — systèmes, champs,
+                                déclencheurs, comportement en cas d'échec — plus une supervision et un chemin
+                                d'alerte qui fonctionnent sans surveillance directe. Lorsqu'un système évolue ou
+                                que le processus change, la modification se fait dans le workflow, pas par un
+                                contournement que quelqu'un garde en tête.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-cta"><a class="button ghost" href="#start"><span class="en">Contact us
+                                        →</span><span class="ar">اتصل بنا →</span><span class="fr">Nous contacter
+                                        →</span></a></div>
+            </div>
+        </section>
+
+        <!-- ========================= 11 START A PROJECT ========================= -->
+        <section class="contact svc-contact" id="start">
+            <div class="wrap contact-grid">
+                <div>
+                    <div class="eyebrow en">10 / START A PROJECT</div>
+                    <div class="eyebrow ar">10 / ابدأ مشروعًا</div>
+                    <div class="eyebrow fr">10 / DÉMARRER UN PROJET</div>
+                    <h2 class="en">Tell us which systems should stop talking past each other.</h2>
+                    <h2 class="ar">أخبرنا بأي نظامين يجب أن يتوقفا عن التجاور بلا تواصل.</h2>
+                    <h2 class="fr">Dites-nous quels systèmes devraient cesser de s'ignorer.</h2>
+                    <p class="en">Describe the process that runs today, the systems involved, and where the same
+                        information gets entered more than once. We'll start from the process and define the
+                        smallest useful integration from there.</p>
+                    <p class="ar">صِف العملية التي تسير اليوم، والأنظمة المعنية، والمواضع التي تُدخل فيها
+                        المعلومة نفسها أكثر من مرة. سنبدأ من العملية ونحدّد أصغر تكامل مفيد انطلاقًا منها.</p>
+                    <p class="fr">Décrivez le processus actuel, les systèmes impliqués et les endroits où la même
+                        information est saisie plus d'une fois. Nous partirons du processus pour définir la plus
+                        petite intégration utile.</p>
+                    <div class="actions"><a class="button" href="#brief"><span class="en">Start a
+                                conversation →</span><span class="ar">اتصل بنا →</span><span
+                                class="fr">Démarrer une conversation →</span></a></div>
+                    <p class="note en">Not sure which systems should be connected, or where the process should
+                        start? That is a fair question. The first step is a map of what you already run, and the
+                        connection decision follows from it rather than leading it.</p>
+                    <p class="note ar">لست متأكدًا أي الأنظمة ينبغي ربطها، أو من أين تبدأ العملية؟ هذا سؤال
+                        مشروع. فالخطوة الأولى خريطة لما تشغّله بالفعل، ويأتي قرار الربط بعدها لا قبلها.</p>
+                    <p class="note fr">Vous ne savez pas quels systèmes relier, ni par où commencer ? La question
+                        est légitime. La première étape est une carte de ce que vous exploitez déjà, et la décision
+                        de connexion en découle au lieu de la précéder.</p>
+                </div>
+                <aside class="contact-side" id="brief">
+                    <form class="contact-form" novalidate>
+                        <div class="field"><label for="cf-name"><span class="en">Full name</span><span class="ar">الاسم
+                                    الكامل</span><span class="fr">Nom complet</span></label><input id="cf-name"
+                                name="name" type="text" autocomplete="name" required
+                                data-ph="Your full name|اسمك الكامل|Votre nom complet"></div>
+                        <div class="field"><label for="cf-phone"><span class="en">Phone</span><span class="ar">رقم
+                                    الهاتف</span><span class="fr">Téléphone</span></label><input id="cf-phone"
+                                name="phone" type="tel" autocomplete="tel"
+                                data-ph="+00 000 000 000|+00 000 000 000|+33 6 00 00 00 00"></div>
+                        <div class="field"><label for="cf-email"><span class="en">Email</span><span
+                                class="ar">البريد الإلكتروني</span><span class="fr">E-mail</span></label><input
+                                id="cf-email" name="email" type="email" autocomplete="email" required
+                                data-ph="you@company.com|you@company.com|vous@entreprise.fr"></div>
+                        <div class="field"><label for="cf-focus"><span class="en">Primary focus</span><span
+                                class="ar">محور التركيز</span><span class="fr">Priorité principale</span></label><span
+                                class="sel"><select id="cf-focus" name="focus">
+                                    <option value="apps"
+                                        data-t="Custom Web &amp; Mobile Apps|تطبيقات الويب والجوال المخصصة|Applications Web &amp; Mobile sur mesure">
+                                        Custom Web &amp; Mobile Apps</option>
+                                    <option value="ecommerce" data-t="E-commerce|التجارة الإلكترونية|E-commerce">
+                                        E-commerce</option>
+                                    <option value="business-software"
+                                        data-t="Business Software|برمجيات الأعمال|Logiciels de gestion">Business
+                                        Software</option>
+                                    <option value="saas"
+                                        data-t="SaaS &amp; Digital Platforms|منصات SaaS والمنتجات الرقمية|SaaS &amp; Plateformes numériques">
+                                        SaaS &amp; Digital Platforms</option>
+                                    <option value="automation" selected
+                                        data-t="Automation &amp; Integrations|الأتمتة والتكاملات|Automatisation &amp; Intégrations">
+                                        Automation &amp; Integrations</option>
+                                    <option value="other" data-t="Other|أخرى|Autre">Other</option>
+                                </select></span></div>
+                        <div class="field"><label for="cf-message"><span class="en">Message</span><span
+                                class="ar">الرسالة</span><span class="fr">Message</span></label><textarea
+                                id="cf-message" name="message" rows="4" required
+                                data-ph="Tell us which systems need to work together, and what happens today…|أخبرنا بأي نظامين يجب أن يعملا معًا، وما يحدث اليوم…|Dites-nous quels systèmes doivent collaborer, et ce qui se passe aujourd'hui…"></textarea></div>
+                        <button class="button contact-submit" type="submit"><span class="en">Send
+                                message</span><span class="ar">إرسال الرسالة</span><span class="fr">Envoyer le
+                                message</span></button>
+                        <p class="sample-note en">This form is a starting point. Add an email address before
+                            launch.</p>
+                        <p class="sample-note ar">هذا النموذج نقطة بداية. أضف عنوان بريد إلكتروني قبل الإطلاق.</p>
+                        <p class="sample-note fr">Ce formulaire est un point de départ. Ajoutez une adresse e-mail
+                            avant la mise en ligne.</p>
+                    </form>
+                </aside>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="wrap">
+            <span class="mark-foot">
+                <svg viewBox="0 0 128 142" width="128" height="142" aria-hidden="true" focusable="false">
+                    <g transform="translate(20 20)">
+                        <path fill="#FFFFFF" d="M0 0H61L88 28L75 46H30L0 18Z" />
+                        <path fill="#FFFFFF" d="M30 56H75L88 74L61 102H0V84Z" />
+                        <path fill="#3157FF" d="M0 25L30 51L0 77Z" />
+                        <path fill="none" stroke="#111318" stroke-width="3" stroke-linejoin="miter"
+                            d="M0 20L36 52L0 82" />
+                    </g>
+                </svg>
+            </span>
+            <span>© BITA AGENCY</span><span class="en">DIGITAL SOLUTIONS / 2026</span><span class="ar">حلول رقمية /
+                2026</span><span class="fr">SOLUTIONS DIGITALES / 2026</span>
+        </div>
+    </footer>
+    <script src="../../assets/js/bita.js"></script>
+</body>
+
+</html>

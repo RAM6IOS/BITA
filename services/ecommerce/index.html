@@ -1,0 +1,1560 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <script>
+        /* The chosen language is stored so it follows the reader across pages.
+           It is applied here, before the stylesheet renders, because applying
+           it later would paint the English copy first and then swap every
+           string, which reads as a flash and shifts the layout. */
+        try {
+            var bitaLang = localStorage.getItem('bita-lang');
+            if (bitaLang === 'en' || bitaLang === 'ar' || bitaLang === 'fr') {
+                var bitaRoot = document.documentElement;
+                bitaRoot.dataset.lang = bitaLang;
+                bitaRoot.lang = bitaLang;
+                bitaRoot.dir = bitaLang === 'ar' ? 'rtl' : 'ltr';
+            }
+        } catch (e) { }
+    </script>
+    <title>E-commerce Development &amp; Solutions | BITA Agency</title>
+    <meta name="description"
+        content="BITA designs and builds e-commerce experiences around your products, customers, checkout, payments, orders, operations, and integrations.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="E-commerce Development &amp; Solutions | BITA Agency">
+    <meta property="og:description"
+        content="BITA designs and builds e-commerce experiences around your products, customers, checkout, payments, orders, operations, and integrations.">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+    <link rel="stylesheet" href="../../assets/css/bita.css">
+    <link rel="stylesheet" href="../../assets/css/service.css">
+    <script type="application/json" id="page-meta">
+        {
+            "titles": {
+                "en": "E-commerce Development & Solutions | BITA Agency",
+                "ar": "تطوير وحلول التجارة الإلكترونية | BITA",
+                "fr": "Développement & Solutions E-commerce | BITA"
+            },
+            "descriptions": {
+                "en": "BITA designs and builds e-commerce experiences around your products, customers, checkout, payments, orders, operations, and integrations.",
+                "ar": "تصمم BITA وتبني تجارب تجارة إلكترونية حول منتجاتك وعملائك ومسار الدفع والمدفوعات والطلبات والعمليات والتكاملات.",
+                "fr": "BITA conçoit et développe des expériences e-commerce autour de vos produits, vos clients, le tunnel d'achat, les paiements, les commandes, les opérations et les intégrations."
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="wrap">
+            <a class="logo" href="../../index.html" data-i18n="BITA Digital Solutions|BITA للحلول الرقمية|BITA Solutions digitales"
+                aria-label="BITA Digital Solutions">
+                <svg viewBox="0 0 450 110" width="450" height="110" aria-hidden="true" focusable="false">
+                    <g transform="translate(20 4) scale(.93)">
+                        <path fill="#111318" d="M0 0H61L88 28L75 46H30L0 18Z" />
+                        <path fill="#111318" d="M30 56H75L88 74L61 102H0V84Z" />
+                        <path fill="#3157FF" d="M0 25L30 51L0 77Z" />
+                        <path fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="miter"
+                            d="M0 20L36 52L0 82" />
+                    </g>
+                    <g transform="translate(130 17) scale(1.05)" fill="#111318">
+                        <path
+                            d="M0 0H34L44 10V28L36 35L46 43V64L35 74H0V0ZM12 12V29H30L33 26V15L30 12H12ZM12 41V62H31L34 59V46L31 41H12Z" />
+                        <path d="M55 0H68V74H55Z" />
+                        <path d="M77 0H125V12H108V74H95V12H77Z" />
+                        <path d="M150 0H164L188 74H175L170 59H144L139 74H126L150 0ZM157 16L148 47H166L157 16Z" />
+                    </g>
+                </svg>
+            </a>
+            <nav class="nav" data-i18n="Primary navigation|التنقل الرئيسي|Navigation principale"
+                aria-label="Primary navigation"><a class="nav-link" href="../../index.html#services"><span class="en">Services</span><span
+                        class="ar">الخدمات</span><span class="fr">Services</span></a><a class="nav-link"
+                    href="../../index.html#solutions"><span class="en">Solutions</span><span class="ar">الحلول</span><span
+                        class="fr">Solutions</span></a><a class="nav-link" href="../../index.html#process"><span
+                        class="en">Process</span><span class="ar">المنهجية</span><span
+                        class="fr">Méthode</span></a><a class="nav-link" href="../../index.html#about"><span
+                        class="en">About</span><span class="ar">من نحن</span><span
+                        class="fr">À propos</span></a><a class="nav-link" href="../../index.html#contact"><span
+                        class="en">Contact</span><span class="ar">تواصل</span><span class="fr">Contact</span></a>
+                <div class="lang" role="group" data-i18n="Language|اللغة|Langue" aria-label="Language"><button
+                        class="active" data-lang="en" lang="en">EN</button><button data-lang="ar"
+                        lang="ar">AR</button><button data-lang="fr" lang="fr">FR</button></div>
+            </nav><a class="menu" href="../../index.html#contact" style="text-decoration:none;color:inherit"
+                data-i18n="Jump to contact|الانتقال إلى التواصل|Accéder à la section contact"
+                aria-label="Jump to contact">↗</a>
+        </div>
+    </header>
+    <main>
+        <div class="svc-breadcrumb">
+            <div class="wrap"><a class="crumb" href="../../index.html#services"><span aria-hidden="true">←</span><span
+                        class="en">All services</span><span class="ar">كل الخدمات</span><span
+                        class="fr">Tous les services</span></a></div>
+        </div>
+
+        <!-- ============================== 01 HERO ============================== -->
+        <section class="svc-hero">
+            <div class="wrap svc-hero-grid">
+                <div>
+                    <div class="eyebrow en">01 / E-COMMERCE</div>
+                    <div class="eyebrow ar">01 / التجارة الإلكترونية</div>
+                    <div class="eyebrow fr">01 / E-COMMERCE</div>
+                    <h1 class="en">E-commerce experiences built around how your customers buy.</h1>
+                    <h1 class="ar">تجارب تجارة إلكترونية مبنية حول طريقة شراء عملائك.</h1>
+                    <h1 class="fr">Des expériences e-commerce conçues autour de la manière dont vos clients achètent.</h1>
+                    <p class="en">We design and build online commerce experiences that connect product discovery,
+                        checkout, payments, orders, and operations into one clear system.</p>
+                    <p class="ar">نصمم ونبني تجارب تجارة إلكترونية تربط اكتشاف المنتج ومسار الدفع والمدفوعات والطلبات
+                        والعمليات في نظام واحد واضح.</p>
+                    <p class="fr">Nous concevons et développons des expériences commerce en ligne qui relient la
+                        découverte des produits, le paiement, les transactions, les commandes et les opérations dans un
+                        seul système clair.</p>
+                    <div class="actions"><a class="button primary" href="#start"><span class="en">Start a
+                                conversation →</span><span class="ar">اتصل بنا →</span><span
+                                class="fr">Démarrer une conversation →</span></a></div>
+                </div>
+                <div class="svc-art" role="img"
+                    data-i18n="Composed commerce system: a desktop storefront, a mobile product page, and a fulfillment pipeline driven by one order flow|نظام تجارة متكامل: واجهة متجر على سطح المكتب وصفحة منتج على الجوال وخط تنفيذ تدفعه رحلة طلب واحدة|Un système commerce composé : une boutique sur ordinateur, une fiche produit mobile et un pipeline de préparation alimentés par un même flux de commande"
+                    aria-label="Composed commerce system: a desktop storefront, a mobile product page, and a fulfillment pipeline driven by one order flow">
+                    <div class="gridlines"></div>
+                    <div class="wedge" aria-hidden="true"></div>
+                    <div class="art-frame" aria-hidden="true"></div>
+
+                    <div class="art-window" aria-hidden="true">
+                        <div class="art-chrome"><i></i><i></i><i></i><span class="art-url"></span></div>
+                        <div class="shop-body">
+                            <div class="shop-nav"><span></span><span></span><span></span><span></span><b></b></div>
+                            <div class="shop-filters"><span></span><span></span><span></span><em></em></div>
+                            <div class="shop-pgrid">
+                                <div class="shop-card">
+                                    <div class="shop-thumb"></div>
+                                    <div class="shop-meta"><span></span><b></b></div>
+                                    <div class="shop-buy"></div>
+                                </div>
+                                <div class="shop-card alt">
+                                    <div class="shop-thumb"></div>
+                                    <div class="shop-meta"><span></span><b></b></div>
+                                    <div class="shop-buy"></div>
+                                </div>
+                                <div class="shop-card">
+                                    <div class="shop-thumb"></div>
+                                    <div class="shop-meta"><span></span><b></b></div>
+                                    <div class="shop-buy"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="art-mobile shop" aria-hidden="true">
+                        <div class="art-status"><span></span><span></span></div>
+                        <div class="shop-mhead"><b></b><em></em></div>
+                        <div class="shop-mbody">
+                            <div class="shop-mimg"></div>
+                            <div class="shop-mline"><span></span><b></b></div>
+                            <div class="shop-mchips"><i></i><i class="on"></i><i></i><i></i></div>
+                            <div class="shop-mcta"></div>
+                        </div>
+                        <div class="shop-mcart"><span></span><b></b></div>
+                    </div>
+
+                    <div class="art-ops tall" aria-hidden="true">
+                        <small><span class="en">Fulfillment</span><span class="ar">التنفيذ</span><span
+                                class="fr">Préparation</span></small>
+                        <div class="shop-flow">
+                            <div><span class="en">Paid</span><span class="ar">مدفوع</span><span
+                                    class="fr">Payé</span><i></i></div>
+                            <div class="on"><span class="en">Packed</span><span class="ar">مُجهّز</span><span
+                                    class="fr">Préparé</span><i></i></div>
+                            <div><span class="en">Shipped</span><span class="ar">مُشحن</span><span
+                                    class="fr">Expédié</span><i></i></div>
+                        </div>
+                        <div class="bars"><i style="height:38%"></i><i style="height:56%"></i><i
+                                style="height:44%"></i><i style="height:72%"></i><i
+                                style="height:64%"></i><i style="height:100%"></i></div>
+                    </div>
+
+                    <div class="corner-note">COMMERCE SYSTEM / 02</div>
+                    <div class="axis">DISCOVERY → CART → ORDER → FULFILLMENT</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================= 02 BUSINESS NEED ========================= -->
+        <section class="section" id="need">
+            <div class="wrap">
+                <div class="section-head">
+                    <div class="eyebrow en">02 / BUSINESS NEED</div>
+                    <div class="eyebrow ar">02 / حاجة العمل</div>
+                    <div class="eyebrow fr">02 / BESOIN MÉTIER</div>
+                    <h2 class="section-title en">Selling online is more than putting products on a website.</h2>
+                    <h2 class="section-title ar">البيع عبر الإنترنت أكثر من مجرد عرض منتجات على موقع.</h2>
+                    <h2 class="section-title fr">Vendre en ligne ne se résume pas à mettre des produits sur un site web.</h2>
+                    <p class="section-intro en">A strong commerce experience has to make products easy to discover,
+                        purchasing easy to complete, and operations easy to manage. When these parts are disconnected,
+                        the customer experience and the business operations suffer together.</p>
+                    <p class="section-intro ar">تجربة التجارة القوية تجعل اكتشاف المنتجات سهلًا وإتمام الشراء سهلًا
+                        وإدارة العمليات سهلة. وعندما تنفصل هذه الأجزاء، تتضرر تجربة العملاء وعمليات العمل معًا.</p>
+                    <p class="section-intro fr">Une expérience commerce solide doit rendre les produits faciles à
+                        découvrir, l'achat facile à finaliser et les opérations faciles à piloter. Lorsque ces éléments
+                        sont déconnectés, l'expérience client et les opérations métier en souffrent ensemble.</p>
+                </div>
+                <div class="need-list">
+                    <article class="need">
+                        <div class="need-no">01</div>
+                        <div>
+                            <h3 class="en">Your store does not reflect how you sell</h3>
+                            <h3 class="ar">متجرك لا يعكس طريقة بيعك</h3>
+                            <h3 class="fr">Votre boutique ne reflète pas votre façon de vendre</h3>
+                            <p class="en">Your products, pricing, customer journey, delivery model, or purchasing
+                                process do not fit comfortably inside a generic storefront.</p>
+                            <p class="ar">منتجاتك أو أسعارك أو رحلة العميل أو نموذج التوصيل أو عملية الشراء لا تناسب
+                                متجرًا عامًا بشكل مريح.</p>
+                            <p class="fr">Vos produits, vos prix, le parcours client, votre modèle de livraison ou
+                                votre processus d'achat ne s'intègrent pas correctement dans une boutique
+                                générique.</p>
+                        </div>
+                    </article>
+                    <article class="need">
+                        <div class="need-no">02</div>
+                        <div>
+                            <h3 class="en">Customers struggle to find and buy</h3>
+                            <h3 class="ar">صعوبة لدى العملاء في العثور على المنتجات وإتمام الشراء</h3>
+                            <h3 class="fr">Les clients peinent à trouver et à acheter</h3>
+                            <p class="en">Customers need clearer product information, better navigation, simpler
+                                checkout, and a more trustworthy path from discovery to purchase.</p>
+                            <p class="ar">يحتاج العملاء إلى معلومات أوضح عن المنتج، وتنقل أفضل، ومسار شراء أبسط، وطريق
+                                أكثر موثوقية من الاكتشاف إلى الشراء.</p>
+                            <p class="fr">Les clients ont besoin d'informations produit plus claires, d'une meilleure
+                                navigation, d'un paiement plus simple et d'un parcours plus fiable entre la découverte
+                                et l'achat.</p>
+                        </div>
+                    </article>
+                    <article class="need">
+                        <div class="need-no">03</div>
+                        <div>
+                            <h3 class="en">Orders and operations are disconnected</h3>
+                            <h3 class="ar">الطلبات والعمليات منفصلة</h3>
+                            <h3 class="fr">Commandes et opérations déconnectées</h3>
+                            <p class="en">Products, inventory, orders, payments, shipping, and customer information
+                                live across separate systems and require unnecessary manual work.</p>
+                            <p class="ar">تعيش المنتجات والمخزون والطلبات والمدفوعات والشحن ومعلومات العملاء في أنظمة
+                                منفصلة وتتطلب عملًا يدويًا غير ضروري.</p>
+                            <p class="fr">Produits, stocks, commandes, paiements, expéditions et informations clients
+                                vivent dans des systèmes séparés et exigent un travail manuel inutile.</p>
+                        </div>
+                    </article>
+                    <article class="need">
+                        <div class="need-no">04</div>
+                        <div>
+                            <h3 class="en">The current store is limiting the business</h3>
+                            <h3 class="ar">المتجر الحالي يحدّ من نمو العمل</h3>
+                            <h3 class="fr">La boutique actuelle limite l'entreprise</h3>
+                            <p class="en">Your existing store has become difficult to extend, integrate, manage, or
+                                adapt as your catalogue and business grow.</p>
+                            <p class="ar">أصبح متجرك الحالي صعب التوسعة أو التكامل أو الإدارة أو التكيف مع نمو
+                                الكتالوج وتوسّع نطاق عملك.</p>
+                            <p class="fr">Votre boutique actuelle est devenue difficile à étendre, à connecter, à gérer
+                                ou à adapter à mesure que votre catalogue et votre activité grandissent.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="section-cta"><a class="button ghost" href="#start"><span class="en">Contact us
+                                        →</span><span class="ar">اتصل بنا →</span><span class="fr">Nous contacter
+                                        →</span></a></div>
+            </div>
+        </section>
+
+        <!-- =========================== 03 SOLUTION =========================== -->
+        <section class="section" id="solution">
+            <div class="wrap">
+                <div class="section-head">
+                    <div class="eyebrow en">03 / THE SOLUTION</div>
+                    <div class="eyebrow ar">03 / الحل</div>
+                    <div class="eyebrow fr">03 / LA SOLUTION</div>
+                    <h2 class="section-title en">A commerce system designed around your products, customers, and operations.</h2>
+                    <h2 class="section-title ar">نظام تجارة مصمم حول منتجاتك وعملائك وعملياتك.</h2>
+                    <h2 class="section-title fr">Un système commerce conçu autour de vos produits, vos clients et vos opérations.</h2>
+                    <p class="section-intro en">BITA brings together commerce strategy, UX/UI design, development,
+                        integrations, and operational workflows to create an e-commerce experience that works for both
+                        the customer and the team behind the store. From product discovery to checkout and fulfillment,
+                        every part is considered as one connected journey.</p>
+                    <p class="section-intro ar">تجمع BITA بين استراتيجية التجارة وتصميم تجربة المستخدم وتطوير البرمجيات
+                        والتكاملات ومسارات العمل التشغيلية لإنشاء تجربة تجارة إلكترونية تعمل للعميل وللفريق خلف المتجر
+                        معًا. ومن اكتشاف المنتج إلى مسار الدفع والتنفيذ، يُعامَل كل جزء ك رحلة واحدة متصلة.</p>
+                    <p class="section-intro fr">BITA réunit stratégie commerce, design UX/UI, développement,
+                        intégrations et processus opérationnels pour créer une expérience e-commerce qui fonctionne
+                        pour le client comme pour l'équipe derrière la boutique. De la découverte des produits au
+                        paiement et à la livraison, chaque élément est pensé comme un parcours unique et connecté.</p>
+                </div>
+                <div class="solutions svc-solutions">
+                    <article class="solution">
+                        <div class="num">01</div>
+                        <h3 class="en">Storefront Experience</h3>
+                        <h3 class="ar">تجربة المتجر</h3>
+                        <h3 class="fr">Expérience de la boutique</h3>
+                        <p class="en">A clear and responsive shopping experience that helps customers discover,
+                            understand, compare, and purchase products.</p>
+                        <p class="ar">تجربة تسوّق واضحة ومتجاوبة تساعد العملاء على اكتشاف المنتجات وفهمها ومقارنتها وشرائها.</p>
+                        <p class="fr">Une expérience d'achat claire et réactive qui aide les clients à découvrir,
+                            comprendre, comparer et acheter des produits.</p>
+                    </article>
+                    <article class="solution">
+                        <div class="num">02</div>
+                        <h3 class="en">Commerce Operations</h3>
+                        <h3 class="ar">عمليات التجارة</h3>
+                        <h3 class="fr">Opérations commerce</h3>
+                        <p class="en">Product, inventory, order, customer, pricing, and fulfillment workflows designed
+                            around the way the business operates.</p>
+                        <p class="ar">مسارات عمل للمنتجات والمخزون والطلبات والعملاء والتسعير والتنفيذ مصممة حول طريقة
+                            تشغيل العمل.</p>
+                        <p class="fr">Des processus produits, stocks, commandes, clients, tarifs et livraison conçus
+                            autour du fonctionnement réel de l'entreprise.</p>
+                    </article>
+                    <article class="solution">
+                        <div class="num">03</div>
+                        <h3 class="en">Payments &amp; Checkout</h3>
+                        <h3 class="ar">المدفوعات ومسار الدفع</h3>
+                        <h3 class="fr">Paiements et paiement</h3>
+                        <p class="en">Checkout and payment experiences designed around the target market, business
+                            model, and available payment methods.</p>
+                        <p class="ar">تجارب دفع ومدفوعات مصممة حول السوق المستهدف ونموذج العمل وطرق الدفع
+                            المتاحة.</p>
+                        <p class="fr">Des expériences de paiement conçues autour du marché cible, du modèle économique
+                            et des moyens de paiement disponibles.</p>
+                    </article>
+                    <article class="solution">
+                        <div class="num">04</div>
+                        <h3 class="en">Connected Commerce</h3>
+                        <h3 class="ar">تجارة متصلة</h3>
+                        <h3 class="fr">Commerce connecté</h3>
+                        <p class="en">Integrations that connect the store with shipping, ERP, CRM, accounting,
+                            analytics, marketplaces, or other business systems when required.</p>
+                        <p class="ar">تكاملات تربط المتجر مع الشحن وتخطيط موارد المؤسسات وإدارة علاقات العملاء
+                            والمحاسبة والتحليلات والمنصات أو غيرها من أنظمة الأعمال عند الحاجة.</p>
+                        <p class="fr">Des intégrations qui relient la boutique aux expéditions, à l'ERP, au CRM, à la
+                            comptabilité, à l'analytique, aux places de marché ou à d'autres systèmes métier, si
+                            nécessaire.</p>
+                    </article>
+                </div>
+
+                <!-- Commerce models: a subsection of 03, not a separate section -->
+                <div class="subhead">
+                    <div class="eyebrow en">COMMERCE MODELS</div>
+                    <div class="eyebrow ar">نماذج التجارة</div>
+                    <div class="eyebrow fr">MODÈLES COMMERCE</div>
+                    <h2 class="section-title en">Different businesses sell differently.</h2>
+                    <h2 class="section-title ar">الشركات المختلفة تبيع بطرق مختلفة.</h2>
+                    <h2 class="section-title fr">Les entreprises ne vendent pas toutes de la même façon.</h2>
+                    <p class="section-intro en">The models below are not a menu to pick from. They are ways of
+                        describing how a business actually sells.</p>
+                    <p class="section-intro ar">النماذج أدناه ليست قائمة تختار منها. إنها طرق لوصف طريقة بيع العمل
+                        فعليًا.</p>
+                    <p class="section-intro fr">Les modèles ci-dessous ne sont pas un menu à cocher. Ils servent à
+                        décrire la façon dont une entreprise vend réellement.</p>
+                </div>
+                <div class="models">
+                    <article class="model">
+                        <div class="model-code">B2C</div>
+                        <h3 class="en">Direct to consumer</h3>
+                        <h3 class="ar">مباشر للمستهلك</h3>
+                        <h3 class="fr">Vente directe au consommateur</h3>
+                        <p class="en">Direct-to-consumer stores built around product discovery, promotions, checkout,
+                            delivery, and customer experience.</p>
+                        <p class="ar">متاجر تبيع مباشرة للمستهلكين مبنية حول اكتشاف المنتج والعروض ومسار الدفع
+                            والتوصيل وتجربة العميل.</p>
+                        <p class="fr">Des boutiques en vente directe au consommateur, structurées autour de la
+                            découverte des produits, des promotions, du paiement, de la livraison et de l'expérience
+                            client.</p>
+                    </article>
+                    <article class="model">
+                        <div class="model-code">D2C</div>
+                        <h3 class="en">D2C brands</h3>
+                        <h3 class="ar">علامات تجارية D2C</h3>
+                        <h3 class="fr">Marques D2C</h3>
+                        <p class="en">Brand-led commerce experiences that combine product storytelling, merchandising,
+                            campaigns, and direct customer relationships.</p>
+                        <p class="ar">تجارات تقودها العلامة التجارية تجمع بين سرد المنتج وتنظيم الواجهة والحملات
+                            وعلاقات مباشرة مع العملاء.</p>
+                        <p class="fr">Des expériences commerce pilotées par la marque, combinant récit produit,
+                            merchandising, campagnes et relations directes avec les clients.</p>
+                    </article>
+                    <article class="model">
+                        <div class="model-code">B2B</div>
+                        <h3 class="en">B2B commerce</h3>
+                        <h3 class="ar">تجارة B2B</h3>
+                        <h3 class="fr">Commerce B2B</h3>
+                        <p class="en">Commerce experiences that can support business accounts, negotiated pricing,
+                            purchasing roles, quotations, repeat orders, and other wholesale workflows when required.</p>
+                        <p class="ar">تجارب تجارية تدعم الحسابات التجارية والأسعار المتفاوضة وأدوار الشراء وعروض
+                            الأسعار وطلبات التكرار وسير عمل الجملة الأخرى عند الحاجة.</p>
+                        <p class="fr">Des expériences commerce pouvant prendre en charge les comptes entreprises, les
+                            tarifs négociés, les rôles d'achat, les devis, les commandes récurrentes et d'autres
+                            processus de gros, si nécessaire.</p>
+                    </article>
+                    <article class="model">
+                        <div class="model-code">MP</div>
+                        <h3 class="en">Marketplace</h3>
+                        <h3 class="ar">منصة متعددة البائعين</h3>
+                        <h3 class="fr">Place de marché</h3>
+                        <p class="en">Multi-vendor commerce platforms with seller, product, order, and administration
+                            workflows where the business model requires them.</p>
+                        <p class="ar">منصات تجارية متعددة البائعين مع مسارات عمل للبائعين والمنتجات والطلبات
+                            والإدارة حين يتطلب نموذج العمل ذلك.</p>
+                        <p class="fr">Des plateformes commerce multi-vendeurs avec les processus vendeurs, produits,
+                            commandes et administration lorsque le modèle économique l'exige.</p>
+                    </article>
+                    <article class="model">
+                        <div class="model-code">SUB</div>
+                        <h3 class="en">Subscription commerce</h3>
+                        <h3 class="ar">تجارة بالاشتراك</h3>
+                        <h3 class="fr">Commerce par abonnement</h3>
+                        <p class="en">Recurring purchase experiences with subscription plans, renewals, and customer
+                            self-service where supported by the chosen commerce architecture.</p>
+                        <p class="ar">تجارب شراء متكررة بخطط اشتراك وتجديدات وخدمة ذاتية للعملاء حيث تدعمها بنية
+                            التجارة المختارة.</p>
+                        <p class="fr">Des expériences d'achat récurrent avec des plans d'abonnement, des
+                            renouvellements et un espace client, lorsque l'architecture commerce retenue le
+                            permet.</p>
+                    </article>
+                </div>
+                <p class="models-note en">These models are not automatically part of every project. The actual scope is
+                    defined during discovery, based on how the business sells and what its operations require.</p>
+                <p class="models-note ar">هذه النماذج ليست جزءًا تلقائيًا من كل مشروع. يُحدَّد النطاق الفعلي خلال مرحلة
+                    الاستكشاف بناءً على طريقة بيع العمل وما تتطلبه عملياته.</p>
+                <p class="models-note fr">Ces modèles ne font pas automatiquement partie de chaque projet. Le périmètre
+                    réel est défini pendant la phase de découverte, selon la façon dont l'entreprise vend et ce que ses
+                    opérations exigent.</p>
+                <div class="section-cta"><a class="button ghost" href="#start"><span class="en">Contact us
+                                        →</span><span class="ar">اتصل بنا →</span><span class="fr">Nous contacter
+                                        →</span></a></div>
+            </div>
+        </section>
+
+        <!-- ========================= 04 CAPABILITIES ========================= -->
+        <section class="section dark" id="capabilities">
+            <div class="wrap">
+                <div class="section-head">
+                    <div class="eyebrow en">04 / CAPABILITIES</div>
+                    <div class="eyebrow ar">04 / القدرات</div>
+                    <div class="eyebrow fr">04 / COMPÉTENCES</div>
+                    <h2 class="section-title en">Everything needed to turn browsing into buying — and buying into an operational workflow.</h2>
+                    <h2 class="section-title ar">كل ما يلزم لتحويل التصفح إلى شراء — والشراء إلى مسار عمل تشغيلي.</h2>
+                    <h2 class="section-title fr">Tout ce qu'il faut pour transformer la navigation en achat — et l'achat en processus opérationnel.</h2>
+                    <p class="section-intro en">A commerce stack is only useful when it holds together. These are the
+                        areas BITA covers, structured around the connected flow from catalogue to fulfillment.</p>
+                    <p class="section-intro ar">لا تفيد منظومة التجارة إلا حين تعمل ككتلة واحدة. وهذه هي المجالات التي
+                        تغطيها BITA، مهيكلة حول المسار المتصل من الكتالوج إلى التنفيذ.</p>
+                    <p class="section-intro fr">Une stack commerce n'est utile que si elle tient ensemble. Voici les
+                        domaines couverts par BITA, structurés autour du flux connecté, du catalogue à la
+                        livraison.</p>
+                </div>
+                <div class="cap-grid four dense">
+                    <article class="cap">
+                        <div class="cap-no">01</div>
+                        <h3 class="en">Storefront &amp; Product Discovery</h3>
+                        <h3 class="ar">المتجر واكتشاف المنتجات</h3>
+                        <h3 class="fr">Boutique et découverte produits</h3>
+                        <ul>
+                            <li class="en">Responsive storefronts</li>
+                            <li class="ar">متاجر متجاوبة</li>
+                            <li class="fr">Boutiques réactives</li>
+                            <li class="en">Product catalogues</li>
+                            <li class="ar">كتالوجات المنتجات</li>
+                            <li class="fr">Catalogues produits</li>
+                            <li class="en">Categories and collections</li>
+                            <li class="ar">الفئات والمجموعات</li>
+                            <li class="fr">Catégories et collections</li>
+                            <li class="en">Product variants</li>
+                            <li class="ar">خيارات المنتج</li>
+                            <li class="fr">Variantes produit</li>
+                            <li class="en">Product search</li>
+                            <li class="ar">البحث عن المنتجات</li>
+                            <li class="fr">Recherche produits</li>
+                            <li class="en">Filters</li>
+                            <li class="ar">عوامل التصفية</li>
+                            <li class="fr">Filtres</li>
+                            <li class="en">Product comparison where required</li>
+                            <li class="ar">مقارنة المنتجات عند الحاجة</li>
+                            <li class="fr">Comparaison de produits si nécessaire</li>
+                            <li class="en">Product pages</li>
+                            <li class="ar">صفحات المنتجات</li>
+                            <li class="fr">Fiches produits</li>
+                            <li class="en">Related products</li>
+                            <li class="ar">منتجات ذات صلة</li>
+                            <li class="fr">Produits associés</li>
+                            <li class="en">Promotional merchandising</li>
+                            <li class="ar">العرض الترويجي</li>
+                            <li class="fr">Merchandising promotionnel</li>
+                        </ul>
+                    </article>
+                    <article class="cap">
+                        <div class="cap-no">02</div>
+                        <h3 class="en">Cart &amp; Checkout</h3>
+                        <h3 class="ar">السلة ومسار الدفع</h3>
+                        <h3 class="fr">Panier et paiement</h3>
+                        <ul>
+                            <li class="en">Shopping cart</li>
+                            <li class="ar">سلة التسوق</li>
+                            <li class="fr">Panier d'achat</li>
+                            <li class="en">Guest checkout</li>
+                            <li class="ar">الدفع كزائر</li>
+                            <li class="fr">Paiement en tant qu'invité</li>
+                            <li class="en">Customer accounts</li>
+                            <li class="ar">حسابات العملاء</li>
+                            <li class="fr">Comptes clients</li>
+                            <li class="en">Checkout flows</li>
+                            <li class="ar">مسارات الدفع</li>
+                            <li class="fr">Parcours de paiement</li>
+                            <li class="en">Address management</li>
+                            <li class="ar">إدارة العناوين</li>
+                            <li class="fr">Gestion des adresses</li>
+                            <li class="en">Order summary</li>
+                            <li class="ar">ملخص الطلب</li>
+                            <li class="fr">Récapitulatif de commande</li>
+                            <li class="en">Discount codes</li>
+                            <li class="ar">أكواد الخصم</li>
+                            <li class="fr">Codes promo</li>
+                            <li class="en">Promotional rules</li>
+                            <li class="ar">قواعد العروض</li>
+                            <li class="fr">Règles promotionnelles</li>
+                            <li class="en">Trust and reassurance elements</li>
+                            <li class="ar">عناصر الثقة والطمأنة</li>
+                            <li class="fr">Éléments de confiance</li>
+                            <li class="en">Mobile-first checkout</li>
+                            <li class="ar">دفع يبدأ من الجوال</li>
+                            <li class="fr">Paiement mobile d'abord</li>
+                        </ul>
+                    </article>
+                    <article class="cap">
+                        <div class="cap-no">03</div>
+                        <h3 class="en">Payments</h3>
+                        <h3 class="ar">المدفوعات</h3>
+                        <h3 class="fr">Paiements</h3>
+                        <ul>
+                            <li class="en">Payment gateway integration</li>
+                            <li class="ar">تكامل بوابة الدفع</li>
+                            <li class="fr">Intégration d'une passerelle de paiement</li>
+                            <li class="en">Online card payments</li>
+                            <li class="ar">الدفع بالبطاقات عبر الإنترنت</li>
+                            <li class="fr">Paiement par carte en ligne</li>
+                            <li class="en">Local payment methods where supported</li>
+                            <li class="ar">طرق الدفع المحلية حيث تُدعم</li>
+                            <li class="fr">Moyens de paiement locaux pris en charge</li>
+                            <li class="en">Cash-on-delivery workflows where relevant</li>
+                            <li class="ar">مسارات الدفع عند الاستلام عند الحاجة</li>
+                            <li class="fr">Processus de paiement à la livraison si pertinent</li>
+                            <li class="en">Payment status handling</li>
+                            <li class="ar">معالجة حالة الدفع</li>
+                            <li class="fr">Gestion du statut de paiement</li>
+                            <li class="en">Transaction states</li>
+                            <li class="ar">حالات المعاملة</li>
+                            <li class="fr">États de transaction</li>
+                            <li class="en">Refund workflows where required</li>
+                            <li class="ar">مسارات الاسترداد عند الحاجة</li>
+                            <li class="fr">Processus de remboursement si nécessaire</li>
+                        </ul>
+                    </article>
+                    <article class="cap">
+                        <div class="cap-no">04</div>
+                        <h3 class="en">Orders &amp; Fulfillment</h3>
+                        <h3 class="ar">الطلبات والتنفيذ</h3>
+                        <h3 class="fr">Commandes et préparation</h3>
+                        <ul>
+                            <li class="en">Order management</li>
+                            <li class="ar">إدارة الطلبات</li>
+                            <li class="fr">Gestion des commandes</li>
+                            <li class="en">Order status</li>
+                            <li class="ar">حالة الطلب</li>
+                            <li class="fr">Statut de commande</li>
+                            <li class="en">Fulfillment workflows</li>
+                            <li class="ar">مسارات التنفيذ</li>
+                            <li class="fr">Processus de préparation</li>
+                            <li class="en">Shipping configuration</li>
+                            <li class="ar">إعداد الشحن</li>
+                            <li class="fr">Configuration des expéditions</li>
+                            <li class="en">Delivery zones</li>
+                            <li class="ar">مناطق التوصيل</li>
+                            <li class="fr">Zones de livraison</li>
+                            <li class="en">Shipping rates</li>
+                            <li class="ar">أسعار الشحن</li>
+                            <li class="fr">Tarifs de livraison</li>
+                            <li class="en">Tracking integration</li>
+                            <li class="ar">تكامل التتبع</li>
+                            <li class="fr">Intégration du suivi</li>
+                            <li class="en">Notifications</li>
+                            <li class="ar">الإشعارات</li>
+                            <li class="fr">Notifications</li>
+                            <li class="en">Returns workflows where required</li>
+                            <li class="ar">مسارات الإرجاع عند الحاجة</li>
+                            <li class="fr">Processus de retour si nécessaire</li>
+                        </ul>
+                    </article>
+                    <article class="cap">
+                        <div class="cap-no">05</div>
+                        <h3 class="en">Inventory &amp; Catalog Management</h3>
+                        <h3 class="ar">إدارة المخزون والكتالوج</h3>
+                        <h3 class="fr">Gestion des stocks et du catalogue</h3>
+                        <ul>
+                            <li class="en">Product management</li>
+                            <li class="ar">إدارة المنتجات</li>
+                            <li class="fr">Gestion des produits</li>
+                            <li class="en">Categories</li>
+                            <li class="ar">الفئات</li>
+                            <li class="fr">Catégories</li>
+                            <li class="en">Variants</li>
+                            <li class="ar">الخيارات</li>
+                            <li class="fr">Variantes</li>
+                            <li class="en">Stock levels</li>
+                            <li class="ar">مستويات المخزون</li>
+                            <li class="fr">Niveaux de stock</li>
+                            <li class="en">Inventory status</li>
+                            <li class="ar">حالة المخزون</li>
+                            <li class="fr">Statut de stock</li>
+                            <li class="en">Low-stock handling</li>
+                            <li class="ar">معالجة انخفاض المخزون</li>
+                            <li class="fr">Gestion des stocks faibles</li>
+                            <li class="en">Product availability</li>
+                            <li class="ar">إتاحة المنتج</li>
+                            <li class="fr">Disponibilité produit</li>
+                            <li class="en">Bulk product management where required</li>
+                            <li class="ar">الإدارة الجماعية للمنتجات عند الحاجة</li>
+                            <li class="fr">Gestion en masse si nécessaire</li>
+                        </ul>
+                    </article>
+                    <article class="cap">
+                        <div class="cap-no">06</div>
+                        <h3 class="en">Customer Experience</h3>
+                        <h3 class="ar">تجربة العميل</h3>
+                        <h3 class="fr">Expérience client</h3>
+                        <ul>
+                            <li class="en">Customer accounts</li>
+                            <li class="ar">حسابات العملاء</li>
+                            <li class="fr">Comptes clients</li>
+                            <li class="en">Order history</li>
+                            <li class="ar">سجل الطلبات</li>
+                            <li class="fr">Historique des commandes</li>
+                            <li class="en">Saved addresses</li>
+                            <li class="ar">العناوين المحفوظة</li>
+                            <li class="fr">Adresses enregistrées</li>
+                            <li class="en">Wishlist where required</li>
+                            <li class="ar">قائمة الرغبات عند الحاجة</li>
+                            <li class="fr">Liste d'envies si nécessaire</li>
+                            <li class="en">Reordering</li>
+                            <li class="ar">إعادة الطلب</li>
+                            <li class="fr">Commande rapide</li>
+                            <li class="en">Transactional notifications</li>
+                            <li class="ar">الإشعارات التشغيلية</li>
+                            <li class="fr">Notifications transactionnelles</li>
+                            <li class="en">Customer communication integrations</li>
+                            <li class="ar">تكاملات مراسلات العملاء</li>
+                            <li class="fr">Intégrations de communication client</li>
+                        </ul>
+                    </article>
+                    <article class="cap">
+                        <div class="cap-no">07</div>
+                        <h3 class="en">Integrations</h3>
+                        <h3 class="ar">التكاملات</h3>
+                        <h3 class="fr">Intégrations</h3>
+                        <ul>
+                            <li class="en">ERP</li>
+                            <li class="ar">تخطيط موارد المؤسسات</li>
+                            <li class="fr">ERP</li>
+                            <li class="en">CRM</li>
+                            <li class="ar">إدارة علاقات العملاء</li>
+                            <li class="fr">CRM</li>
+                            <li class="en">Inventory systems</li>
+                            <li class="ar">أنظمة المخزون</li>
+                            <li class="fr">Systèmes de stock</li>
+                            <li class="en">Accounting</li>
+                            <li class="ar">المحاسبة</li>
+                            <li class="fr">Comptabilité</li>
+                            <li class="en">Shipping providers</li>
+                            <li class="ar">مزودو الشحن</li>
+                            <li class="fr">Prestataires d'expédition</li>
+                            <li class="en">Payment providers</li>
+                            <li class="ar">مزودو الدفع</li>
+                            <li class="fr">Prestataires de paiement</li>
+                            <li class="en">Analytics</li>
+                            <li class="ar">التحليلات</li>
+                            <li class="fr">Analytique</li>
+                            <li class="en">Marketing tools</li>
+                            <li class="ar">أدوات التسويق</li>
+                            <li class="fr">Outils marketing</li>
+                            <li class="en">External APIs</li>
+                            <li class="ar">واجهات برمجية خارجية</li>
+                            <li class="fr">API externes</li>
+                            <li class="en">Webhooks</li>
+                            <li class="ar">خطافات الويب</li>
+                            <li class="fr">Webhooks</li>
+                        </ul>
+                    </article>
+                    <article class="cap">
+                        <div class="cap-no">08</div>
+                        <h3 class="en">SEO &amp; Analytics Foundations</h3>
+                        <h3 class="ar">أساسيات تحسين محركات البحث والتحليلات</h3>
+                        <h3 class="fr">Fondamentaux SEO et analytique</h3>
+                        <ul>
+                            <li class="en">Clean product URLs</li>
+                            <li class="ar">روابط منتجات نظيفة</li>
+                            <li class="fr">URL produits propres</li>
+                            <li class="en">Category structure</li>
+                            <li class="ar">هيكل الفئات</li>
+                            <li class="fr">Structure des catégories</li>
+                            <li class="en">Metadata</li>
+                            <li class="ar">البيانات الوصفية</li>
+                            <li class="fr">Métadonnées</li>
+                            <li class="en">Sitemap</li>
+                            <li class="ar">خريطة الموقع</li>
+                            <li class="fr">Plan du site</li>
+                            <li class="en">Product structured data where appropriate</li>
+                            <li class="ar">بيانات منظمة للمنتجات عند الملاءمة</li>
+                            <li class="fr">Données structurées produit si pertinent</li>
+                            <li class="en">Search-engine crawlability</li>
+                            <li class="ar">قابلية الزحف لمحركات البحث</li>
+                            <li class="fr">Explorabilité par les moteurs de recherche</li>
+                            <li class="en">Analytics</li>
+                            <li class="ar">التحليلات</li>
+                            <li class="fr">Analytique</li>
+                            <li class="en">Conversion tracking</li>
+                            <li class="ar">تتبع التحويلات</li>
+                            <li class="fr">Suivi des conversions</li>
+                            <li class="en">Commerce funnel measurement</li>
+                            <li class="ar">قياس قمع التجارة</li>
+                            <li class="fr">Mesure du entonnoir commerce</li>
+                        </ul>
+                    </article>
+                </div>
+                <p class="cap-note en">The exact integrations depend on the client's existing systems. SEO is treated as part of the architecture, not something added after launch.</p>
+                <p class="cap-note ar">تعتمد التكاملات الدقيقة على أنظمة العميل القائمة. ويُعامل تحسين محركات البحث كجزء من البنية لا كإضافة بعد الإطلاق.</p>
+                <p class="cap-note fr">Les intégrations exactes dépendent des systèmes existants du client. Le SEO est traité comme partie de l'architecture, et non comme un ajout après la mise en ligne.</p>
+                <div class="section-cta"><a class="button ghost" href="#start"><span class="en">Contact us
+                                        →</span><span class="ar">اتصل بنا →</span><span class="fr">Nous contacter
+                                        →</span></a></div>
+            </div>
+        </section>
+
+        <!-- ========================= 05 DELIVERABLES ========================= -->
+        <section class="section" id="deliverables">
+            <div class="wrap">
+                <div class="section-head">
+                    <div class="eyebrow en">05 / DELIVERABLES</div>
+                    <div class="eyebrow ar">05 / المخرجات</div>
+                    <div class="eyebrow fr">05 / LIVRABLES</div>
+                    <h2 class="section-title en">What you get.</h2>
+                    <h2 class="section-title ar">ما الذي تحصل عليه.</h2>
+                    <h2 class="section-title fr">Ce que vous obtenez.</h2>
+                    <p class="section-intro en">Each engagement is scoped, so the exact set is confirmed during
+                        discovery. These are the parts of the commerce system BITA is responsible for.</p>
+                    <p class="section-intro ar">يُحدَّد نطاق كل مشروع، لذا تُؤكَّد القائمة الدقيقة خلال مرحلة الاستكشاف.
+                        وهذه هي الأجزاء التي تتحمل BITA مسؤوليتها.</p>
+                    <p class="section-intro fr">Chaque mission est cadrée : le périmètre exact est confirmé pendant la
+                        phase de découverte. Voici les parties du système commerce dont BITA est responsable.</p>
+                </div>
+                <div class="deliver-grid">
+                    <article class="deliver"><i aria-hidden="true"></i>
+                        <div>
+                            <h3 class="en">Commerce Strategy &amp; Structure</h3>
+                            <h3 class="ar">استراتيجية وهيكل التجارة</h3>
+                            <h3 class="fr">Stratégie et architecture commerce</h3>
+                            <p class="en">A clear understanding of products, customers, catalogue structure,
+                                purchasing flow, business rules, and operational requirements.</p>
+                            <p class="ar">فهم واضح للمنتجات والعملاء وهيكل الكتالوج ومسار الشراء وقواعد العمل
+                                والمتطلبات التشغيلية.</p>
+                            <p class="fr">Une compréhension claire des produits, des clients, de la structure du
+                                catalogue, du parcours d'achat, des règles métier et des exigences
+                                opérationnelles.</p>
+                        </div>
+                    </article>
+                    <article class="deliver"><i aria-hidden="true"></i>
+                        <div>
+                            <h3 class="en">UX/UI Design</h3>
+                            <h3 class="ar">تصميم تجربة المستخدم والواجهة</h3>
+                            <h3 class="fr">Design UX/UI</h3>
+                            <p class="en">A responsive storefront and shopping experience designed around product
+                                discovery, trust, usability, and checkout.</p>
+                            <p class="ar">متجر وتجربة تسوّق متجاوبة مصممة حول اكتشاف المنتج والثقة وسهولة الاستخدام
+                                ومسار الدفع.</p>
+                            <p class="fr">Une boutique et une expérience d'achat réactives, conçues autour de la
+                                découverte des produits, de la confiance, de l'ergonomie et du paiement.</p>
+                        </div>
+                    </article>
+                    <article class="deliver"><i aria-hidden="true"></i>
+                        <div>
+                            <h3 class="en">Product Catalogue</h3>
+                            <h3 class="ar">كتالوج المنتجات</h3>
+                            <h3 class="fr">Catalogue produits</h3>
+                            <p class="en">Structured products, categories, variants, pricing, product information,
+                                and merchandising logic according to the project scope.</p>
+                            <p class="ar">منتجات وفئات وخيارات وتسعير ومعلومات منتج ومنطق عرض منظم وفق نطاق
+                                المشروع.</p>
+                            <p class="fr">Produits, catégories, variantes, tarifs, informations produit et logique de
+                                merchandising structurés selon le périmètre du projet.</p>
+                        </div>
+                    </article>
+                    <article class="deliver"><i aria-hidden="true"></i>
+                        <div>
+                            <h3 class="en">Storefront</h3>
+                            <h3 class="ar">المتجر</h3>
+                            <h3 class="fr">Boutique</h3>
+                            <p class="en">A production-ready e-commerce storefront designed around the agreed
+                                commerce model.</p>
+                            <p class="ar">متجر تجارة إلكترونية جاهز للإنتاج مصمم حول نموذج التجارة المتفق عليه.</p>
+                            <p class="fr">Une boutique e-commerce prête pour la production, conçue autour du modèle
+                                commerce retenu.</p>
+                        </div>
+                    </article>
+                    <article class="deliver"><i aria-hidden="true"></i>
+                        <div>
+                            <h3 class="en">Cart &amp; Checkout</h3>
+                            <h3 class="ar">السلة ومسار الدفع</h3>
+                            <h3 class="fr">Panier et paiement</h3>
+                            <p class="en">A complete purchasing flow connecting product selection, cart, checkout,
+                                payment, and order creation.</p>
+                            <p class="ar">مسار شراء كامل يربط اختيار المنتج والسلة والدفع والمدفوعات وإنشاء
+                                الطلب.</p>
+                            <p class="fr">Un parcours d'achat complet reliant la sélection du produit, le panier, le
+                                paiement et la création de commande.</p>
+                        </div>
+                    </article>
+                    <article class="deliver"><i aria-hidden="true"></i>
+                        <div>
+                            <h3 class="en">Payments</h3>
+                            <h3 class="ar">المدفوعات</h3>
+                            <h3 class="fr">Paiements</h3>
+                            <p class="en">Integration with the payment methods required for the target market and
+                                business model.</p>
+                            <p class="ar">تكامل مع طرق الدفع المطلوبة للسوق المستهدف ونموذج العمل.</p>
+                            <p class="fr">L'intégration des moyens de paiement requis pour le marché cible et le modèle
+                                économique.</p>
+                        </div>
+                    </article>
+                    <article class="deliver"><i aria-hidden="true"></i>
+                        <div>
+                            <h3 class="en">Order &amp; Inventory Management</h3>
+                            <h3 class="ar">إدارة الطلبات والمخزون</h3>
+                            <h3 class="fr">Gestion des commandes et des stocks</h3>
+                            <p class="en">The operational tools required to manage products, stock, orders, and
+                                fulfillment according to the project scope.</p>
+                            <p class="ar">الأدوات التشغيلية اللازمة لإدارة المنتجات والمخزون والطلبات والتنفيذ وفق نطاق
+                                المشروع.</p>
+                            <p class="fr">Les outils opérationnels nécessaires pour gérer produits, stocks, commandes
+                                et livraison selon le périmètre du projet.</p>
+                        </div>
+                    </article>
+                    <article class="deliver"><i aria-hidden="true"></i>
+                        <div>
+                            <h3 class="en">Integrations</h3>
+                            <h3 class="ar">التكاملات</h3>
+                            <h3 class="fr">Intégrations</h3>
+                            <p class="en">Connections with relevant business systems such as ERP, CRM, shipping,
+                                accounting, analytics, or external APIs.</p>
+                            <p class="ar">ربط بأنظمة الأعمال ذات الصلة مثل تخطيط موارد المؤسسات وإدارة علاقات
+                                العملاء والشحن والمحاسبة والتحليلات أو واجهات برمجية خارجية.</p>
+                            <p class="fr">Des connexions avec les systèmes métier pertinents : ERP, CRM, expéditions,
+                                comptabilité, analytique ou API externes.</p>
+                        </div>
+                    </article>
+                    <article class="deliver"><i aria-hidden="true"></i>
+                        <div>
+                            <h3 class="en">Analytics &amp; Tracking</h3>
+                            <h3 class="ar">التحليلات والتتبع</h3>
+                            <h3 class="fr">Analytique et suivi</h3>
+                            <p class="en">The required analytics and conversion events needed to understand the
+                                commerce journey.</p>
+                            <p class="ar">أحداث التحليلات والتحويلات اللازمة لفهم رحلة التجارة.</p>
+                            <p class="fr">Les événements analytiques et de conversion nécessaires pour comprendre le
+                                parcours commerce.</p>
+                        </div>
+                    </article>
+                    <article class="deliver"><i aria-hidden="true"></i>
+                        <div>
+                            <h3 class="en">Deployment &amp; Launch</h3>
+                            <h3 class="ar">النشر والإطلاق</h3>
+                            <h3 class="fr">Mise en ligne</h3>
+                            <p class="en">Production deployment, configuration, testing, and launch preparation.</p>
+                            <p class="ar">النشر في بيئة الإنتاج والإعداد والاختبار والتحضير للإطلاق.</p>
+                            <p class="fr">Déploiement en production, configuration, tests et préparation du
+                                lancement.</p>
+                        </div>
+                    </article>
+                    <article class="deliver wide"><i aria-hidden="true"></i>
+                        <div>
+                            <h3 class="en">Documentation &amp; Handover</h3>
+                            <h3 class="ar">التوثيق والتسليم</h3>
+                            <h3 class="fr">Documentation et transmission</h3>
+                            <p class="en">Relevant documentation and handover required for the team to operate and
+                                maintain the commerce system.</p>
+                            <p class="ar">التوثيق والتسليم اللازم لفريق العمل لتشغيل نظام التجارة وصيانته.</p>
+                            <p class="fr">La documentation et la transmission nécessaires à l'équipe pour exploiter et
+                                maintenir le système commerce.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="section-cta"><a class="button ghost" href="#start"><span class="en">Contact us
+                                        →</span><span class="ar">اتصل بنا →</span><span class="fr">Nous contacter
+                                        →</span></a></div>
+            </div>
+        </section>
+
+        <!-- =========================== 06 PROCESS =========================== -->
+        <section class="section" id="process">
+            <div class="wrap">
+                <div class="section-head">
+                    <div class="eyebrow en">06 / PROCESS</div>
+                    <div class="eyebrow ar">06 / المنهجية</div>
+                    <div class="eyebrow fr">06 / MÉTHODE</div>
+                    <h2 class="section-title en">From commerce model to working store.</h2>
+                    <h2 class="section-title ar">من نموذج التجارة إلى متجر عامل.</h2>
+                    <h2 class="section-title fr">Du modèle commerce à la boutique opérationnelle.</h2>
+                    <p class="section-intro en">Five stages. The first two define the model, the next two build it,
+                        and the last one moves it into real commerce.</p>
+                    <p class="section-intro ar">خمس مراحل. تحدد الأولى والثانية النموذج، وتبني التاليتان النظام، وتنقله
+                        الأخيرة إلى تجارة حقيقية.</p>
+                    <p class="section-intro fr">Cinq étapes. Les deux premières définissent le modèle, les deux
+                        suivantes le construisent, la dernière le met en production.</p>
+                </div>
+                <div class="process five dense">
+                    <article class="step"><b>01</b>
+                        <h3 class="en">Understand</h3>
+                        <h3 class="ar">نفهم</h3>
+                        <h3 class="fr">Comprendre</h3>
+                        <p class="en">We start with how you sell.</p>
+                        <p class="ar">نبدأ من طريقة بيعك.</p>
+                        <p class="fr">Nous partons de votre façon de vendre.</p>
+                        <ul class="step-list">
+                            <li class="en">Products</li>
+                            <li class="ar">المنتجات</li>
+                            <li class="fr">Produits</li>
+                            <li class="en">Customers</li>
+                            <li class="ar">العملاء</li>
+                            <li class="fr">Clients</li>
+                            <li class="en">Markets</li>
+                            <li class="ar">الأسواق</li>
+                            <li class="fr">Marchés</li>
+                            <li class="en">Pricing</li>
+                            <li class="ar">التسعير</li>
+                            <li class="fr">Tarifs</li>
+                            <li class="en">Delivery</li>
+                            <li class="ar">التوصيل</li>
+                            <li class="fr">Livraison</li>
+                            <li class="en">Payment methods</li>
+                            <li class="ar">طرق الدفع</li>
+                            <li class="fr">Moyens de paiement</li>
+                            <li class="en">Operational workflows</li>
+                            <li class="ar">مسارات العمل التشغيلية</li>
+                            <li class="fr">Processus opérationnels</li>
+                            <li class="en">Existing systems</li>
+                            <li class="ar">الأنظمة القائمة</li>
+                            <li class="fr">Systèmes existants</li>
+                            <li class="en">Business goals</li>
+                            <li class="ar">أهداف العمل</li>
+                            <li class="fr">Objectifs de l'entreprise</li>
+                        </ul>
+                        <div class="step-out"><span class="en">Deliverable</span><span class="ar">المخرج</span><span
+                                class="fr">Livrable</span>
+                            <div class="en">Commerce requirements and project direction.</div>
+                            <div class="ar">متطلبات التجارة واتجاه المشروع.</div>
+                            <div class="fr">Exigences commerce et orientation du projet.</div>
+                        </div>
+                    </article>
+                    <article class="step"><b>02</b>
+                        <h3 class="en">Structure</h3>
+                        <h3 class="ar">نُهيكِل</h3>
+                        <h3 class="fr">Structurer</h3>
+                        <p class="en">We define how the commerce system should work.</p>
+                        <p class="ar">نحدد كيف يجب أن يعمل نظام التجارة.</p>
+                        <p class="fr">Nous définissons comment le système commerce doit fonctionner.</p>
+                        <ul class="step-list">
+                            <li class="en">Catalogue</li>
+                            <li class="ar">الكتالوج</li>
+                            <li class="fr">Catalogue</li>
+                            <li class="en">Categories</li>
+                            <li class="ar">الفئات</li>
+                            <li class="fr">Catégories</li>
+                            <li class="en">Product structure</li>
+                            <li class="ar">هيكل المنتج</li>
+                            <li class="fr">Structure produit</li>
+                            <li class="en">Navigation</li>
+                            <li class="ar">التنقل</li>
+                            <li class="fr">Navigation</li>
+                            <li class="en">Customer journey</li>
+                            <li class="ar">رحلة العميل</li>
+                            <li class="fr">Parcours client</li>
+                            <li class="en">Cart</li>
+                            <li class="ar">السلة</li>
+                            <li class="fr">Panier</li>
+                            <li class="en">Checkout</li>
+                            <li class="ar">مسار الدفع</li>
+                            <li class="fr">Paiement</li>
+                            <li class="en">Orders</li>
+                            <li class="ar">الطلبات</li>
+                            <li class="fr">Commandes</li>
+                            <li class="en">Fulfillment</li>
+                            <li class="ar">التنفيذ</li>
+                            <li class="fr">Préparation</li>
+                            <li class="en">Integrations</li>
+                            <li class="ar">التكاملات</li>
+                            <li class="fr">Intégrations</li>
+                        </ul>
+                        <div class="step-out"><span class="en">Deliverable</span><span class="ar">المخرج</span><span
+                                class="fr">Livrable</span>
+                            <div class="en">Commerce architecture and user flows.</div>
+                            <div class="ar">بنية التجارة ومسارات المستخدم.</div>
+                            <div class="fr">Architecture commerce et parcours utilisateurs.</div>
+                        </div>
+                    </article>
+                    <article class="step"><b>03</b>
+                        <h3 class="en">Design</h3>
+                        <h3 class="ar">نصمّم</h3>
+                        <h3 class="fr">Concevoir</h3>
+                        <p class="en">We design the buying experience.</p>
+                        <p class="ar">نصمم تجربة الشراء.</p>
+                        <p class="fr">Nous concevons l'expérience d'achat.</p>
+                        <ul class="step-list">
+                            <li class="en">Storefront</li>
+                            <li class="ar">المتجر</li>
+                            <li class="fr">Boutique</li>
+                            <li class="en">Category pages</li>
+                            <li class="ar">صفحات الفئات</li>
+                            <li class="fr">Pages de catégories</li>
+                            <li class="en">Product pages</li>
+                            <li class="ar">صفحات المنتجات</li>
+                            <li class="fr">Fiches produits</li>
+                            <li class="en">Cart</li>
+                            <li class="ar">السلة</li>
+                            <li class="fr">Panier</li>
+                            <li class="en">Checkout</li>
+                            <li class="ar">مسار الدفع</li>
+                            <li class="fr">Paiement</li>
+                            <li class="en">Account areas</li>
+                            <li class="ar">مناطق الحساب</li>
+                            <li class="fr">Espace client</li>
+                            <li class="en">Responsive states</li>
+                            <li class="ar">حالات التجاوب</li>
+                            <li class="fr">États réactifs</li>
+                            <li class="en">Operational interfaces where required</li>
+                            <li class="ar">واجهات تشغيلية عند الحاجة</li>
+                            <li class="fr">Interfaces opérationnelles si nécessaire</li>
+                        </ul>
+                        <div class="step-out"><span class="en">Deliverable</span><span class="ar">المخرج</span><span
+                                class="fr">Livrable</span>
+                            <div class="en">Complete commerce UX/UI direction.</div>
+                            <div class="ar">اتجاه متكامل لتصميم تجربة التجارة.</div>
+                            <div class="fr">Direction UX/UI commerce complète.</div>
+                        </div>
+                    </article>
+                    <article class="step"><b>04</b>
+                        <h3 class="en">Build</h3>
+                        <h3 class="ar">نبني</h3>
+                        <h3 class="fr">Développer</h3>
+                        <p class="en">We connect the storefront to the systems behind it.</p>
+                        <p class="ar">نربط المتجر بالأنظمة التي تقف خلفه.</p>
+                        <p class="fr">Nous relions la boutique aux systèmes qui se trouvent derrière elle.</p>
+                        <ul class="step-list">
+                            <li class="en">Storefront</li>
+                            <li class="ar">المتجر</li>
+                            <li class="fr">Boutique</li>
+                            <li class="en">Commerce functionality</li>
+                            <li class="ar">وظائف التجارة</li>
+                            <li class="fr">Fonctionnalités commerce</li>
+                            <li class="en">Payments</li>
+                            <li class="ar">المدفوعات</li>
+                            <li class="fr">Paiements</li>
+                            <li class="en">Orders</li>
+                            <li class="ar">الطلبات</li>
+                            <li class="fr">Commandes</li>
+                            <li class="en">Inventory</li>
+                            <li class="ar">المخزون</li>
+                            <li class="fr">Stocks</li>
+                            <li class="en">Shipping</li>
+                            <li class="ar">الشحن</li>
+                            <li class="fr">Expéditions</li>
+                            <li class="en">Backend</li>
+                            <li class="ar">الخلفية</li>
+                            <li class="fr">Backend</li>
+                            <li class="en">Third-party systems</li>
+                            <li class="ar">أنظمة الأطراف الثالثة</li>
+                            <li class="fr">Systèmes tiers</li>
+                        </ul>
+                        <div class="step-out"><span class="en">Deliverable</span><span class="ar">المخرج</span><span
+                                class="fr">Livrable</span>
+                            <div class="en">Working commerce system.</div>
+                            <div class="ar">نظام تجارة عامل.</div>
+                            <div class="fr">Système commerce opérationnel.</div>
+                        </div>
+                    </article>
+                    <article class="step"><b>05</b>
+                        <h3 class="en">Launch &amp; Evolve</h3>
+                        <h3 class="ar">نطلق ونتطور</h3>
+                        <h3 class="fr">Lancer et évoluer</h3>
+                        <p class="en">We move from development into real commerce.</p>
+                        <p class="ar">ننتقل من التطوير إلى تجارة حقيقية.</p>
+                        <p class="fr">Nous passons du développement au commerce réel.</p>
+                        <ul class="step-list">
+                            <li class="en">Product journeys</li>
+                            <li class="ar">رحلات المنتجات</li>
+                            <li class="fr">Parcours produits</li>
+                            <li class="en">Checkout</li>
+                            <li class="ar">مسار الدفع</li>
+                            <li class="fr">Paiement</li>
+                            <li class="en">Payments</li>
+                            <li class="ar">المدفوعات</li>
+                            <li class="fr">Paiements</li>
+                            <li class="en">Orders</li>
+                            <li class="ar">الطلبات</li>
+                            <li class="fr">Commandes</li>
+                            <li class="en">Notifications</li>
+                            <li class="ar">الإشعارات</li>
+                            <li class="fr">Notifications</li>
+                            <li class="en">Shipping</li>
+                            <li class="ar">الشحن</li>
+                            <li class="fr">Expéditions</li>
+                            <li class="en">Responsive behavior</li>
+                            <li class="ar">السلوك المتجاوب</li>
+                            <li class="fr">Comportement réactif</li>
+                            <li class="en">Performance</li>
+                            <li class="ar">الأداء</li>
+                            <li class="fr">Performance</li>
+                            <li class="en">Analytics</li>
+                            <li class="ar">التحليلات</li>
+                            <li class="fr">Analytique</li>
+                        </ul>
+                        <div class="step-out"><span class="en">Deliverable</span><span class="ar">المخرج</span><span
+                                class="fr">Livrable</span>
+                            <div class="en">Production-ready commerce experience and a path for continued
+                                evolution.</div>
+                            <div class="ar">تجربة تجارة جاهزة للإنتاج ومسار للتطور المستمر.</div>
+                            <div class="fr">Expérience commerce prête pour la production et trajectoire
+                                d'évolution.</div>
+                        </div>
+                    </article>
+                </div>
+                <div class="section-cta"><a class="button ghost" href="#start"><span class="en">Contact us
+                                        →</span><span class="ar">اتصل بنا →</span><span class="fr">Nous contacter
+                                        →</span></a></div>
+            </div>
+        </section>
+
+        <!-- =========================== 07 OUTCOMES =========================== -->
+        <section class="section" id="outcomes">
+            <div class="wrap">
+                <div class="section-head">
+                    <div class="eyebrow en">07 / OUTCOMES</div>
+                    <div class="eyebrow ar">07 / النتائج</div>
+                    <div class="eyebrow fr">07 / RÉSULTATS</div>
+                    <h2 class="section-title en">A better commerce experience for customers and the business behind it.</h2>
+                    <h2 class="section-title ar">تجربة تجارة أفضل للعملاء وللعمل الذي يقف خلفها.</h2>
+                    <h2 class="section-title fr">Une meilleure expérience commerce pour les clients et l'entreprise qui la porte.</h2>
+                    <p class="section-intro en">These are the kinds of change a well-built commerce system makes
+                        possible. They describe what becomes easier to do, not what a number is guaranteed to reach.</p>
+                    <p class="section-intro ar">هذه هي أنواع التغيير التي يتيحها نظام تجارة مبني جيدًا. وهي تصف ما يصبح
+                        أسهل في الأداء، لا ما يُضمان بلوغه.</p>
+                    <p class="section-intro fr">Voici les types de changement qu'un système commerce bien conçu
+                        permet. Ils décrivent ce qui devient plus simple à réaliser, pas un résultat garanti.</p>
+                </div>
+                <div class="out-grid">
+                    <article class="out">
+                        <div class="out-no">01</div>
+                        <h3 class="en">Easier product discovery</h3>
+                        <h3 class="ar">اكتشاف أسهل للمنتجات</h3>
+                        <h3 class="fr">Une découverte facilitée</h3>
+                        <p class="en">Help customers find and understand the right products with clearer
+                            navigation, product information, search, and filtering.</p>
+                        <p class="ar">ساعد العملاء على العثور على المنتجات وفهمها عبر تنقل أوضح ومعلومات منتج أفضل وبحث وتصفية.</p>
+                        <p class="fr">Aidez les clients à trouver et comprendre les bons produits grâce à une
+                            navigation plus claire, de meilleures informations, la recherche et des filtres.</p>
+                    </article>
+                    <article class="out">
+                        <div class="out-no">02</div>
+                        <h3 class="en">Less friction at checkout</h3>
+                        <h3 class="ar">احتكاك أقل عند الدفع</h3>
+                        <h3 class="fr">Moins de frictions au paiement</h3>
+                        <p class="en">Create a clearer purchasing journey across cart, checkout, payment, and
+                            confirmation.</p>
+                        <p class="ar">أنشئ مسار شراء أوضح عبر السلة والدفع والمدفوعات والتأكيد.</p>
+                        <p class="fr">Créez un parcours d'achat plus clair entre le panier, le paiement, la
+                            transaction et la confirmation.</p>
+                    </article>
+                    <article class="out">
+                        <div class="out-no">03</div>
+                        <h3 class="en">Better operational visibility</h3>
+                        <h3 class="ar">رؤية تشغيلية أفضل</h3>
+                        <h3 class="fr">Une meilleure visibilité opérationnelle</h3>
+                        <p class="en">Bring product, order, inventory, and fulfillment information into clearer
+                            workflows.</p>
+                        <p class="ar">اجمع معلومات المنتجات والطلبات والمخزون والتنفيذ في مسارات عمل أوضح.</p>
+                        <p class="fr">Réunissez les informations produits, commandes, stocks et préparation dans des
+                            processus plus clairs.</p>
+                    </article>
+                    <article class="out">
+                        <div class="out-no">04</div>
+                        <h3 class="en">Fewer disconnected processes</h3>
+                        <h3 class="ar">عمليات أقل انفصالًا</h3>
+                        <h3 class="fr">Moins de processus déconnectés</h3>
+                        <p class="en">Connect the systems involved in selling, processing, and fulfilling orders
+                            where integrations are required.</p>
+                        <p class="ar">اربط الأنظمة المشاركة في البيع ومعالجة الطلبات وتنفيذها عند الحاجة إلى
+                            تكاملات.</p>
+                        <p class="fr">Reliez les systèmes impliqués dans la vente, le traitement et la préparation des
+                            commandes, là où des intégrations sont nécessaires.</p>
+                    </article>
+                    <article class="out">
+                        <div class="out-no">05</div>
+                        <h3 class="en">Better customer experience</h3>
+                        <h3 class="ar">تجربة عميل أفضل</h3>
+                        <h3 class="fr">Une meilleure expérience client</h3>
+                        <p class="en">Give customers a consistent and responsive shopping experience across
+                            devices.</p>
+                        <p class="ar">امنح العملاء تجربة تسوّق متسقة ومتجاوبة عبر مختلف الأجهزة.</p>
+                        <p class="fr">Offrez à vos clients une expérience d'achat cohérente et réactive sur tous
+                            vos appareils.</p>
+                    </article>
+                    <article class="out">
+                        <div class="out-no">06</div>
+                        <h3 class="en">A commerce foundation that can evolve</h3>
+                        <h3 class="ar">أساس تجارة قابل للتطور</h3>
+                        <h3 class="fr">Une base commerce évolutive</h3>
+                        <p class="en">Build the store and supporting systems so new products, features,
+                            integrations, and business requirements can be added over time.</p>
+                        <p class="ar">ابنِ المتجر والأنظمة الداعمة بحيث يمكن إضافة منتجات وميزات وتكاملات
+                            ومتطلبات عمل جديدة مع الوقت.</p>
+                        <p class="fr">Construisez la boutique et les systèmes de sorte que de nouveaux produits,
+                            fonctionnalités, intégrations et exigences puissent être ajoutés au fil du temps.</p>
+                    </article>
+                </div>
+                <div class="section-cta"><a class="button ghost" href="#start"><span class="en">Contact us
+                                        →</span><span class="ar">اتصل بنا →</span><span class="fr">Nous contacter
+                                        →</span></a></div>
+            </div>
+        </section>
+
+                <!-- ============================== 09 FAQ ============================== -->
+        <section class="section" id="faq">
+            <div class="wrap">
+                <div class="section-head">
+                    <div class="eyebrow en">08 / FAQ</div>
+                    <div class="eyebrow ar">08 / الأسئلة الشائعة</div>
+                    <div class="eyebrow fr">08 / FAQ</div>
+                    <h2 class="section-title en">Questions before we build.</h2>
+                    <h2 class="section-title ar">أسئلة قبل أن نبدأ البناء.</h2>
+                    <h2 class="section-title fr">Les questions avant de commencer.</h2>
+                    <p class="section-intro en">The questions we are asked most often at the start of an e-commerce
+                        project.</p>
+                    <p class="section-intro ar">الأسئلة التي تُطرح علينا أكثر في بداية مشروع تجارة إلكترونية.</p>
+                    <p class="section-intro fr">Les questions les plus fréquentes au démarrage d'un projet
+                        e-commerce.</p>
+                </div>
+                <div class="faq" data-faq>
+                    <div class="faq-item">
+                        <h3 class="faq-h">
+                            <button class="faq-q" type="button" id="faq1" aria-expanded="false"
+                                aria-controls="faq1-a"><span><span class="faq-no">01</span><span class="en">Should I use
+                                        Shopify, WooCommerce, or build a custom e-commerce system?</span><span
+                                        class="ar">هل أستخدم Shopify أو WooCommerce أم أبني نظام تجارة إلكترونية
+                                        مخصصًا؟</span><span class="fr">Dois-je utiliser Shopify, WooCommerce ou
+                                        construire un système e-commerce sur mesure ?</span></span><span
+                                    class="faq-sign" aria-hidden="true"></span></button>
+                        </h3>
+                        <div class="faq-a" id="faq1-a" role="region" aria-labelledby="faq1" hidden>
+                            <p class="en">The right approach depends on the business model, catalogue complexity,
+                                required integrations, operational workflows, customization needs, budget, and
+                                long-term direction. BITA should evaluate these requirements before recommending
+                                the appropriate architecture.</p>
+                            <p class="ar">يعتمد الاختيار المناسب على نموذج العمل وتعقيد الكتالوج والتكاملات المطلوبة
+                                ومسارات العمل التشغيلية واحتياجات التخصيص والميزانية والاتجاه طويل الأمد. وينبغي
+                                لـ BITA تقييم هذه المتطلبات قبل التوصية بالبنية المناسبة.</p>
+                            <p class="fr">L'approche adaptée dépend du modèle économique, de la complexité du
+                                catalogue, des intégrations requises, des processus opérationnels, des besoins de
+                                personnalisation, du budget et de l'orientation à long terme. BITA doit évaluer
+                                ces exigences avant de recommander l'architecture appropriée.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-h">
+                            <button class="faq-q" type="button" id="faq2" aria-expanded="false"
+                                aria-controls="faq2-a"><span><span class="faq-no">02</span><span class="en">Can you
+                                        build a custom e-commerce website?</span><span class="ar">هل يمكنكم بناء موقع
+                                        تجارة إلكترونية مخصص؟</span><span class="fr">Pouvez-vous construire un site
+                                        e-commerce sur mesure ?</span></span><span class="faq-sign"
+                                    aria-hidden="true"></span></button>
+                        </h3>
+                        <div class="faq-a" id="faq2-a" role="region" aria-labelledby="faq2" hidden>
+                            <p class="en">Yes. BITA can design and build custom commerce experiences when the
+                                business requires functionality, workflows, integrations, or user experiences that
+                                cannot be adequately supported by an off-the-shelf setup.</p>
+                            <p class="ar">نعم. يمكن لـ BITA تصميم وبناء تجارات مخصصة عندما يتطلب العمل وظائف أو مسارات
+                                عمل أو تكاملات أو تجارب استخدام لا تدعمها حل جاهز بما يكفي.</p>
+                            <p class="fr">Oui. BITA peut concevoir et développer des expériences commerce sur mesure
+                                lorsque l'entreprise a besoin de fonctionnalités, de processus, d'intégrations ou
+                                d'expériences qu'une solution standard ne permet pas de couvrir correctement.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-h">
+                            <button class="faq-q" type="button" id="faq3" aria-expanded="false"
+                                aria-controls="faq3-a"><span><span class="faq-no">03</span><span class="en">Can you
+                                        work with Shopify or WooCommerce?</span><span class="ar">هل تعملون مع Shopify أو
+                                        WooCommerce؟</span><span class="fr">Pouvez-vous travailler avec Shopify ou
+                                        WooCommerce ?</span></span><span class="faq-sign"
+                                    aria-hidden="true"></span></button>
+                        </h3>
+                        <div class="faq-a" id="faq3-a" role="region" aria-labelledby="faq3" hidden>
+                            <p class="en">Yes, where the platform is appropriate for the project. BITA can work
+                                with platform-based commerce as well as more customized or headless approaches
+                                depending on requirements.</p>
+                            <p class="ar">نعم، حين تكون المنصة مناسبة للمشروع. يمكن لـ BITA العمل مع التجارة المبنية
+                                على منصات جاهزة، إضافة إلى التجارب الأكثر تخصيصًا أو المنفصلة عن الواجهة
+                                بحسب المتطلبات.</p>
+                            <p class="fr">Oui, lorsque la plateforme convient au projet. BITA peut travailler avec
+                                du commerce basé sur une plateforme ainsi qu'avec des approches plus personnalisées
+                                ou découplées, selon les exigences.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-h">
+                            <button class="faq-q" type="button" id="faq4" aria-expanded="false"
+                                aria-controls="faq4-a"><span><span class="faq-no">04</span><span class="en">Can you
+                                        integrate online payments?</span><span class="ar">هل يمكنكم تكامل الدفع
+                                        الإلكتروني؟</span><span class="fr">Pouvez-vous intégrer les paiements en
+                                        ligne ?</span></span><span class="faq-sign"
+                                    aria-hidden="true"></span></button>
+                        </h3>
+                        <div class="faq-a" id="faq4-a" role="region" aria-labelledby="faq4" hidden>
+                            <p class="en">Yes. Payment integrations can be included according to the target market,
+                                supported payment providers, business model, and technical requirements.</p>
+                            <p class="ar">نعم. يمكن تضمين تكاملات الدفع بحسب السوق المستهدف ومزودي الدفع المدعومين
+                                ونموذج العمل والمتطلبات التقنية.</p>
+                            <p class="fr">Oui. Les intégrations de paiement peuvent être incluses selon le marché
+                                cible, les prestataires de paiement pris en charge, le modèle économique et les
+                                exigences techniques.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-h">
+                            <button class="faq-q" type="button" id="faq5" aria-expanded="false"
+                                aria-controls="faq5-a"><span><span class="faq-no">05</span><span class="en">Can you
+                                        support cash on delivery?</span><span class="ar">هل يمكنكم دعم الدفع عند
+                                        الاستلام؟</span><span class="fr">Pouvez-vous prendre en charge le paiement à
+                                        la livraison ?</span></span><span class="faq-sign"
+                                    aria-hidden="true"></span></button>
+                        </h3>
+                        <div class="faq-a" id="faq5-a" role="region" aria-labelledby="faq5" hidden>
+                            <p class="en">Yes, when the business model and market require it. COD can be
+                                incorporated into the order and fulfillment workflow alongside other supported
+                                payment methods.</p>
+                            <p class="ar">نعم، حين يتطلب نموذج العمل والسوق ذلك. يمكن دمج الدفع عند الاستلام في
+                                مسار الطلب والتنفيذ إلى جانب طرق الدفع الأخرى المدعومة.</p>
+                            <p class="fr">Oui, lorsque le modèle économique et le marché l'exigent. Le paiement à
+                                la livraison peut être intégré au processus de commande et de préparation aux côtés
+                                des autres moyens de paiement pris en charge.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-h">
+                            <button class="faq-q" type="button" id="faq6" aria-expanded="false"
+                                aria-controls="faq6-a"><span><span class="faq-no">06</span><span class="en">Can you
+                                        integrate delivery or shipping providers?</span><span class="ar">هل يمكنكم
+                                        تكامل مزودي التوصيل أو الشحن؟</span><span class="fr">Pouvez-vous intégrer des
+                                        prestataires de livraison ou d'expédition ?</span></span><span
+                                    class="faq-sign" aria-hidden="true"></span></button>
+                        </h3>
+                        <div class="faq-a" id="faq6-a" role="region" aria-labelledby="faq6" hidden>
+                            <p class="en">Yes. Shipping and delivery integrations can connect the store with relevant
+                                logistics providers, shipping rules, delivery zones, tracking, and order-status
+                                workflows.</p>
+                            <p class="ar">نعم. يمكن لتكاملات الشحن والتوصيل ربط المتجر بمزودي الخدمات اللوجستية
+                                وقواعد الشحن ومناطق التوصيل والتتبع ومسارات حالة الطلب.</p>
+                            <p class="fr">Oui. Les intégrations d'expédition et de livraison peuvent relier la
+                                boutique aux prestataires logistiques, aux règles d'expédition, aux zones de
+                                livraison, au suivi et aux statuts de commande.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-h">
+                            <button class="faq-q" type="button" id="faq7" aria-expanded="false"
+                                aria-controls="faq7-a"><span><span class="faq-no">07</span><span class="en">Can the store
+                                        connect to our ERP or inventory system?</span><span class="ar">هل يمكن للمتجر
+                                        الاتصال بنظام تخطيط موارد المؤسسات أو المخزون لدينا؟</span><span
+                                        class="fr">La boutique peut-elle se connecter à notre ERP ou à notre système
+                                        de stock ?</span></span><span class="faq-sign"
+                                    aria-hidden="true"></span></button>
+                        </h3>
+                        <div class="faq-a" id="faq7-a" role="region" aria-labelledby="faq7" hidden>
+                            <p class="en">Yes. Where APIs or appropriate integration methods are available, BITA
+                                can connect the commerce system with ERP, CRM, inventory, accounting, shipping, or
+                                other business systems.</p>
+                            <p class="ar">نعم. عندما تتوفر واجهات برمجية أو طرق تكامل مناسبة، يمكن لـ BITA ربط نظام
+                                التجارة بتخطيط موارد المؤسسات أو إدارة علاقات العملاء أو المخزون أو المحاسبة أو
+                                الشحن أو غيرها من أنظمة الأعمال.</p>
+                            <p class="fr">Oui. Lorsque des API ou des méthodes d'intégration adaptées sont
+                                disponibles, BITA peut relier le système commerce à l'ERP, au CRM, aux stocks, à la
+                                comptabilité, aux expéditions ou à d'autres systèmes métier.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-h">
+                            <button class="faq-q" type="button" id="faq8" aria-expanded="false"
+                                aria-controls="faq8-a"><span><span class="faq-no">08</span><span class="en">Can
+                                        customers manage their orders?</span><span class="ar">هل يمكن للعملاء إدارة
+                                        طلباتهم؟</span><span class="fr">Les clients peuvent-ils gérer leurs
+                                        commandes ?</span></span><span class="faq-sign"
+                                    aria-hidden="true"></span></button>
+                        </h3>
+                        <div class="faq-a" id="faq8-a" role="region" aria-labelledby="faq8" hidden>
+                            <p class="en">Yes. Customer accounts can include order history, addresses, status
+                                information, and other self-service features according to project scope.</p>
+                            <p class="ar">نعم. يمكن أن تتضمن حسابات العملاء سجل الطلبات والعناوين ومعلومات الحالة
+                                وميزات خدمة ذاتية أخرى وفق نطاق المشروع.</p>
+                            <p class="fr">Oui. Les comptes clients peuvent inclure l'historique des commandes, les
+                                adresses, les informations de statut et d'autres fonctions en libre-service selon le
+                                périmètre du projet.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-h">
+                            <button class="faq-q" type="button" id="faq9" aria-expanded="false"
+                                aria-controls="faq9-a"><span><span class="faq-no">09</span><span class="en">Can you
+                                        migrate an existing online store?</span><span class="ar">هل يمكنكم نقل متجر
+                                        إلكتروني قائم؟</span><span class="fr">Pouvez-vous migrer une boutique en
+                                        ligne existante ?</span></span><span class="faq-sign"
+                                    aria-hidden="true"></span></button>
+                        </h3>
+                        <div class="faq-a" id="faq9-a" role="region" aria-labelledby="faq9" hidden>
+                            <p class="en">Potentially, yes. Existing products, customers, orders, content, or other
+                                data can be assessed for migration depending on the source platform, data
+                                structure, and technical constraints.</p>
+                            <p class="ar">محتمل ذلك، نعم. يمكن تقييم المنتجات والعملاء والطلبات والمحتوى أو البيانات
+                                الأخرى القائمة لنقلها بحسب المنصة المصدرية وبنية البيانات والقيود التقنية.</p>
+                            <p class="fr">Potentiellement, oui. Les produits, clients, commandes, contenus ou
+                                autres données existants peuvent être évalués pour une migration selon la plateforme
+                                source, la structure des données et les contraintes techniques.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-h">
+                            <button class="faq-q" type="button" id="faq10" aria-expanded="false"
+                                aria-controls="faq10-a"><span><span class="faq-no">10</span><span class="en">Can you
+                                        continue improving the store after launch?</span><span class="ar">هل يمكنكم مواصلة
+                                        تحسين المتجر بعد الإطلاق؟</span><span class="fr">Pouvez-vous continuer à
+                                        améliorer la boutique après la mise en ligne ?</span></span><span
+                                    class="faq-sign" aria-hidden="true"></span></button>
+                        </h3>
+                        <div class="faq-a" id="faq10-a" role="region" aria-labelledby="faq10" hidden>
+                            <p class="en">Yes. Post-launch maintenance, optimization, integrations, new features,
+                                and ongoing improvements can be handled through a continued engagement.</p>
+                            <p class="ar">نعم. يمكن التعامل مع الصيانة والتحسين والتكاملات والميزات الجديدة والتحسينات
+                                المستمرة بعد الإطلاق كجزء من تعاون مستمر.</p>
+                            <p class="fr">Oui. La maintenance, l'optimisation, les intégrations, les nouvelles
+                                fonctionnalités et les améliorations continues après la mise en ligne peuvent être
+                                traitées dans le cadre d'une mission continue.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-cta"><a class="button ghost" href="#start"><span class="en">Contact us
+                                        →</span><span class="ar">اتصل بنا →</span><span class="fr">Nous contacter
+                                        →</span></a></div>
+            </div>
+        </section>
+
+        <!-- ========================== 10 START A PROJECT ========================== -->
+        <section class="contact svc-contact" id="start">
+            <div class="wrap contact-grid">
+                <div>
+                    <div class="eyebrow en">09 / START A PROJECT</div>
+                    <div class="eyebrow ar">09 / ابدأ مشروعًا</div>
+                    <div class="eyebrow fr">09 / DÉMARRER UN PROJET</div>
+                    <h2 class="en">Ready to build a better way to sell online?</h2>
+                    <h2 class="ar">مستعد لبناء طريقة أفضل للبيع عبر الإنترنت؟</h2>
+                    <h2 class="fr">Prêt à construire une meilleure façon de vendre en ligne ?</h2>
+                    <p class="en">Tell us about your products, customers, current setup, and what you want to improve.
+                        We'll start by understanding how your commerce operation works before defining the right
+                        solution.</p>
+                    <p class="ar">أخبرنا عن منتجاتك وعملائك وإعدادك الحالي وما تريد تحسينه. سنبدأ بفهم كيفية عمل
+                        عمليات التجارة لديك قبل تحديد الحل المناسب.</p>
+                    <p class="fr">Parlez-nous de vos produits, de vos clients, de votre installation actuelle et de ce
+                        que vous souhaitez améliorer. Nous commencerons par comprendre le fonctionnement de vos
+                        opérations commerce avant de définir la bonne solution.</p>
+                    <div class="actions"><a class="button" href="#brief"><span class="en">Start a
+                                conversation →</span><span class="ar">اتصل بنا →</span><span
+                                class="fr">Démarrer une conversation →</span></a></div>
+                    <p class="note en">Not sure which commerce model or platform fits? Tell us how you sell today
+                        and we will start from there.</p>
+                    <p class="note ar">لست متأكدًا أي نموذج تجارة أو منصة يناسبك؟ أخبرنا كيف تبيع اليوم وسنبدأ من
+                        هناك.</p>
+                    <p class="note fr">Vous ne savez pas quel modèle commerce ou quelle plateforme convient ?
+                        Dites-nous comment vous vendez aujourd'hui et nous partirons de là.</p>
+                </div>
+                <aside class="contact-side" id="brief">
+                    <form class="contact-form" novalidate>
+                        <div class="field"><label for="cf-name"><span class="en">Full name</span><span class="ar">الاسم
+                                    الكامل</span><span class="fr">Nom complet</span></label><input id="cf-name"
+                                name="name" type="text" autocomplete="name" required
+                                data-ph="Your full name|اسمك الكامل|Votre nom complet"></div>
+                        <div class="field"><label for="cf-phone"><span class="en">Phone</span><span class="ar">رقم
+                                    الهاتف</span><span class="fr">Téléphone</span></label><input id="cf-phone"
+                                name="phone" type="tel" autocomplete="tel"
+                                data-ph="+00 000 000 000|+00 000 000 000|+33 6 00 00 00 00"></div>
+                        <div class="field"><label for="cf-email"><span class="en">Email</span><span
+                                class="ar">البريد الإلكتروني</span><span class="fr">E-mail</span></label><input
+                                id="cf-email" name="email" type="email" autocomplete="email" required
+                                data-ph="you@company.com|you@company.com|vous@entreprise.fr"></div>
+                        <div class="field"><label for="cf-focus"><span class="en">Primary focus</span><span
+                                class="ar">محور التركيز</span><span class="fr">Priorité principale</span></label><span
+                                class="sel"><select id="cf-focus" name="focus">
+                                    <option value="apps"
+                                        data-t="Custom Web &amp; Mobile Apps|تطبيقات الويب والجوال المخصصة|Applications Web &amp; Mobile sur mesure">
+                                        Custom Web &amp; Mobile Apps</option>
+                                    <option value="ecommerce" selected data-t="E-commerce|التجارة الإلكترونية|E-commerce">
+                                        E-commerce</option>
+                                    <option value="business-software"
+                                        data-t="Business Software|برمجيات الأعمال|Logiciels de gestion">Business
+                                        Software</option>
+                                    <option value="saas"
+                                        data-t="SaaS &amp; Digital Platforms|منصات SaaS والمنتجات الرقمية|SaaS &amp; Plateformes numériques">
+                                        SaaS &amp; Digital Platforms</option>
+                                    <option value="automation"
+                                        data-t="Automation &amp; Integrations|الأتمتة والتكاملات|Automatisation &amp; Intégrations">
+                                        Automation &amp; Integrations</option>
+                                    <option value="other" data-t="Other|أخرى|Autre">Other</option>
+                                </select></span></div>
+                        <div class="field"><label for="cf-message"><span class="en">Message</span><span
+                                class="ar">الرسالة</span><span class="fr">Message</span></label><textarea
+                                id="cf-message" name="message" rows="4" required
+                                data-ph="Tell us briefly what you sell and how you sell it…|أخبرنا باختصار بما تبيعه وكيف تبيعه…|Dites-nous brièvement ce que vous vendez et comment…"></textarea></div>
+                        <button class="button contact-submit" type="submit"><span class="en">Send
+                                message</span><span class="ar">إرسال الرسالة</span><span class="fr">Envoyer le
+                                message</span></button>
+                        <p class="sample-note en">This form is a starting point. Add an email address before
+                            launch.</p>
+                        <p class="sample-note ar">هذا النموذج نقطة بداية. أضف عنوان بريد إلكتروني قبل الإطلاق.</p>
+                        <p class="sample-note fr">Ce formulaire est un point de départ. Ajoutez une adresse e-mail
+                            avant la mise en ligne.</p>
+                    </form>
+                </aside>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="wrap">
+            <span class="mark-foot">
+                <svg viewBox="0 0 128 142" width="128" height="142" aria-hidden="true" focusable="false">
+                    <g transform="translate(20 20)">
+                        <path fill="#FFFFFF" d="M0 0H61L88 28L75 46H30L0 18Z" />
+                        <path fill="#FFFFFF" d="M30 56H75L88 74L61 102H0V84Z" />
+                        <path fill="#3157FF" d="M0 25L30 51L0 77Z" />
+                        <path fill="none" stroke="#111318" stroke-width="3" stroke-linejoin="miter"
+                            d="M0 20L36 52L0 82" />
+                    </g>
+                </svg>
+            </span>
+            <span>© BITA AGENCY</span><span class="en">DIGITAL SOLUTIONS / 2026</span><span class="ar">حلول رقمية /
+                2026</span><span class="fr">SOLUTIONS DIGITALES / 2026</span>
+        </div>
+    </footer>
+    <script src="../../assets/js/bita.js"></script>
+</body>
+
+</html>

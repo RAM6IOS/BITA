@@ -1,0 +1,2518 @@
+/* ==========================================================================
+   BITA — service page components
+   Layered on top of bita.css (tokens, type, buttons, header, footer,
+   section, solution, case, process, contact). Nothing here redefines the
+   design system: these are arrangements of existing parts, so additional
+   service pages can reuse the same classes with different content.
+   ========================================================================== */
+
+:root {
+    --dark-line: #343741;
+    --dark-muted: #b8bdc8;
+    --dark-cell: #1a1e27
+}
+
+.svc-hero {
+    padding: var(--s64) 0 var(--s48);
+    position: relative
+}
+
+.svc-hero-grid {
+    display: grid;
+    grid-template-columns: 1.02fr .98fr;
+    gap: var(--s48);
+    align-items: center
+}
+
+.svc-hero h1 {
+    font-size: clamp(40px, 4.9vw, 68px);
+    letter-spacing: -.07em;
+    line-height: 1;
+    max-width: 700px;
+    margin: var(--s16) 0 var(--s24)
+}
+
+.svc-hero p {
+    max-width: 500px;
+    font-size: 18px;
+    color: var(--muted);
+    margin: 0 0 var(--s32)
+}
+
+html[data-lang="ar"] .svc-hero h1 {
+    letter-spacing: -.03em
+}
+
+/* ---------- Hero: composed product system ---------- */
+.svc-art {
+    position: relative;
+    height: 500px;
+    background: var(--ink);
+    overflow: hidden
+}
+
+.svc-art .wedge {
+    position: absolute;
+    inset-inline-start: 0;
+    bottom: 0;
+    width: 52%;
+    height: 56%;
+    background: var(--blue);
+    clip-path: polygon(0 0, 100% 0, 58% 100%, 0 100%)
+}
+
+html[data-lang="ar"] .svc-art .wedge {
+    transform: scaleX(-1)
+}
+
+.art-window {
+    position: absolute;
+    z-index: 2;
+    inset-inline-start: 5%;
+    top: 7%;
+    width: 84%;
+    height: 66%;
+    background: #fff;
+    color: var(--ink);
+    border-radius: 4px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, .45);
+    overflow: hidden
+}
+
+.art-chrome {
+    height: 26px;
+    background: #f0f2f6;
+    border-bottom: 1px solid #e1e4eb;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0 10px
+}
+
+.art-chrome i {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #dce1eb
+}
+
+.art-url {
+    margin-inline-start: 8px;
+    height: 12px;
+    flex: 1;
+    max-width: 190px;
+    background: #fff;
+    border: 1px solid #e1e4eb;
+    border-radius: 2px
+}
+
+.art-app {
+    display: flex;
+    height: calc(100% - 26px)
+}
+
+.art-rail {
+    width: 42px;
+    background: #fff;
+    border-inline-end: 1px solid #e1e4eb;
+    padding: 8px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px
+}
+
+.art-rail .mark {
+    width: 16px;
+    height: 16px;
+    background: var(--ink);
+    clip-path: polygon(0 0, 100% 0, 100% 46%, 52% 100%, 0 100%);
+    margin-bottom: 4px
+}
+
+.art-rail b {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #dce1eb
+}
+
+.art-rail b.on {
+    background: var(--blue);
+    border-color: var(--blue)
+}
+
+.art-main {
+    flex: 1;
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0
+}
+
+.art-h {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px
+}
+
+.art-h span {
+    height: 9px;
+    width: 96px;
+    background: var(--ink)
+}
+
+.art-h em {
+    height: 13px;
+    width: 46px;
+    background: var(--blue);
+    border-radius: 2px
+}
+
+.art-tiles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 7px
+}
+
+.art-tile {
+    border: 1px solid #e1e4eb;
+    padding: 6px 7px
+}
+
+.art-tile span {
+    display: block;
+    height: 5px;
+    width: 60%;
+    background: #dce1eb
+}
+
+.art-tile b {
+    display: block;
+    margin-top: 5px;
+    height: 10px;
+    width: 74%;
+    background: var(--ink)
+}
+
+.art-tile.hot b {
+    background: var(--blue)
+}
+
+.art-rows {
+    border: 1px solid #e1e4eb;
+    flex: 1;
+    min-height: 0
+}
+
+.art-rows div {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 5px 7px;
+    border-bottom: 1px solid #f0f2f6
+}
+
+.art-rows div:last-child {
+    border-bottom: 0
+}
+
+.art-rows span {
+    height: 5px;
+    background: #dce1eb
+}
+
+.art-rows .c1 {
+    width: 34%
+}
+
+.art-rows .c2 {
+    width: 22%
+}
+
+.art-rows .c3 {
+    width: 15%
+}
+
+.art-pill {
+    margin-inline-start: auto;
+    height: 9px;
+    width: 34px;
+    background: #e9edff;
+    border-inline-start: 3px solid var(--blue)
+}
+
+.art-pill.off {
+    background: #f0f2f6;
+    border-inline-start-color: #dce1eb
+}
+
+.art-mobile {
+    position: absolute;
+    z-index: 3;
+    inset-inline-start: 3%;
+    bottom: 5%;
+    width: 27%;
+    height: 45%;
+    background: #fff;
+    color: var(--ink);
+    border-radius: 10px;
+    box-shadow: 0 18px 44px rgba(0, 0, 0, .5);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column
+}
+
+.art-status {
+    height: 15px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7px
+}
+
+.art-status span {
+    height: 3px;
+    width: 16px;
+    background: #dce1eb;
+    border-radius: 2px
+}
+
+.art-mhead {
+    padding: 5px 8px 7px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border-bottom: 1px solid #f0f2f6
+}
+
+.art-mhead b {
+    height: 6px;
+    width: 58%;
+    background: var(--ink)
+}
+
+.art-mhead em {
+    margin-inline-start: auto;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--blue)
+}
+
+.art-mlist {
+    flex: 1;
+    padding: 7px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px
+}
+
+.art-mcard {
+    border: 1px solid #e1e4eb;
+    padding: 5px 6px
+}
+
+.art-mcard span {
+    display: block;
+    height: 4px;
+    width: 82%;
+    background: #dce1eb
+}
+
+.art-mcard b {
+    display: block;
+    margin-top: 4px;
+    height: 7px;
+    width: 44%;
+    background: var(--ink)
+}
+
+.art-mcard.on {
+    border-inline-start: 2px solid var(--blue)
+}
+
+.art-tabs {
+    height: 26px;
+    border-top: 1px solid #f0f2f6;
+    display: flex;
+    align-items: center;
+    justify-content: space-around
+}
+
+.art-tabs i {
+    width: 9px;
+    height: 9px;
+    border: 1px solid #dce1eb
+}
+
+.art-tabs i.on {
+    background: var(--blue);
+    border-color: var(--blue)
+}
+
+.art-ops {
+    position: absolute;
+    z-index: 2;
+    inset-inline-end: 3%;
+    bottom: 6%;
+    width: 37%;
+    height: 31%;
+    background: #e9edff;
+    color: var(--ink);
+    padding: 11px 12px;
+    box-shadow: 0 18px 44px rgba(0, 0, 0, .4)
+}
+
+.art-ops small {
+    display: block;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    color: var(--ink)
+}
+
+.art-ops b {
+    display: block;
+    margin-top: 5px;
+    font-size: 21px;
+    letter-spacing: -.05em;
+    line-height: 1
+}
+
+.art-ops .delta {
+    display: block;
+    margin-top: 4px;
+    font-size: 9px;
+    font-weight: 700;
+    color: var(--blue)
+}
+
+.art-ops .bars {
+    position: absolute;
+    inset-inline: 12px;
+    bottom: 11px;
+    height: 44px;
+    display: flex;
+    align-items: flex-end;
+    gap: 5px
+}
+
+.art-ops .bars i {
+    flex: 1;
+    background: var(--blue);
+    opacity: .3
+}
+
+.art-ops .bars i:nth-child(5),
+.art-ops .bars i:nth-child(6) {
+    opacity: 1
+}
+
+.art-frame {
+    position: absolute;
+    z-index: 1;
+    inset-inline-end: 6%;
+    top: 9%;
+    width: 54px;
+    height: 54px;
+    border: 1px solid #343741
+}
+
+.art-frame:after {
+    content: "";
+    position: absolute;
+    inset-inline-end: -1px;
+    top: -1px;
+    width: 22px;
+    height: 22px;
+    background: var(--blue);
+    clip-path: polygon(100% 0, 100% 100%, 0 0)
+}
+
+/* ---------- E-commerce hero: storefront → cart → order pipeline ----------
+   Reuses .art-window / .art-mobile / .art-ops frames, swaps the surfaces. */
+.art-mobile.shop {
+    height: 58%
+}
+
+.art-ops.tall {
+    height: 46%
+}
+
+.shop-body {
+    height: calc(100% - 26px);
+    display: flex;
+    flex-direction: column
+}
+
+.shop-nav {
+    height: 26px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 0 10px;
+    border-bottom: 1px solid #e1e4eb
+}
+
+.shop-nav span {
+    height: 5px;
+    width: 24px;
+    background: #dce1eb
+}
+
+.shop-nav span:first-child {
+    background: var(--ink)
+}
+
+.shop-nav b {
+    margin-inline-start: auto;
+    height: 9px;
+    width: 22px;
+    background: var(--blue)
+}
+
+.shop-filters {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 10px
+}
+
+.shop-filters span {
+    height: 9px;
+    width: 32px;
+    background: #f0f2f6;
+    border: 1px solid #e1e4eb
+}
+
+.shop-filters em {
+    margin-inline-start: auto;
+    height: 6px;
+    width: 38px;
+    background: #dce1eb
+}
+
+.shop-pgrid {
+    flex: 1;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding: 0 10px 10px
+}
+
+.shop-card {
+    border: 1px solid #e1e4eb;
+    display: flex;
+    flex-direction: column
+}
+
+.shop-thumb {
+    flex: 1;
+    min-height: 0;
+    background: #f0f2f6;
+    position: relative
+}
+
+.shop-thumb:after {
+    content: "";
+    position: absolute;
+    inset-inline-end: 0;
+    bottom: 0;
+    width: 48%;
+    height: 64%;
+    background: var(--blue);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%)
+}
+
+.shop-card.alt .shop-thumb:after,
+.shop-card.alt .shop-buy {
+    background: var(--ink)
+}
+
+.shop-meta {
+    padding: 5px 6px 0
+}
+
+.shop-meta span {
+    display: block;
+    height: 4px;
+    width: 80%;
+    background: #dce1eb
+}
+
+.shop-meta b {
+    display: block;
+    margin-top: 4px;
+    height: 7px;
+    width: 36%;
+    background: var(--ink)
+}
+
+.shop-buy {
+    height: 12px;
+    background: var(--blue);
+    margin: 6px
+}
+
+.shop-mhead {
+    padding: 5px 8px 7px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border-bottom: 1px solid #f0f2f6
+}
+
+.shop-mhead b {
+    height: 6px;
+    width: 50%;
+    background: var(--ink)
+}
+
+.shop-mhead em {
+    margin-inline-start: auto;
+    width: 16px;
+    height: 10px;
+    background: var(--blue)
+}
+
+.shop-mbody {
+    flex: 1;
+    min-height: 0;
+    padding: 7px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px
+}
+
+.shop-mimg {
+    flex: 1;
+    min-height: 0;
+    background: #f0f2f6;
+    border: 1px solid #e1e4eb;
+    position: relative
+}
+
+.shop-mimg:after {
+    content: "";
+    position: absolute;
+    inset-inline-end: 0;
+    bottom: 0;
+    width: 46%;
+    height: 72%;
+    background: var(--blue);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%)
+}
+
+.shop-mline span {
+    display: block;
+    height: 4px;
+    width: 86%;
+    background: #dce1eb
+}
+
+.shop-mline b {
+    display: block;
+    margin-top: 4px;
+    height: 8px;
+    width: 32%;
+    background: var(--ink)
+}
+
+.shop-mchips {
+    display: flex;
+    gap: 5px
+}
+
+.shop-mchips i {
+    flex: 1;
+    height: 12px;
+    border: 1px solid #e1e4eb
+}
+
+.shop-mchips i.on {
+    border-color: var(--blue);
+    background: #e9edff
+}
+
+.shop-mcta {
+    height: 17px;
+    background: var(--blue)
+}
+
+.shop-mcart {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 8px;
+    border-top: 1px solid #f0f2f6
+}
+
+.shop-mcart span {
+    height: 4px;
+    width: 44%;
+    background: #dce1eb
+}
+
+.shop-mcart b {
+    margin-inline-start: auto;
+    height: 9px;
+    width: 24px;
+    background: var(--ink)
+}
+
+.shop-flow {
+    margin-top: 8px
+}
+
+.shop-flow div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 0;
+    border-top: 1px solid rgba(17, 19, 24, .12)
+}
+
+.shop-flow div>span {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .11em;
+    text-transform: uppercase;
+    color: var(--ink)
+}
+
+.shop-flow i {
+    margin-inline-start: auto;
+    height: 9px;
+    width: 32px;
+    background: #fff;
+    border: 1px solid #c9d2f7
+}
+
+.shop-flow div.on i {
+    background: var(--blue);
+    border-color: var(--blue)
+}
+
+/* ---------- 02 Business need: numbered rows ---------- */
+.need-list {
+    border-top: 1px solid var(--line)
+}
+
+.need {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: var(--s24);
+    padding: 26px 0 30px;
+    border-bottom: 1px solid var(--line)
+}
+
+.need-no {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--blue);
+    letter-spacing: .06em
+}
+
+.need h3 {
+    font-size: clamp(21px, 2.1vw, 30px);
+    line-height: 1.1;
+    letter-spacing: -.045em;
+    margin: 0 0 9px;
+    max-width: 20ch
+}
+
+.need p {
+    font-size: 15px;
+    color: var(--muted);
+    margin: 0;
+    max-width: 62ch
+}
+
+/* No column swap here. A grid already mirrors under direction: rtl, so the
+   120px number track moves to the right edge and the copy track fills the
+   left. Reordering the tracks to "1fr 120px" inverted the widths instead:
+   the number stretched across 1200px of empty space while the Arabic heading
+   and paragraph were crushed into a 120px column. Only the text alignment
+   needs stating, because it does not follow the writing direction. */
+html[data-lang="ar"] .need {
+    text-align: right
+}
+
+html[data-lang="ar"] .need-no {
+    text-align: start
+}
+
+/* ---------- 03 Solution pillars (reuses .solutions / .solution) ---------- */
+.svc-solutions {
+    grid-template-columns: 1fr 1fr
+}
+
+.svc-solutions .solution h3 {
+    margin-top: 44px
+}
+
+/* ---------- 04 Capabilities (dark) ---------- */
+.dark {
+    background: var(--ink);
+    color: #fff
+}
+
+.dark .section-head {
+    border-color: var(--dark-line)
+}
+
+.dark .eyebrow {
+    color: #abb0bc
+}
+
+.dark .section-intro,
+.dark .cap li {
+    color: var(--dark-muted)
+}
+
+.cap-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    border: 1px solid var(--dark-line);
+    border-inline-end: 0
+}
+
+.cap {
+    padding: 22px 20px 26px;
+    border-inline-end: 1px solid var(--dark-line);
+    display: flex;
+    flex-direction: column
+}
+
+.cap-no {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--blue)
+    letter-spacing: .06em
+}
+
+.cap h3 {
+    font-size: 18px;
+    letter-spacing: -.03em;
+    margin: 26px 0 16px;
+    line-height: 1.15
+}
+
+.cap ul {
+    list-style: none;
+    margin: auto 0 0;
+    padding: 0
+}
+
+.cap li {
+    font-size: 13px;
+    line-height: 1.35;
+    color: var(--dark-muted);
+    padding: 9px 0;
+    border-top: 1px solid var(--dark-line)
+}
+
+.cap-grid.four {
+    grid-template-columns: repeat(4, 1fr)
+}
+
+.cap-grid.dense .cap h3 {
+    margin: 24px 0 14px
+}
+
+.cap-grid.dense .cap li {
+    font-size: 12.5px;
+    line-height: 1.3;
+    padding: 7px 0
+}
+
+/* ---------- Subsection head (used inside a numbered section) ---------- */
+.subhead {
+    display: grid;
+    grid-template-columns: 3fr 6fr 3fr;
+    gap: var(--s24);
+    border-top: 1px solid var(--line);
+    padding-top: 16px;
+    margin: 88px 0 40px
+}
+
+.subhead .section-title {
+    font-size: clamp(24px, 2.4vw, 34px);
+    letter-spacing: -.05em;
+    line-height: 1.08;
+    max-width: 24ch
+}
+
+/* ---------- Commerce models index ---------- */
+.models {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    border: 1px solid var(--line);
+    border-inline-end: 0
+}
+
+.model {
+    padding: 20px 20px 26px;
+    border-inline-end: 1px solid var(--line);
+    display: flex;
+    flex-direction: column
+}
+
+.model-code {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--blue);
+    letter-spacing: .06em
+}
+
+.model h3 {
+    font-size: 17px;
+    letter-spacing: -.03em;
+    line-height: 1.15;
+    margin: 24px 0 8px
+}
+
+.model p {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 0;
+    line-height: 1.45
+}
+
+.models-note {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 20px 0 0;
+    max-width: 68ch
+}
+
+/* ---------- 05 Deliverables ---------- */
+.deliver-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--s48)
+    border-top: 1px solid var(--line)
+}
+
+.deliver {
+    display: grid;
+    grid-template-columns: 26px 1fr;
+    gap: 14px;
+    padding: 20px 0 22px;
+    border-bottom: 1px solid var(--line)
+}
+
+.deliver i {
+    width: 9px;
+    height: 9px;
+    background: var(--blue);
+    margin-top: 7px
+}
+
+.deliver h3 {
+    font-size: 16px;
+    letter-spacing: -.03em;
+    margin: 0 0 6px
+}
+
+.deliver p {
+    font-size: 13.5px;
+    color: var(--muted);
+    margin: 0;
+    max-width: 46ch
+}
+
+/* A final full-width deliverable closes an odd-count list cleanly. */
+.deliver.wide {
+    grid-column: 1 / -1;
+    border-bottom: 0;
+    padding: 26px 0 0
+}
+
+.cap-note {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--dark-muted);
+    margin: 22px 0 0;
+    max-width: 68ch
+}
+
+/* `.cap-note` is a dark-section style: --dark-muted on --ink measured 1.76:1
+   on the off-white body surface. Reused on a light section it needs the light
+   muted token. */
+.cap-note.on-light {
+    color: var(--muted)
+}
+
+/* ---------- 06 Process (extends .process with a fifth column) ---------- */
+.process.five {
+    grid-template-columns: repeat(5, 1fr)
+}
+
+.step-out {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+    font-size: 12px;
+    line-height: 1.4
+}
+
+.step-out span {
+    color: var(--blue);
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    font-size: 10px;
+    display: block;
+    margin-bottom: 4px
+}
+
+/* Process variant for stages that carry a working list.
+   Columns are flex so every "Deliverable" sits on one baseline. */
+.process.five.dense .step {
+    display: flex;
+    flex-direction: column
+}
+
+.process.five.dense .step b {
+    margin-bottom: 30px
+}
+
+.step-list {
+    list-style: none;
+    margin: 16px 0 0;
+    padding: 0
+}
+
+.step-list li {
+    font-size: 12.5px;
+    line-height: 1.3;
+    color: var(--muted);
+    padding: 6px 0;
+    border-top: 1px solid var(--line)
+}
+
+.process.five.dense .step-out {
+    margin-top: auto
+}
+
+/* ---------- 07 Outcomes ---------- */
+.out-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid var(--line);
+    border-inline-end: 0
+}
+
+.out {
+    padding: 22px 20px 28px;
+    border-inline-end: 1px solid var(--line);
+    min-height: 190px;
+    display: flex;
+    flex-direction: column
+}
+
+.out-no {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--blue)
+}
+
+.out h3 {
+    font-size: 21px;
+    letter-spacing: -.04em;
+    line-height: 1.1;
+    margin: 34px 0 8px
+}
+
+.out p {
+    font-size: 13.5px;
+    color: var(--muted);
+    margin: 0
+}
+
+/* ---------- 08 Work (extends .work-grid / .case) ---------- */
+.work-grid.three {
+    grid-template-columns: repeat(3, 1fr)
+}
+
+.case .screen {
+    height: 196px
+}
+
+.case-body {
+    margin-top: auto
+}
+
+.case p {
+    font-size: 13.5px;
+    color: #b8bdc8;
+    margin: 10px 0 0;
+    line-height: 1.45
+}
+
+.case .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 14px
+}
+
+.case .tags span {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    padding: 5px 8px;
+    border: 1px solid #343741;
+    color: #fff
+}
+
+.case.light .tags span {
+    border-color: rgba(49, 87, 255, .35);
+    color: var(--ink)
+}
+
+.case .tags span.key {
+    background: var(--blue);
+    border-color: var(--blue);
+    color: #fff
+}
+
+.case.light p {
+    color: var(--ink)
+}
+
+.case .meta {
+    margin-top: 15px;
+    padding-top: 12px;
+    border-top: 1px solid #343741
+}
+
+.case .meta div {
+    display: flex;
+    gap: 12px;
+    padding: 4px 0;
+    font-size: 12px;
+    line-height: 1.45;
+    color: #b8bdc8
+}
+
+.case .meta div>span:first-child {
+    flex: 0 0 74px;
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    color: #abb0bc;
+    padding-top: 2px
+}
+
+.case.light .meta {
+    border-top-color: rgba(49, 87, 255, .35)
+}
+
+.case.light .meta div {
+    color: var(--ink)
+}
+
+.case.light .meta div>span:first-child {
+    color: var(--ink)
+}
+
+/* ---------- 09 FAQ ---------- */
+.faq {
+    border-top: 1px solid var(--line);
+    max-width: 1000px
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--line)
+}
+
+.faq-h {
+    margin: 0
+}
+
+.faq-q {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--s24);
+    text-align: start;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    color: var(--ink);
+    font: inherit;
+    font-size: clamp(18px, 1.85vw, 25px);
+    line-height: 1.18;
+    letter-spacing: -.035em;
+    padding: 24px 0
+}
+
+.faq-q:hover {
+    color: var(--blue)
+}
+
+.faq-no {
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .06em;
+    display: block;
+    margin-bottom: 8px
+}
+
+.faq-sign {
+    position: relative;
+    flex: 0 0 auto;
+    width: 15px;
+    height: 15px;
+    margin-top: 9px
+}
+
+.faq-sign:before,
+.faq-sign:after {
+    content: "";
+    position: absolute;
+    background: var(--ink);
+    transition: transform .2s
+}
+
+.faq-sign:before {
+    inset-inline-start: 0;
+    top: 7px;
+    width: 15px;
+    height: 1.5px
+}
+
+.faq-sign:after {
+    inset-inline-start: 7px;
+    top: 0;
+    height: 15px;
+    width: 1.5px
+}
+
+.faq-q[aria-expanded="true"] .faq-sign:after {
+    transform: rotate(90deg)
+}
+
+.faq-q[aria-expanded="true"] .faq-sign:before,
+.faq-q[aria-expanded="true"] .faq-sign:after {
+    background: var(--blue)
+}
+
+.faq-a {
+    padding: 0 40px 26px 0
+}
+
+.faq-a p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--muted);
+    max-width: 68ch
+}
+
+html[data-lang="ar"] .faq-a {
+    padding: 0 0 26px 40px
+}
+
+html[data-lang="ar"] .faq-q,
+html[data-lang="ar"] .faq {
+    text-align: right
+}
+
+/* ---------- 10 Start a project ---------- */
+.svc-contact .contact-grid {
+    align-items: end
+}
+
+.svc-contact .note {
+    font-size: 11px;
+    line-height: 1.6;
+    letter-spacing: .04em;
+    /* This note sits on the BITA blue panel. 0.82 alpha measured 4.11:1
+       against #3157FF, just under the 4.5:1 AA threshold for 11px text.
+       0.90 measures 4.62:1 and keeps the intended soft-white treatment. */
+    color: rgba(255, 255, 255, .9);
+    margin: 18px 0 0
+}
+
+.svc-contact .actions {
+    flex-wrap: wrap
+}
+
+.svc-contact .button.ghost {
+    background: transparent;
+    color: #fff;
+    border-color: rgba(255, 255, 255, .8)
+}
+
+.svc-contact .button.ghost:hover {
+    background: rgba(255, 255, 255, .12)
+}
+
+/* ---------- Section-end contact CTA ----------
+   Reuses the existing ghost button, so it introduces no new token. The
+   8px gap lets the edge of a bordered block (cap-grid, outcome grid)
+   sit flush instead of butting straight against the button. */
+.section-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 44px
+}
+
+.section-cta .button.ghost:hover {
+    background: var(--ink);
+    color: #fff
+}
+
+/* The ink border and ink text of the default ghost button disappear on the
+   capabilities band, so invert it there. */
+.dark .section-cta .button.ghost {
+    color: #fff;
+    border-color: rgba(255, 255, 255, .55)
+}
+
+.dark .section-cta .button.ghost:hover {
+    background: #fff;
+    color: var(--ink)
+}
+
+/* ---------- Page furniture ---------- */
+.svc-breadcrumb {
+    padding: 18px 0 0
+}
+
+/* ---------- Business Software hero: console → approvals → roles ----------
+   Deliberately not a phone frame. Business software is something people
+   work in all day on a screen, so the composition is console-first:
+   a record table, an approval lane, and a roles panel. */
+.art-window.biz {
+    height: 57%
+}
+
+.art-rows .c4 {
+    width: 13%
+}
+
+.art-rows.four .c1 {
+    width: 29%
+}
+
+.art-rows.four .c2 {
+    width: 18%
+}
+
+.art-rows.four .c3 {
+    width: 14%
+}
+
+/* Approval lane: stages left to right, one marked as the current step */
+.bsw-flow {
+    position: absolute;
+    z-index: 3;
+    inset-inline-end: 4%;
+    bottom: 6%;
+    width: 45%;
+    height: 27%;
+    background: #e9edff;
+    color: var(--ink);
+    padding: 10px 12px;
+    box-shadow: 0 18px 44px rgba(0, 0, 0, .4)
+}
+
+.bsw-flow small,
+.bsw-roles small {
+    display: block;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    color: var(--ink)
+}
+
+.bsw-stages {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 9px
+}
+
+.bsw-stages b {
+    flex: 1 1 0;
+    min-width: 0;
+    height: 26px;
+    padding: 0 6px;
+    background: #fff;
+    border: 1px solid #d5dbf3;
+    display: flex;
+    align-items: center;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden
+}
+
+.bsw-stages b.on {
+    background: var(--blue);
+    border-color: var(--blue);
+    color: #fff
+}
+
+.bsw-stages i {
+    flex: none;
+    width: 8px;
+    height: 1px;
+    background: #b9c2e8
+}
+
+/* Roles panel: who can see or approve what */
+.bsw-roles {
+    position: absolute;
+    z-index: 3;
+    inset-inline-start: 4%;
+    bottom: 6%;
+    width: 33%;
+    height: 27%;
+    background: #fff;
+    color: var(--ink);
+    padding: 10px 12px;
+    box-shadow: 0 18px 44px rgba(0, 0, 0, .4)
+}
+
+.bsw-role {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 7px
+}
+
+.bsw-role b {
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden
+}
+
+.bsw-role em {
+    flex: none;
+    margin-inline-start: auto;
+    width: 28%;
+    height: 5px;
+    background: #f0f2f6
+}
+
+.bsw-role em.part {
+    background: #a9b6f5
+}
+
+.bsw-role em.full {
+    background: var(--blue)
+}
+
+/* ---------- Business system examples: 6 items, so 3 × 2 rather than the
+   5-across commerce-models row. Row separators are managed per breakpoint
+   to keep the grid reading as one bordered table. ---------- */
+.models.six {
+    grid-template-columns: repeat(3, 1fr)
+}
+
+.models.six .model {
+    border-bottom: 1px solid var(--line)
+}
+
+.models.six .model:nth-last-child(-n+3) {
+    border-bottom: 0
+}
+
+.models.six .model:last-child {
+    border-bottom: 0
+}
+
+/* ---------- 10 capability groups in 4 columns: 4 + 4 + a closing row in
+   which the last two groups each span two columns. The grid therefore still
+   closes on the container border instead of leaving a dangling rule beside
+   two empty cells. Same closing move as `.deliver.wide`. ---------- */
+.cap-grid.ten .cap:nth-last-child(-n+2) {
+    grid-column: span 2;
+    border-inline-end: 0
+}
+
+/* ---------- 7 platform types in 3 columns: 3 + 3, then the closing type
+   ("Internal product → SaaS") runs full width. The platform model is defined
+   during discovery, so the last entry reads as a separate consideration
+   rather than a seventh equal box. ---------- */
+.models.three {
+    grid-template-columns: repeat(3, 1fr)
+}
+
+.models.three .model {
+    border-bottom: 1px solid var(--line)
+}
+
+.models.three .model:nth-last-child(-n+2) {
+    border-bottom: 0
+}
+
+.models.three .model:last-child {
+    grid-column: 1 / -1;
+    border-inline-end: 0;
+    border-bottom: 0
+}
+
+/* ---------- SaaS hero: one platform → many organizations ----------
+   This service is not one screen but a relationship between many: a single
+   platform hosting separated customer workspaces, with a platform-level
+   administration layer beneath them. The composition runs top to bottom in
+   that order, so the diagram explains the model before any text does.
+
+   The diagram is a centred flex column rather than absolutely positioned
+   boxes, so the vertical rhythm and the connector stems stay correct as the
+   panel height changes between breakpoints. */
+.saas-diagram {
+    position: absolute;
+    z-index: 2;
+    inset: 7% 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+/* Platform bar: the one product every workspace runs on */
+.saas-hub {
+    background: var(--blue);
+    color: #fff;
+    padding: 10px 16px;
+    text-align: center;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, .38)
+}
+
+.saas-drop {
+    width: 1px;
+    height: 20px;
+    background: #454b5c;
+    flex: none
+}
+
+/* The rail that feeds every workspace, and the one the platform admin reads */
+.saas-rail {
+    width: 66.6%;
+    height: 1px;
+    background: #454b5c;
+    flex: none
+}
+
+.saas-tenants {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 100%;
+    margin-top: 9px
+}
+
+.saas-rail.bot {
+    margin-top: 9px
+}
+
+/* One customer workspace: team, dashboard, plan, usage */
+.saas-ws {
+    position: relative;
+    background: #fff;
+    color: var(--ink);
+    padding: 10px 11px 11px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, .34)
+}
+
+.saas-ws:before,
+.saas-ws:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 1px;
+    height: 9px;
+    background: #454b5c
+}
+
+.saas-ws:before {
+    top: -9px
+}
+
+.saas-ws:after {
+    bottom: -9px
+}
+
+.saas-ws-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid var(--line)
+}
+
+.saas-ws-top b {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase
+}
+
+/* Unread-activity marker: notifications are part of a workspace */
+.saas-ws-top i {
+    width: 6px;
+    height: 6px;
+    background: var(--blue);
+    border-radius: 50%;
+    flex: none
+}
+
+/* Team members inside the workspace */
+.saas-members {
+    display: flex;
+    gap: 4px;
+    padding: 8px 0 0
+}
+
+.saas-members i {
+    width: 15px;
+    height: 15px;
+    background: #dfe3ec;
+    flex: none
+}
+
+.saas-members i:nth-child(2) {
+    background: #b9c0d2
+}
+
+.saas-members i:nth-child(3) {
+    background: var(--blue)
+}
+
+.saas-members i.more {
+    background: none;
+    color: var(--muted);
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 15px;
+    text-align: center
+}
+
+/* The workspace dashboard */
+.saas-dash {
+    padding: 9px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px
+}
+
+.saas-dash span {
+    height: 4px;
+    background: #eceff5
+}
+
+.saas-dash span:nth-child(1) {
+    width: 82%
+}
+
+.saas-dash span:nth-child(2) {
+    width: 64%
+}
+
+.saas-dash span:nth-child(3) {
+    width: 44%
+}
+
+/* Subscription plan and usage against its limit */
+.saas-plan {
+    margin-top: auto;
+    padding-top: 10px
+}
+
+.saas-plan-top {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 6px
+}
+
+.saas-plan-top b {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase
+}
+
+.saas-plan-top em {
+    font-size: 9px;
+    font-style: normal;
+    color: var(--muted);
+    white-space: nowrap
+}
+
+.saas-usage {
+    height: 4px;
+    background: #eceff5;
+    margin-top: 5px
+}
+
+.saas-usage i {
+    display: block;
+    height: 100%;
+    background: var(--blue)
+}
+
+.saas-usage i.u35 {
+    width: 35%
+}
+
+.saas-usage i.u40 {
+    width: 40%
+}
+
+.saas-usage i.u60 {
+    width: 60%
+}
+
+.saas-usage i.u85 {
+    width: 85%
+}
+
+/* Platform administration: a layer above the customer workspaces, and a
+   different surface from the admin inside any single organization */
+.saas-admin {
+    background: #e9edff;
+    color: var(--ink);
+    padding: 10px 16px;
+    text-align: center;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, .34)
+}
+
+/* ---------- Automation hero: systems → layer → workflow → action ----------
+   This service is not one screen but a relationship between many, so the
+   panel is a flow rather than a product shot. The composition runs top to
+   bottom in that order — three business systems, the BITA integration layer
+   that reads them, the workflow the event resolves into, and the operational
+   actions it produces — so the diagram states the argument of the section
+   before any text does: systems → data → workflow → action.
+
+   The diagram is a centred flex column rather than absolutely positioned
+   boxes, so the vertical rhythm and the connector stems stay correct as the
+   panel height changes between breakpoints. */
+.int-diagram {
+    position: absolute;
+    z-index: 2;
+    inset: 6% 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+/* The integration layer itself: the one component BITA owns */
+.int-hub {
+    background: var(--blue);
+    color: #fff;
+    padding: 10px 18px;
+    text-align: center;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, .38)
+}
+
+/* Stems: one connector between each stage, the bus between the system row and the layer */
+.int-drop {
+    width: 1px;
+    height: 18px;
+    background: #454b5c;
+    flex: none
+}
+
+.int-rail {
+    width: 66.6%;
+    height: 1px;
+    background: #454b5c;
+    flex: none
+}
+
+/* The systems being connected. Each carries a record fragment, so the row
+   reads as data being read rather than as a row of category labels. */
+.int-systems {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 100%;
+    margin-top: 9px
+}
+
+.int-sys {
+    position: relative;
+    background: #fff;
+    color: var(--ink);
+    padding: 9px 10px 10px;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, .34)
+}
+
+.int-sys:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -9px;
+    width: 1px;
+    height: 9px;
+    background: #454b5c
+}
+
+.int-sys-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid var(--line)
+}
+
+.int-sys-top b {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase
+}
+
+/* Connection state: linked systems are marked, unlinked ones stay neutral */
+.int-sys-top i {
+    width: 6px;
+    height: 6px;
+    background: var(--blue);
+    border-radius: 50%;
+    flex: none
+}
+
+.int-sys-top i.idle {
+    background: #d6dbe5
+}
+
+.int-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-top: 8px
+}
+
+.int-field {
+    display: flex;
+    align-items: center;
+    gap: 6px
+}
+
+.int-field span {
+    flex: 0 0 44%;
+    font-size: 7.5px;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--muted)
+}
+
+.int-field em {
+    flex: 1;
+    min-width: 0;
+    height: 4px;
+    background: #eceff5
+}
+
+/* The field being carried by the integration: one per system */
+.int-field em.hot {
+    background: var(--blue)
+}
+
+/* Sync state of the connector itself */
+.int-sync {
+    height: 3px;
+    background: #eceff5;
+    margin-top: 9px
+}
+
+.int-sync i {
+    display: block;
+    height: 100%;
+    background: var(--blue)
+}
+
+.int-sync i.p70 {
+    width: 70%
+}
+
+.int-sync i.p85 {
+    width: 85%
+}
+
+.int-sync i.p40 {
+    width: 40%
+}
+
+/* The workflow: trigger, rule, action. One stage is marked as the current
+   step, the way the approval lane in the Business Software hero is. */
+/* Sized to its labels rather than split into equal thirds: the row is
+   shrink-to-fit inside a centred column, so equal thirds clipped "Trigger" by
+   4px at every viewport. The chips now hug their label and still give way
+   with min-width if the column ever narrows again. */
+.int-flow {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: max-content;
+    max-width: 100%;
+    background: #e9edff;
+    color: var(--ink);
+    padding: 9px 12px;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, .34)
+}
+
+.int-flow b {
+    flex: 0 1 auto;
+    min-width: 0;
+    height: 22px;
+    padding: 0 9px;
+    background: #fff;
+    border: 1px solid #d5dbf3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden
+}
+
+.int-flow b.on {
+    background: var(--blue);
+    border-color: var(--blue);
+    color: #fff
+}
+
+.int-flow i {
+    flex: none;
+    width: 8px;
+    height: 1px;
+    background: #b9c2e8
+}
+
+/* What the workflow produces: one row per action, each with its own state */
+.int-actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 100%;
+    margin-top: 9px
+}
+
+.int-rail.bot {
+    margin-top: 9px
+}
+
+.int-act {
+    position: relative;
+    background: #fff;
+    color: var(--ink);
+    padding: 9px 10px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, .34)
+}
+
+.int-act:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -9px;
+    width: 1px;
+    height: 9px;
+    background: #454b5c
+}
+
+.int-act b {
+    font-size: 8.5px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap
+}
+
+.int-act em {
+    margin-inline-start: auto;
+    font-size: 8px;
+    font-style: normal;
+    color: var(--muted);
+    white-space: nowrap
+}
+
+.int-act i {
+    flex: none;
+    width: 6px;
+    height: 6px;
+    background: var(--blue);
+    border-radius: 50%
+}
+
+.int-act i.wait {
+    background: #d6dbe5
+}
+
+/* ---------- 02 Business need: the diagnostic test ----------
+   The reader should be able to apply the section to their own operation while
+   reading it, so it is set as a statement band rather than another content
+   row: a label column matching .subhead, and the test itself. */
+.principle {
+    display: grid;
+    grid-template-columns: 3fr 6fr 3fr;
+    gap: var(--s24);
+    border: 1px solid var(--line);
+    border-inline-start: 2px solid var(--blue);
+    background: var(--white);
+    padding: 26px 28px 28px;
+    margin-top: var(--s32)
+}
+
+.principle .eyebrow {
+    color: var(--blue)
+}
+
+.principle p {
+    font-size: clamp(19px, 1.9vw, 26px);
+    line-height: 1.24;
+    letter-spacing: -.04em;
+    margin: 0;
+    max-width: 34ch
+}
+
+.principle .side {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--muted);
+    margin: 0
+}
+
+/* ---------- Responsive ---------- */
+@media(max-width:1180px) {
+    .cap-grid {
+        grid-template-columns: repeat(3, 1fr)
+    }
+
+    /* 10 groups in 3 columns leaves a single orphan, so the closing row
+       becomes one full-width group instead of two half-width ones. */
+    .cap-grid.ten .cap:nth-last-child(-n+2) {
+        grid-column: auto;
+        border-inline-end: 1px solid var(--dark-line)
+    }
+
+    .cap-grid.ten .cap:last-child {
+        grid-column: 1 / -1;
+        border-inline-end: 0
+    }
+
+    .work-grid.three {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .process.five {
+        grid-template-columns: repeat(3, 1fr)
+    }
+
+    .process.five .step {
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 22px;
+        margin-bottom: 22px
+    }
+
+    .process.five.dense .step-out {
+        margin-top: 18px
+    }
+
+    .models {
+        grid-template-columns: repeat(3, 1fr)
+    }
+
+    .models.six .model:nth-last-child(-n+3) {
+        border-bottom: 1px solid var(--line)
+    }
+
+    .models.six .model:nth-last-child(-n+2) {
+        border-bottom: 0
+    }
+}
+
+@media(max-width:1050px) {
+    .svc-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 36px
+    }
+
+    .svc-art {
+        height: 440px
+    }
+
+    .out-grid {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .deliver-grid {
+        column-gap: 32px
+    }
+}
+
+@media(max-width:900px) {
+    /* Matches the header breakpoint in bita.css: at tablet-portrait width the
+       service pages show the logo + MENU pill, so their anchor nav links must
+       be hidden here too, not only below 760px. */
+    .nav .nav-link {
+        display: none
+    }
+
+    .svc-solutions,
+    .deliver-grid {
+        grid-template-columns: 1fr
+    }
+
+    .cap-grid.four,
+    .cap-grid.ten,
+    .models {
+        grid-template-columns: 1fr 1fr
+    }
+
+    /* Three columns at 768px left each stage 224px wide, tight for a stage
+       that also carries a deliverable list. Two columns read comfortably and
+       still show the sequence left to right. */
+    .process.five {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .process.five .step:nth-last-child(-n+2) {
+        border-bottom: 0;
+        padding-bottom: 0;
+        margin-bottom: 0
+    }
+
+    .models.three {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .models.three .model {
+        border-bottom: 1px solid var(--line)
+    }
+
+    .models.three .model:nth-last-child(-n+2) {
+        border-bottom: 1px solid var(--line)
+    }
+
+    .models.three .model:last-child {
+        border-bottom: 0
+    }
+
+    .models.six {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .models.six .model:nth-last-child(-n+2) {
+        border-bottom: 1px solid var(--line)
+    }
+
+    .models.six .model:last-child {
+        border-bottom: 0
+    }
+
+    .deliver.wide {
+        grid-column: auto
+    }
+}
+
+@media(max-width:760px) {
+    .svc-hero {
+        padding: 40px 0 var(--s32)
+    }
+
+    .svc-hero h1 {
+        font-size: clamp(30px, 7.4vw, 40px)
+    }
+
+    .svc-hero p {
+        font-size: 16px;
+        margin-bottom: var(--s24)
+    }
+
+    .svc-art {
+        height: 330px
+    }
+
+    .need,
+    html[data-lang="ar"] .need {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 20px 0 24px
+    }
+
+    html[data-lang="ar"] .need-no {
+        text-align: start
+    }
+
+    .need h3 {
+        max-width: none
+    }
+
+    .cap-grid,
+    .cap-grid.four,
+    .cap-grid.ten,
+    .models,
+    .models.three,
+    .out-grid,
+    .work-grid.three,
+    .process.five {
+        grid-template-columns: 1fr
+    }
+
+    .cap-grid,
+    .out-grid,
+    .models {
+        border-inline-end: 1px solid var(--line)
+    }
+
+    .work-grid.three {
+        border-inline-end: 0
+    }
+
+    .model {
+        border-inline-end: 0;
+        border-bottom: 1px solid var(--line)
+    }
+
+    .model:last-child {
+        border-bottom: 0
+    }
+
+    .cap-grid.ten .cap:nth-last-child(-n+2),
+    .cap-grid.ten .cap:last-child,
+    .models.three .model:last-child {
+        grid-column: auto;
+        border-inline-end: 0
+    }
+
+    .model h3 {
+        margin-top: 18px
+    }
+
+    /* `.models.six` outranks the generic `.models` rules above, so the
+       single-column stack and its borders have to be restated here. */
+    .models.six {
+        grid-template-columns: 1fr
+    }
+
+    .models.six .model,
+    .models.six .model:nth-last-child(-n+3),
+    .models.six .model:nth-last-child(-n+2) {
+        border-bottom: 1px solid var(--line)
+    }
+
+    .models.six .model:last-child {
+        border-bottom: 0
+    }
+
+    .cap,
+    .out {
+        border-inline-end: 0;
+        border-bottom: 1px solid var(--line);
+        min-height: 0
+    }
+
+    .work-grid.three .case {
+        border-inline-end: 0;
+        border-bottom: 1px solid var(--dark-line)
+    }
+
+    .cap:last-child,
+    .out:last-child,
+    .work-grid.three .case:last-child {
+        border-bottom: 0
+    }
+
+    .cap h3,
+    .out h3 {
+        margin-top: 20px
+    }
+
+    .process.five .step,
+    html[data-lang="ar"] .process.five .step {
+        grid-template-columns: 1fr;
+        border-inline-end: 0;
+        border-bottom: 1px solid var(--line);
+        padding: 20px 0;
+        margin: 0;
+        min-height: 0
+    }
+
+    .process.five .step b {
+        margin-bottom: 22px
+    }
+
+    .process.five.dense .step b {
+        margin-bottom: 20px
+    }
+
+    .process.five.dense .step-out {
+        margin-top: 18px
+    }
+
+    .art-mobile.shop {
+        height: 62%
+    }
+
+    /* The fulfillment rows carry meaning; the sparkline is decoration.
+       On short panels they collide, so the bars step aside. */
+    .art-ops.tall .bars {
+        display: none
+    }
+
+    /* Business Software hero: one console plus a full-width approval lane.
+       The roles panel would only fit at ~100px wide, where its labels
+       cannot be read, so it steps aside rather than shrink. */
+    .art-window.biz {
+        height: 61%
+    }
+
+    .bsw-roles {
+        display: none
+    }
+
+    .bsw-flow {
+        inset-inline-start: 4%;
+        inset-inline-end: 4%;
+        width: auto;
+        height: 24%
+    }
+
+    /* SaaS hero: the three-column fan-out is the point of the composition, so
+       it is not shrunk. Instead the diagram re-reads vertically — platform,
+       a compact stack of customer workspaces, platform admin — and the rails
+       and stems step aside because a stack needs no bus. Each workspace
+       collapses to one row (identity, plan, usage) so three of them still fit
+       at 330px, and the dashboard bars and member dots go: workspace, plan and
+       usage carry the meaning, the bars would not survive the height, and team
+       membership is already covered in capabilities and deliverables. */
+    .saas-diagram {
+        inset: 6% 4%
+    }
+
+    .saas-tenants {
+        grid-template-columns: 1fr;
+        gap: 7px;
+        margin-top: 0
+    }
+
+    .saas-rail,
+    .saas-ws:before,
+    .saas-ws:after,
+    .saas-dash,
+    .saas-members {
+        display: none
+    }
+
+    .saas-drop {
+        height: 12px
+    }
+
+    .saas-ws {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 10px
+    }
+
+    .saas-ws-top {
+        padding-bottom: 0;
+        border-bottom: 0;
+        flex: none;
+        min-width: 88px
+    }
+
+    .saas-plan {
+        margin-top: 0;
+        padding-top: 0;
+        flex: 1;
+        min-width: 0
+    }
+
+    .saas-hub,
+    .saas-admin {
+        padding: 8px 12px;
+        font-size: 8px
+    }
+
+    /* Automation hero: the three-across fan-out is the point of the
+       composition, so it is not shrunk. Instead the diagram re-reads
+       vertically — layer, systems, workflow, actions — and the bus and the
+       stems step aside because a stack needs no bus. Each system collapses to
+       one row (identity, then the two fields it carries) and each action is
+       already a single row. The sync bars go: identity and carried fields
+       carry the meaning, and a three-pixel progress bar cannot survive the
+       height. */
+    .int-diagram {
+        inset: 6% 4%
+    }
+
+    .int-systems,
+    .int-actions {
+        grid-template-columns: 1fr;
+        gap: 6px;
+        margin-top: 0
+    }
+
+    .int-rail,
+    .int-sys:before,
+    .int-act:before,
+    .int-sync {
+        display: none
+    }
+
+    .int-drop {
+        height: 9px
+    }
+
+    .int-sys {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        padding: 7px 9px
+    }
+
+    .int-sys-top {
+        flex: none;
+        min-width: 74px;
+        padding-bottom: 0;
+        border-bottom: 0
+    }
+
+    .int-fields {
+        flex: 1;
+        min-width: 0;
+        flex-direction: row;
+        gap: 8px;
+        padding-top: 0
+    }
+
+    .int-field {
+        flex: 1;
+        min-width: 0
+    }
+
+    .int-field span {
+        flex-basis: auto
+    }
+
+    .int-flow {
+        padding: 6px 9px
+    }
+
+    .int-flow b {
+        height: 18px
+    }
+
+    .int-act {
+        padding: 7px 9px
+    }
+
+    .int-hub {
+        padding: 7px 12px;
+        font-size: 8px
+    }
+
+    .principle {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 20px 22px 22px;
+        margin-top: var(--s24)
+    }
+
+    .principle p {
+        max-width: none
+    }
+
+    .subhead {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin: 56px 0 28px
+    }
+
+    .faq-q {
+        padding: 20px 0;
+        font-size: 19px
+    }
+
+    .crumb {
+        min-height: 44px
+    }
+
+    .faq-a,
+    html[data-lang="ar"] .faq-a {
+        padding: 0 0 22px
+    }
+
+    .case .screen {
+        height: 180px
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+    .faq-sign:before,
+    .faq-sign:after {
+        transition: none
+    }
+}
+
+/* ---------- Language visibility ----------
+   Component rules such as `.step-out span{display:block}` (0,1,1) and
+   `.case .meta div{display:flex}` (0,2,1) outrank the base `.ar/.fr
+   {display:none}` (0,1,0) declared in bita.css, which let inactive
+   translations render. This block is last in the cascade so the inactive
+   language is always hidden regardless of component display rules. The
+   active language keeps its natural display, since no rule is set for it. */
+html[data-lang="en"] .ar,
+html[data-lang="en"] .fr,
+html[data-lang="ar"] .en,
+html[data-lang="ar"] .fr,
+html[data-lang="fr"] .en,
+html[data-lang="fr"] .ar {
+    display: none
+}

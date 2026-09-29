@@ -4,999 +4,26 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <script>
+        /* The chosen language is stored so it follows the reader across pages.
+           It is applied here, before the stylesheet renders, because applying
+           it later would paint the English copy first and then swap every
+           string, which reads as a flash and shifts the layout. */
+        try {
+            var bitaLang = localStorage.getItem('bita-lang');
+            if (bitaLang === 'en' || bitaLang === 'ar' || bitaLang === 'fr') {
+                var bitaRoot = document.documentElement;
+                bitaRoot.dataset.lang = bitaLang;
+                bitaRoot.lang = bitaLang;
+                bitaRoot.dir = bitaLang === 'ar' ? 'rtl' : 'ltr';
+            }
+        } catch (e) { }
+    </script>
     <title>BITA — Digital Solutions</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap');
-
-        :root {
-            --ink: #111318;
-            --blue: #3157FF;
-            --paper: #F7F7F5;
-            --white: #fff;
-            --muted: #6B7280;
-            --line: #D9DCE1;
-            --s8: 8px;
-            --s12: 12px;
-            --s16: 16px;
-            --s24: 24px;
-            --s32: 32px;
-            --s48: 48px;
-            --s64: 64px;
-            --s96: 96px;
-            --font: "Geist", "Arial", sans-serif;
-            --arabic: "IBM Plex Sans Arabic", Arial, sans-serif
-        }
-
-        * {
-            box-sizing: border-box
-        }
-
-        html {
-            scroll-behavior: smooth
-        }
-
-        body {
-            margin: 0;
-            background: var(--paper);
-            color: var(--ink);
-            font-family: var(--font);
-            font-size: 16px;
-            line-height: 1.5
-        }
-
-        button {
-            font: inherit
-        }
-
-        button:focus-visible,
-        a:focus-visible {
-            outline: 3px solid var(--blue);
-            outline-offset: 3px
-        }
-
-        .wrap {
-            max-width: 1440px;
-            margin: auto;
-            padding: 0 48px
-        }
-
-        .eyebrow {
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: .17em;
-            text-transform: uppercase;
-            color: var(--muted)
-        }
-
-        .rule {
-            height: 1px;
-            background: var(--line)
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            color: var(--ink)
-        }
-
-        .logo svg {
-            display: block;
-            width: auto;
-            height: 36px
-        }
-
-        .mark-foot,
-        .mark-hero {
-            display: block;
-            flex: 0 0 auto
-        }
-
-        .mark-foot svg {
-            display: block;
-            width: auto;
-            height: 26px
-        }
-
-        header {
-            height: 76px;
-            display: flex;
-            align-items: center;
-            border-bottom: 1px solid var(--line)
-        }
-
-        header .wrap {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center
-        }
-
-        .nav {
-            display: flex;
-            align-items: center;
-            gap: 24px
-        }
-
-        .nav button,
-        .text-button {
-            background: transparent;
-            border: 0;
-            color: var(--ink);
-            cursor: pointer;
-            padding: 8px 0;
-            font-size: 13px
-        }
-
-        .nav button:hover,
-        .text-button:hover {
-            color: var(--blue)
-        }
-
-        .lang {
-            display: flex;
-            border: 1px solid var(--line);
-            padding: 3px;
-            margin-left: 10px
-        }
-
-        .lang button {
-            border: 0;
-            background: transparent;
-            padding: 5px 8px;
-            font-size: 11px;
-            font-weight: 700;
-            cursor: pointer;
-            color: var(--muted)
-        }
-
-        .lang button.active {
-            background: var(--ink);
-            color: #fff
-        }
-
-        .menu {
-            display: none;
-            background: none;
-            border: 0;
-            font-size: 24px
-        }
-
-        .hero {
-            padding: var(--s64) 0 var(--s48);
-            min-height: 570px;
-            position: relative;
-            overflow: hidden
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 7fr 5fr;
-            gap: var(--s48);
-            align-items: end
-        }
-
-        .hero h1 {
-            font-size: clamp(48px, 6.3vw, 88px);
-            letter-spacing: -.075em;
-            line-height: .98;
-            max-width: 800px;
-            margin: var(--s16) 0 var(--s24)
-        }
-
-        .hero p {
-            max-width: 510px;
-            font-size: 18px;
-            color: var(--muted);
-            margin: 0 0 var(--s32)
-        }
-
-        .actions {
-            display: flex;
-            gap: 12px;
-            align-items: center
-        }
-
-        .button {
-            border: 1px solid var(--ink);
-            padding: 13px 18px;
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: 650;
-            transition: .2s
-        }
-
-        .button.primary {
-            background: var(--blue);
-            color: #fff;
-            border-color: var(--blue)
-        }
-
-        .button.primary:hover {
-            background: #2447da
-        }
-
-        .button.dark {
-            background: var(--ink);
-            color: #fff
-        }
-
-        .button.ghost {
-            background: transparent;
-            color: var(--ink)
-        }
-
-        .hero-art {
-            height: 410px;
-            position: relative;
-            background: var(--ink);
-            overflow: hidden
-        }
-
-        .hero-art .gridlines {
-            position: absolute;
-            inset: 0;
-            background-image: linear-gradient(rgba(255, 255, 255, .1) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .1) 1px, transparent 1px);
-            background-size: 42px 42px
-        }
-
-        .mark-hero {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: auto;
-            height: 190px
-        }
-
-        .mark-hero svg {
-            display: block;
-            width: auto;
-            height: 100%
-        }
-
-        .corner-note {
-            position: absolute;
-            left: 20px;
-            top: 18px;
-            color: #fff;
-            font-size: 10px;
-            letter-spacing: .15em;
-            text-transform: uppercase
-        }
-
-        .axis {
-            position: absolute;
-            right: 20px;
-            bottom: 18px;
-            color: #fff;
-            font-size: 10px;
-            letter-spacing: .12em;
-            opacity: .65
-        }
-
-        .statement-band {
-            border-top: 1px solid var(--line);
-            border-bottom: 1px solid var(--line);
-            padding: 24px 0
-        }
-
-        .statement {
-            display: grid;
-            grid-template-columns: 2fr 3fr;
-            gap: 32px
-        }
-
-        .statement p {
-            font-size: 24px;
-            line-height: 1.25;
-            letter-spacing: -.035em;
-            margin: 0;
-            max-width: 710px
-        }
-
-        .section {
-            padding: var(--s96) 0
-        }
-
-        .section-head {
-            display: grid;
-            grid-template-columns: 3fr 6fr 3fr;
-            gap: 24px;
-            border-top: 1px solid var(--line);
-            padding-top: 16px;
-            margin-bottom: 48px
-        }
-
-        .section-title {
-            font-size: clamp(30px, 3.6vw, 52px);
-            line-height: 1.05;
-            letter-spacing: -.06em;
-            margin: 0
-        }
-
-        .section-intro {
-            color: var(--muted);
-            margin: 4px 0 0;
-            max-width: 430px
-        }
-
-        .services {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            border: 1px solid var(--line);
-            border-right: 0
-        }
-
-        .solutions {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            border: 1px solid var(--line)
-        }
-
-        .solution {
-            padding: 32px;
-            min-height: 310px;
-            position: relative;
-            border-right: 1px solid var(--line);
-            background: var(--white);
-            overflow: hidden
-        }
-
-        .solution:last-child {
-            border-right: 0
-        }
-
-        .solution h3 {
-            font-size: 31px;
-            line-height: 1.04;
-            letter-spacing: -.05em;
-            max-width: 270px;
-            margin: 58px 0 12px
-        }
-
-        .solution p {
-            max-width: 370px;
-            font-size: 14px;
-            color: var(--muted);
-            margin: 0
-        }
-
-        .solution .solution-mark {
-            position: absolute;
-            right: -28px;
-            bottom: -18px;
-            width: 190px;
-            height: 190px;
-            background: var(--blue);
-            clip-path: polygon(0 0, 100% 0, 100% 55%, 52% 100%, 0 100%);
-            opacity: .96
-        }
-
-        .solution.growth .solution-mark {
-            background: var(--ink);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 45% 100%, 0 55%)
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 5fr 7fr;
-            border-top: 1px solid var(--line);
-            padding-top: 20px;
-            gap: 48px
-        }
-
-        .about-copy {
-            font-size: clamp(25px, 3.2vw, 43px);
-            line-height: 1.12;
-            letter-spacing: -.055em;
-            margin: 0;
-            max-width: 690px
-        }
-
-        .about-list {
-            border-left: 1px solid var(--line);
-            padding-left: 24px
-        }
-
-        .about-list div {
-            padding: 12px 0;
-            border-bottom: 1px solid var(--line);
-            display: flex;
-            justify-content: space-between;
-            font-size: 14px
-        }
-
-        .about-list span:last-child {
-            color: var(--muted)
-        }
-
-        .service {
-            padding: 28px;
-            border-right: 1px solid var(--line);
-            min-height: 260px;
-            position: relative;
-            background: var(--white)
-        }
-
-        .service:hover {
-            background: #f1f3ff
-        }
-
-        .service-no {
-            font-size: 12px;
-            color: var(--blue);
-            font-weight: 700
-        }
-
-        .service h3 {
-            font-size: 25px;
-            letter-spacing: -.04em;
-            margin: 58px 0 9px
-        }
-
-        .service p {
-            font-size: 14px;
-            color: var(--muted);
-            margin: 0
-        }
-
-        .service .line-icon {
-            position: absolute;
-            right: 24px;
-            top: 24px;
-            width: 25px;
-            height: 25px;
-            border: 1.5px solid var(--ink)
-        }
-
-        .service:nth-child(2) .line-icon {
-            border-radius: 50%;
-            border-right-color: var(--blue)
-        }
-
-        .service:nth-child(3) .line-icon {
-            transform: rotate(45deg);
-            border-color: var(--blue)
-        }
-
-        .work {
-            background: var(--ink);
-            color: #fff
-        }
-
-        .work .section-head {
-            border-color: #343741
-        }
-
-        .work .eyebrow {
-            color: #abb0bc
-        }
-
-        .work .section-intro {
-            color: #b8bdc8
-        }
-
-        .work-grid {
-            display: grid;
-            grid-template-columns: 1.4fr 1fr;
-            gap: 20px
-        }
-
-        .case {
-            min-height: 370px;
-            position: relative;
-            padding: 24px;
-            overflow: hidden;
-            background: #1a1e27;
-            display: flex;
-            flex-direction: column
-        }
-
-        .case.light {
-            background: #e9edff;
-            color: var(--ink)
-        }
-
-        .case small {
-            font-size: 11px;
-            letter-spacing: .14em;
-            text-transform: uppercase
-        }
-
-        .case h3 {
-            margin: auto 0 0;
-            font-size: 27px;
-            letter-spacing: -.05em
-        }
-
-        .case .sample {
-            position: absolute;
-            top: 23px;
-            right: 20px;
-            background: rgba(255, 255, 255, .16);
-            padding: 5px 8px;
-            font-size: 10px;
-            letter-spacing: .1em
-        }
-
-        .light .sample {
-            background: rgba(17, 19, 24, .08)
-        }
-
-        .screen {
-            position: relative;
-            flex: 0 0 auto;
-            height: 228px;
-            margin: 22px 11px 18px;
-            background: #fff;
-            color: var(--ink);
-            padding: 14px;
-            border-radius: 4px
-        }
-
-        .screen-nav {
-            height: 8px;
-            width: 55%;
-            background: #dce1eb;
-            margin-bottom: 24px
-        }
-
-        .screen-title {
-            font-weight: 800;
-            font-size: 30px;
-            letter-spacing: -.07em;
-            max-width: 220px;
-            line-height: .95
-        }
-
-        .screen-blue {
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            width: 47%;
-            height: 56%;
-            background: var(--blue);
-            clip-path: polygon(100% 0, 100% 100%, 0 100%)
-        }
-
-        .screen-grid {
-            position: absolute;
-            bottom: 30px;
-            left: 14px;
-            right: 14px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 8px
-        }
-
-        .screen-grid b {
-            height: 43px;
-            background: #f0f2f6;
-            border: 1px solid #e1e4eb
-        }
-
-        .process {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            border-top: 1px solid var(--line)
-        }
-
-        .step {
-            padding: 22px 22px 0 0;
-            margin-right: 22px;
-            border-right: 1px solid var(--line);
-            min-height: 180px
-        }
-
-        .step:last-child {
-            border: 0
-        }
-
-        .step b {
-            display: block;
-            font-size: 12px;
-            color: var(--blue);
-            margin-bottom: 44px
-        }
-
-        .step h3 {
-            font-size: 20px;
-            letter-spacing: -.03em;
-            margin: 0 0 7px
-        }
-
-        .step p {
-            font-size: 13px;
-            color: var(--muted);
-            margin: 0
-        }
-
-        .contact {
-            padding: var(--s96) 0;
-            background: var(--blue);
-            color: #fff
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 7fr 5fr;
-            gap: 48px;
-            align-items: end
-        }
-
-        .contact h2 {
-            font-size: clamp(44px, 5.6vw, 76px);
-            line-height: .98;
-            letter-spacing: -.07em;
-            margin: 14px 0
-        }
-
-        .contact p {
-            max-width: 490px;
-            margin: 0;
-            color: rgba(255, 255, 255, .9);
-            font-size: 17px
-        }
-
-        .contact .button {
-            background: #fff;
-            border-color: #fff;
-            color: var(--ink);
-            margin-top: 28px
-        }
-
-        .contact-side {
-            border-left: 1px solid rgba(255, 255, 255, .7);
-            padding: 20px 0 20px 26px
-        }
-
-        .contact-side p {
-            font-size: 12px;
-            line-height: 1.6
-        }
-
-        .contact .eyebrow {
-            color: rgba(255, 255, 255, .9)
-        }
-
-        .contact-form {
-            display: grid;
-            gap: 17px;
-            margin: 0
-        }
-
-        .field {
-            display: grid;
-            gap: 6px
-        }
-
-        .field label {
-            font-size: 10px;
-            font-weight: 700;
-            letter-spacing: .14em;
-            text-transform: uppercase;
-            color: rgba(255, 255, 255, .9)
-        }
-
-        .field input,
-        .field select,
-        .field textarea {
-            width: 100%;
-            background: transparent;
-            border: 0;
-            border-bottom: 1px solid rgba(255, 255, 255, .7);
-            color: #fff;
-            font: inherit;
-            font-size: 15px;
-            padding: 9px 0;
-            border-radius: 0;
-            appearance: none;
-            -webkit-appearance: none;
-            transition: border-color .2s, box-shadow .2s
-        }
-
-        .field textarea {
-            resize: vertical;
-            min-height: 92px;
-            line-height: 1.5;
-            font-size: 14px
-        }
-
-        .field input::placeholder,
-        .field textarea::placeholder {
-            color: rgba(255, 255, 255, .9);
-            opacity: 1
-        }
-
-        .field input:focus,
-        .field select:focus,
-        .field textarea:focus {
-            outline: none;
-            border-bottom-color: #fff;
-            box-shadow: 0 1px 0 0 #fff
-        }
-
-        .sel {
-            position: relative;
-            display: block
-        }
-
-        .sel:after {
-            content: "";
-            position: absolute;
-            inset-inline-end: 2px;
-            top: 16px;
-            width: 7px;
-            height: 7px;
-            border-right: 1.5px solid rgba(255, 255, 255, .9);
-            border-bottom: 1.5px solid rgba(255, 255, 255, .9);
-            transform: rotate(45deg);
-            pointer-events: none
-        }
-
-        .field select option {
-            background: #111318;
-            color: #fff
-        }
-
-        .contact-form .contact-submit {
-            justify-self: start;
-            margin: 4px 0 0;
-            padding: 12px 22px;
-            background: #fff;
-            border-color: #fff;
-            color: var(--ink);
-            font-weight: 650;
-            cursor: pointer
-        }
-
-        .contact-form .sample-note {
-            margin: 0;
-            color: rgba(255, 255, 255, .9);
-            opacity: 1;
-            max-width: none;
-            font-size: 12px;
-            line-height: 1.6
-        }
-
-        .sample-note {
-            font-size: 10px;
-            letter-spacing: .1em;
-            text-transform: uppercase;
-            opacity: .72
-        }
-
-        footer {
-            padding: 24px 0;
-            background: var(--ink);
-            color: #fff
-        }
-
-        footer .wrap {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            justify-content: space-between;
-            font-size: 11px;
-            color: #bdc2cc
-        }
-
-        .ar {
-            font-family: var(--arabic);
-            display: none
-        }
-
-        .fr {
-            display: none
-        }
-
-        html[data-lang="ar"] .en,
-        html[data-lang="fr"] .en {
-            display: none
-        }
-
-        html[data-lang="ar"] .fr,
-        html[data-lang="fr"] .ar {
-            display: none
-        }
-
-        html[data-lang="ar"] .ar,
-        html[data-lang="fr"] .fr {
-            display: block
-        }
-
-        html[data-lang="ar"] .hero h1,
-        html[data-lang="ar"] .section-title,
-        html[data-lang="ar"] .contact h2 {
-            letter-spacing: -.04em
-        }
-
-        html[data-lang="ar"] .hero-grid,
-        html[data-lang="ar"] .contact-grid {
-            direction: rtl
-        }
-
-        html[data-lang="ar"] .hero-art {
-            text-align: left
-        }
-
-        html[data-lang="ar"] .statement,
-        html[data-lang="ar"] .section-head {
-            direction: rtl
-        }
-
-        html[data-lang="ar"] .service,
-        html[data-lang="ar"] .step {
-            text-align: right
-        }
-
-        html[data-lang="ar"] .step {
-            border-right: 0;
-            border-left: 1px solid var(--line);
-            padding: 22px 0 0 22px;
-            margin: 0 0 0 22px
-        }
-
-        html[data-lang="ar"] .contact-side {
-            border-left: 0;
-            border-right: 1px solid rgba(255, 255, 255, .7);
-            padding: 20px 26px 20px 0
-        }
-
-        @media(max-width:1050px) {
-            .services {
-                grid-template-columns: repeat(3, 1fr)
-            }
-        }
-
-        @media(max-width:760px) {
-            .wrap {
-                padding: 0 20px
-            }
-
-            .nav {
-                display: flex;
-                margin-left: auto
-            }
-
-            .nav>button {
-                display: none
-            }
-
-            .lang {
-                margin-left: 0
-            }
-
-            .menu {
-                display: block
-            }
-
-            .hero {
-                padding: 48px 0 24px
-            }
-
-            .hero-grid,
-            .contact-grid,
-            .statement {
-                grid-template-columns: 1fr;
-                gap: 28px
-            }
-
-            .hero-art {
-                height: 280px
-            }
-
-            .mark-hero {
-                height: 120px
-            }
-
-            .hero h1 {
-                font-size: 51px
-            }
-
-            .section {
-                padding: 64px 0
-            }
-
-            .section-head {
-                grid-template-columns: 1fr;
-                gap: 14px;
-                margin-bottom: 28px
-            }
-
-            .services,
-            .work-grid,
-            .process,
-            .solutions,
-            .about-grid {
-                grid-template-columns: 1fr
-            }
-
-            .solution {
-                border-right: 0;
-                border-bottom: 1px solid var(--line);
-                min-height: 240px
-            }
-
-            .solution:last-child {
-                border-bottom: 0
-            }
-
-            .about-list {
-                border-left: 0;
-                padding-left: 0
-            }
-
-            .services {
-                border-right: 1px solid var(--line)
-            }
-
-            .service {
-                min-height: 190px;
-                border-right: 0;
-                border-bottom: 1px solid var(--line)
-            }
-
-            .process {
-                border-top: 1px solid var(--line)
-            }
-
-            .step,
-            html[data-lang="ar"] .step {
-                border-right: 0;
-                border-left: 0;
-                border-bottom: 1px solid var(--line);
-                padding: 20px 0;
-                margin: 0;
-                min-height: 0
-            }
-
-            .step b {
-                margin-bottom: 24px
-            }
-
-            .contact {
-                padding: 64px 0
-            }
-
-            .contact-side,
-            html[data-lang="ar"] .contact-side {
-                border-left: 0;
-                border-right: 0;
-                border-top: 1px solid rgba(255, 255, 255, .7);
-                padding: 20px 0
-            }
-
-            .work-grid {
-                gap: 12px
-            }
-
-            .case {
-                min-height: 300px
-            }
-
-            .screen {
-                height: 190px;
-                margin: 18px 0 16px
-            }
-
-            .logo svg {
-                height: 30px
-            }
-        }
-
-        @media(prefers-reduced-motion:reduce) {
-            html {
-                scroll-behavior: auto
-            }
-
-            .button {
-                transition: none
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/bita.css">
 </head>
 
 <body>
@@ -1025,8 +52,7 @@
                 aria-label="Primary navigation"><button data-go="services"><span class="en">Services</span><span
                         class="ar">الخدمات</span><span class="fr">Services</span></button><button
                     data-go="solutions"><span class="en">Solutions</span><span class="ar">الحلول</span><span
-                        class="fr">Solutions</span></button><button data-go="work"><span class="en">Work</span><span
-                        class="ar">الأعمال</span><span class="fr">Réalisations</span></button><button
+                        class="fr">Solutions</span></button><button
                     data-go="process"><span class="en">Process</span><span class="ar">المنهجية</span><span
                         class="fr">Méthode</span></button><button data-go="about"><span class="en">About</span><span
                         class="ar">من نحن</span><span class="fr">À propos</span></button><button data-go="contact"><span
@@ -1056,7 +82,7 @@
                     <p class="fr">Nous concevons et développons des produits, des plateformes et des systèmes numériques
                         qui transforment des besoins métiers complexes en élan concret.</p>
                     <div class="actions"><button class="button primary" data-go="contact"><span class="en">Start a
-                                conversation</span><span class="ar">ابدأ محادثة</span><span class="fr">Démarrer une
+                                conversation</span><span class="ar">اتصل بنا</span><span class="fr">Démarrer une
                                 conversation</span></button><button class="text-button" data-go="services"><span
                                 class="en">Explore capabilities ↓</span><span class="ar">استكشف قدراتنا ↓</span><span
                                 class="fr">Découvrir nos expertises ↓</span></button></div>
@@ -1111,47 +137,76 @@
                 </div>
                 <div class="services">
                     <article class="service"><span class="service-no">01</span><i class="line-icon"></i>
-                        <h3 class="en">Custom Web &amp; Mobile Apps</h3>
-                        <h3 class="ar">تطبيقات الويب والجوال المخصصة</h3>
-                        <h3 class="fr">Applications Web &amp; Mobile sur mesure</h3>
+                        <h3 class="en"><a class="service-link"
+                                href="services/custom-web-mobile-apps/index.html">Custom Web &amp; Mobile Apps</a></h3>
+                        <h3 class="ar"><a class="service-link"
+                                href="services/custom-web-mobile-apps/index.html">تطبيقات الويب والجوال المخصصة</a></h3>
+                        <h3 class="fr"><a class="service-link"
+                                href="services/custom-web-mobile-apps/index.html">Applications Web &amp; Mobile sur
+                                mesure</a></h3>
                         <p class="en">Purpose-built customer and internal experiences that solve a specific job.</p>
                         <p class="ar">تجارب مخصصة للعملاء والفرق الداخلية لحل احتياج محدد.</p>
                         <p class="fr">Des expériences clients et internes conçues sur mesure pour répondre à un besoin
-                            précis.</p>
+                            précis.</p><span class="service-go en" aria-hidden="true">Service page →</span><span
+                            class="service-go ar" aria-hidden="true">صفحة الخدمة ←</span><span class="service-go fr"
+                            aria-hidden="true">Page service →</span>
                     </article>
                     <article class="service"><span class="service-no">02</span><i class="line-icon"></i>
-                        <h3 class="en">E-commerce</h3>
-                        <h3 class="ar">التجارة الإلكترونية</h3>
-                        <h3 class="fr">E-commerce</h3>
+                        <h3 class="en"><a class="service-link"
+                                href="services/ecommerce/index.html">E-commerce</a></h3>
+                        <h3 class="ar"><a class="service-link"
+                                href="services/ecommerce/index.html">التجارة الإلكترونية</a></h3>
+                        <h3 class="fr"><a class="service-link"
+                                href="services/ecommerce/index.html">E-commerce</a></h3>
                         <p class="en">Storefronts and purchase journeys engineered for clarity and conversion.</p>
                         <p class="ar">متاجر ومسارات شراء مصممة للوضوح والتحويل.</p>
-                        <p class="fr">Des boutiques et des parcours d’achat conçus pour la clarté et la conversion.</p>
+                        <p class="fr">Des boutiques et des parcours d’achat conçus pour la clarté et la conversion.</p><span
+                            class="service-go en" aria-hidden="true">Service page →</span><span
+                            class="service-go ar" aria-hidden="true">صفحة الخدمة ←</span><span class="service-go fr"
+                            aria-hidden="true">Page service →</span>
                     </article>
                     <article class="service"><span class="service-no">03</span><i class="line-icon"></i>
-                        <h3 class="en">Business Software</h3>
-                        <h3 class="ar">برمجيات الأعمال</h3>
-                        <h3 class="fr">Logiciels de gestion</h3>
+                        <h3 class="en"><a class="service-link"
+                                href="services/business-software/index.html">Business Software</a></h3>
+                        <h3 class="ar"><a class="service-link"
+                                href="services/business-software/index.html">برمجيات الأعمال</a></h3>
+                        <h3 class="fr"><a class="service-link"
+                                href="services/business-software/index.html">Logiciels de gestion</a></h3>
                         <p class="en">Operational tools that make information and decisions easier to manage.</p>
                         <p class="ar">أدوات تشغيلية تسهّل إدارة المعلومات والقرارات.</p>
                         <p class="fr">Des outils opérationnels qui simplifient la gestion de l’information et de la
-                            décision.</p>
+                            décision.</p><span class="service-go en" aria-hidden="true">Service page →</span><span
+                            class="service-go ar" aria-hidden="true">صفحة الخدمة ←</span><span class="service-go fr"
+                            aria-hidden="true">Page service →</span>
                     </article>
                     <article class="service"><span class="service-no">04</span><i class="line-icon"></i>
-                        <h3 class="en">SaaS &amp; Digital Platforms</h3>
-                        <h3 class="ar">منصات SaaS والمنتجات الرقمية</h3>
-                        <h3 class="fr">SaaS &amp; Plateformes numériques</h3>
+                        <h3 class="en"><a class="service-link"
+                                href="services/saas-digital-platforms/index.html">SaaS &amp; Digital Platforms</a></h3>
+                        <h3 class="ar"><a class="service-link"
+                                href="services/saas-digital-platforms/index.html">منصات SaaS والمنتجات الرقمية</a></h3>
+                        <h3 class="fr"><a class="service-link"
+                                href="services/saas-digital-platforms/index.html">SaaS &amp; Plateformes
+                                numériques</a></h3>
                         <p class="en">Scalable platforms with a coherent product foundation.</p>
                         <p class="ar">منصات قابلة للتوسع بأساس منتج متماسك.</p>
-                        <p class="fr">Des plateformes évolutives, bâties sur un socle produit cohérent.</p>
+                        <p class="fr">Des plateformes évolutives, bâties sur un socle produit cohérent.</p><span
+                            class="service-go en" aria-hidden="true">Service page →</span><span
+                            class="service-go ar" aria-hidden="true">صفحة الخدمة ←</span><span class="service-go fr"
+                            aria-hidden="true">Page service →</span>
                     </article>
                     <article class="service"><span class="service-no">05</span><i class="line-icon"></i>
-                        <h3 class="en">Automation &amp; Integrations</h3>
-                        <h3 class="ar">الأتمتة والتكاملات</h3>
-                        <h3 class="fr">Automatisation &amp; Intégrations</h3>
+                        <h3 class="en"><a class="service-link"
+                                href="services/automation-integrations/index.html">Automation &amp; Integrations</a></h3>
+                        <h3 class="ar"><a class="service-link"
+                                href="services/automation-integrations/index.html">الأتمتة والتكاملات</a></h3>
+                        <h3 class="fr"><a class="service-link"
+                                href="services/automation-integrations/index.html">Automatisation &amp; Intégrations</a></h3>
                         <p class="en">Connected workflows that remove friction between tools and teams.</p>
                         <p class="ar">تدفقات عمل مترابطة تقلل الاحتكاك بين الأدوات والفرق.</p>
                         <p class="fr">Des flux de travail connectés qui suppriment les frictions entre les outils et les
-                            équipes.</p>
+                            équipes.</p><span class="service-go en" aria-hidden="true">Service page →</span><span
+                            class="service-go ar" aria-hidden="true">صفحة الخدمة ←</span><span class="service-go fr"
+                            aria-hidden="true">Page service →</span>
                     </article>
                 </div>
             </div>
@@ -1201,63 +256,12 @@
                 </div>
             </div>
         </section>
-        <section class="work section" id="work">
+                <section class="section" id="process">
             <div class="wrap">
                 <div class="section-head">
-                    <div class="eyebrow en">03 / SELECTED WORK</div>
-                    <div class="eyebrow ar">03 / أعمال مختارة</div>
-                    <div class="eyebrow fr">03 / RÉALISATIONS SÉLECTIONNÉES</div>
-                    <h2 class="section-title en">Designed to make the complex feel inevitable.</h2>
-                    <h2 class="section-title ar">تصميم يجعل المعقد يبدو بديهيًا.</h2>
-                    <h2 class="section-title fr">Une conception qui fait de la complexité une évidence.</h2>
-                    <p class="section-intro en">Sample case-study layouts — replace with verified BITA client projects
-                        and outcomes.</p>
-                    <p class="section-intro ar">نماذج لتخطيط دراسات الحالة — تُستبدل بمشاريع BITA ونتائج العملاء
-                        المُوثقة.</p>
-                    <p class="section-intro fr">Maquettes d’études de cas — à remplacer par les projets et les résultats
-                        clients vérifiés de BITA.</p>
-                </div>
-                <div class="work-grid">
-                    <article class="case"><small class="en">Platform concept</small><small class="ar">مفهوم
-                            منصة</small><small class="fr">Concept de plateforme</small><span class="sample en">Sample
-                            content</span><span class="sample ar">محتوى تجريبي</span><span class="sample fr">Contenu de
-                            démonstration</span>
-                        <div class="screen">
-                            <div class="screen-nav"></div>
-                            <div class="screen-title en">One clear workspace.</div>
-                            <div class="screen-title ar">مساحة عمل واحدة وواضحة.</div>
-                            <div class="screen-title fr">Un espace de travail unique et clair.</div>
-                            <div class="screen-grid"><b></b><b></b><b></b></div>
-                            <div class="screen-blue"></div>
-                        </div>
-                        <h3 class="en">Operations, made legible</h3>
-                        <h3 class="ar">عمليات أكثر وضوحًا</h3>
-                        <h3 class="fr">Des opérations lisibles</h3>
-                    </article>
-                    <article class="case light"><small class="en">Mobile concept</small><small class="ar">مفهوم
-                            جوّال</small><small class="fr">Concept mobile</small><span class="sample en">Sample
-                            content</span><span class="sample ar">محتوى تجريبي</span><span class="sample fr">Contenu de
-                            démonstration</span>
-                        <div class="screen">
-                            <div class="screen-nav"></div>
-                            <div class="screen-title en">Progress without the noise.</div>
-                            <div class="screen-title ar">تقدم بلا ضوضاء.</div>
-                            <div class="screen-title fr">De la progression, sans le bruit.</div>
-                            <div class="screen-blue"></div>
-                        </div>
-                        <h3 class="en">Service on the move</h3>
-                        <h3 class="ar">خدمة تتحرك معك</h3>
-                        <h3 class="fr">Un service en mouvement</h3>
-                    </article>
-                </div>
-            </div>
-        </section>
-        <section class="section" id="process">
-            <div class="wrap">
-                <div class="section-head">
-                    <div class="eyebrow en">04 / HOW WE WORK</div>
-                    <div class="eyebrow ar">04 / كيف نعمل</div>
-                    <div class="eyebrow fr">04 / NOTRE MÉTHODE</div>
+                    <div class="eyebrow en">03 / HOW WE WORK</div>
+                    <div class="eyebrow ar">03 / كيف نعمل</div>
+                    <div class="eyebrow fr">03 / NOTRE MÉTHODE</div>
                     <h2 class="section-title en">Structured enough to stay aligned. Flexible enough to keep moving.</h2>
                     <h2 class="section-title ar">منهجية منظمة تحافظ على التوافق، ومرنة تحافظ على التقدم.</h2>
                     <h2 class="section-title fr">Assez structuré pour rester alignés. Assez souple pour garder le
@@ -1302,9 +306,9 @@
         <section class="section" id="about">
             <div class="wrap">
                 <div class="section-head">
-                    <div class="eyebrow en">05 / ABOUT BITA</div>
-                    <div class="eyebrow ar">05 / عن BITA</div>
-                    <div class="eyebrow fr">05 / À PROPOS DE BITA</div>
+                    <div class="eyebrow en">04 / ABOUT BITA</div>
+                    <div class="eyebrow ar">04 / عن BITA</div>
+                    <div class="eyebrow fr">04 / À PROPOS DE BITA</div>
                     <h2 class="section-title en">A practical digital partner for ambitious teams.</h2>
                     <h2 class="section-title ar">شريك رقمي عملي للفرق الطموحة.</h2>
                     <h2 class="section-title fr">Un partenaire digital pragmatique pour les équipes ambitieuses.</h2>
@@ -1335,13 +339,14 @@
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
         <section class="contact" id="contact">
             <div class="wrap contact-grid">
                 <div>
-                    <div class="eyebrow en">06 / CONTACT</div>
-                    <div class="eyebrow ar">06 / تواصل</div>
-                    <div class="eyebrow fr">06 / CONTACT</div>
+                    <div class="eyebrow en">05 / CONTACT</div>
+                    <div class="eyebrow ar">05 / تواصل</div>
+                    <div class="eyebrow fr">05 / CONTACT</div>
                     <h2 class="en">Have a complex digital problem?</h2>
                     <h2 class="ar">لديك تحدٍ رقمي معقد؟</h2>
                     <h2 class="fr">Vous avez un problème numérique complexe ?</h2>
@@ -1396,10 +401,7 @@
                         </div><button class="button contact-submit" type="submit"><span class="en">Send
                                 message</span><span class="ar">إرسال الرسالة</span><span class="fr">Envoyer le
                                 message</span></button>
-                        <p class="sample-note en">Form not connected yet — messages are not sent.</p>
-                        <p class="sample-note ar">النموذج غير مفعّل بعد — لا تُرسل الرسائل.</p>
-                        <p class="sample-note fr">Le formulaire n’est pas encore connecté — les messages ne sont pas
-                            envoyés.</p>
+
                     </form>
                 </aside>
             </div>
@@ -1422,9 +424,7 @@
                 2026</span><span class="fr">SOLUTIONS DIGITALES / 2026</span>
         </div>
     </footer>
-    <script>
-        const LANGS = { en: 'ltr', ar: 'rtl', fr: 'ltr' }, ORDER = Object.keys(LANGS), TITLES = { en: 'BITA — Digital Solutions', ar: 'BITA — حلول رقمية', fr: 'BITA — Solutions digitales' }, root = document.documentElement, tr = c => ORDER.indexOf(c), btns = document.querySelectorAll('.lang [data-lang]'); const setLang = c => { if (!(c in LANGS)) c = 'en'; root.dataset.lang = c; root.lang = c; root.dir = LANGS[c]; document.title = TITLES[c]; btns.forEach(x => { x.classList.toggle('active', x.dataset.lang === c); x.setAttribute('aria-current', x.dataset.lang === c ? 'true' : 'false') }); document.querySelectorAll('[data-i18n]').forEach(x => x.setAttribute('aria-label', x.dataset.i18n.split('|')[tr(c)])); document.querySelectorAll('[data-t]').forEach(x => x.textContent = x.dataset.t.split('|')[tr(c)]); document.querySelectorAll('[data-ph]').forEach(x => x.placeholder = x.dataset.ph.split('|')[tr(c)]) }; document.querySelectorAll('[data-go]').forEach(b => b.addEventListener('click', () => document.getElementById(b.dataset.go).scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }))); btns.forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang))); document.querySelector('[data-contact]').addEventListener('click', function () { const a = document.createElement('a'); a.href = 'mailto:'; a.setAttribute('aria-label', this.dataset.i18n.split('|')[tr(root.dataset.lang)]); document.body.append(a); a.click(); a.remove() }); document.querySelector('.contact-form').addEventListener('submit', e => e.preventDefault()); setLang(root.dataset.lang);
-    </script>
+    <script src="assets/js/bita.js"></script>
 </body>
 
 </html>

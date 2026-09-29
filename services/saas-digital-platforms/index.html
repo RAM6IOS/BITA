@@ -1,0 +1,1702 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <script>
+        /* The chosen language is stored so it follows the reader across pages.
+           It is applied here, before the stylesheet renders, because applying
+           it later would paint the English copy first and then swap every
+           string, which reads as a flash and shifts the layout. */
+        try {
+            var bitaLang = localStorage.getItem('bita-lang');
+            if (bitaLang === 'en' || bitaLang === 'ar' || bitaLang === 'fr') {
+                var bitaRoot = document.documentElement;
+                bitaRoot.dataset.lang = bitaLang;
+                bitaRoot.lang = bitaLang;
+                bitaRoot.dir = bitaLang === 'ar' ? 'rtl' : 'ltr';
+            }
+        } catch (e) { }
+    </script>
+    <title>SaaS &amp; Digital Platform Development | BITA Agency</title>
+    <meta name="description"
+        content="BITA designs and builds SaaS products and digital platforms with the foundations needed for users, organizations, permissions, subscriptions, billing, integrations, and continued product growth.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SaaS &amp; Digital Platform Development | BITA Agency">
+    <meta property="og:description"
+        content="BITA designs and builds SaaS products and digital platforms with the foundations needed for users, organizations, permissions, subscriptions, billing, integrations, and continued product growth.">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+    <link rel="stylesheet" href="../../assets/css/bita.css">
+    <link rel="stylesheet" href="../../assets/css/service.css">
+    <script type="application/json" id="page-meta">
+        {
+            "titles": {
+                "en": "SaaS & Digital Platform Development | BITA Agency",
+                "ar": "تطوير منصات SaaS والمنتجات الرقمية | BITA",
+                "fr": "Développement de plateformes SaaS et numériques | BITA"
+            },
+            "descriptions": {
+                "en": "BITA designs and builds SaaS products and digital platforms with the foundations needed for users, organizations, permissions, subscriptions, billing, integrations, and continued product growth.",
+                "ar": "تصمم BITA وتبني منتجات SaaS والمنصات الرقمية بالبنيات الأساسية اللازمة للمستخدمين والمؤسسات والصلاحيات والاشتراكات والفوترة والتكاملات ونمو المنتج المستمر.",
+                "fr": "BITA conçoit et développe des produits SaaS et des plateformes numériques avec les fondations nécessaires aux utilisateurs, aux organisations, aux permissions, aux abonnements, à la facturation, aux intégrations et à la croissance continue du produit."
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="wrap">
+            <a class="logo" href="../../index.html" data-i18n="BITA Digital Solutions|BITA للحلول الرقمية|BITA Solutions digitales"
+                aria-label="BITA Digital Solutions">
+                <svg viewBox="0 0 450 110" width="450" height="110" aria-hidden="true" focusable="false">
+                    <g transform="translate(20 4) scale(.93)">
+                        <path fill="#111318" d="M0 0H61L88 28L75 46H30L0 18Z" />
+                        <path fill="#111318" d="M30 56H75L88 74L61 102H0V84Z" />
+                        <path fill="#3157FF" d="M0 25L30 51L0 77Z" />
+                        <path fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="miter"
+                            d="M0 20L36 52L0 82" />
+                    </g>
+                    <g transform="translate(130 17) scale(1.05)" fill="#111318">
+                        <path
+                            d="M0 0H34L44 10V28L36 35L46 43V64L35 74H0V0ZM12 12V29H30L33 26V15L30 12H12ZM12 41V62H31L34 59V46L31 41H12Z" />
+                        <path d="M55 0H68V74H55Z" />
+                        <path d="M77 0H125V12H108V74H95V12H77Z" />
+                        <path d="M150 0H164L188 74H175L170 59H144L139 74H126L150 0ZM157 16L148 47H166L157 16Z" />
+                    </g>
+                </svg>
+            </a>
+            <nav class="nav" data-i18n="Primary navigation|التنقل الرئيسي|Navigation principale"
+                aria-label="Primary navigation"><a class="nav-link" href="../../index.html#services"><span class="en">Services</span><span
+                        class="ar">الخدمات</span><span class="fr">Services</span></a><a class="nav-link"
+                    href="../../index.html#solutions"><span class="en">Solutions</span><span class="ar">الحلول</span><span
+                        class="fr">Solutions</span></a><a class="nav-link" href="../../index.html#process"><span
+                        class="en">Process</span><span class="ar">المنهجية</span><span
+                        class="fr">Méthode</span></a><a class="nav-link" href="../../index.html#about"><span
+                        class="en">About</span><span class="ar">من نحن</span><span
+                        class="fr">À propos</span></a><a class="nav-link" href="../../index.html#contact"><span
+                        class="en">Contact</span><span class="ar">تواصل</span><span
+                        class="fr">Contact</span></a>
+                <div class="lang" role="group" data-i18n="Language|اللغة|Langue" aria-label="Language"><button
+                        class="active" data-lang="en" lang="en">EN</button><button data-lang="ar"
+                        lang="ar">AR</button><button data-lang="fr" lang="fr">FR</button></div>
+            </nav><a class="menu" href="../../index.html#contact" style="text-decoration:none;color:inherit"
+                data-i18n="Jump to contact|الانتقال إلى التواصل|Accéder à la section contact"
+                aria-label="Jump to contact">↗</a>
+        </div>
+    </header>
+    <main>
+        <div class="svc-breadcrumb">
+            <div class="wrap"><a class="crumb" href="../../index.html#services"><span aria-hidden="true">←</span><span
+                        class="en">All services</span><span class="ar">كل الخدمات</span><span
+                        class="fr">Tous les services</span></a></div>
+        </div>
+
+        <!-- ============================== 01 HERO ============================== -->
+        <section class="svc-hero">
+            <div class="wrap svc-hero-grid">
+                <div>
+                    <div class="eyebrow en">01 / SAAS &amp; DIGITAL PLATFORMS</div>
+                    <div class="eyebrow ar">01 / المنصات ومنتجات SaaS</div>
+                    <div class="eyebrow fr">01 / SAAS &amp; PLATEFORMES NUMÉRIQUES</div>
+                    <h1 class="en">Turn your digital idea into a platform built to grow.</h1>
+                    <h1 class="ar">حوّل فكرتك الرقمية إلى منصة مبنية للنمو.</h1>
+                    <h1 class="fr">Transformez votre idée numérique en une plateforme conçue pour grandir.</h1>
+                    <p class="en">We design and build SaaS products and digital platforms that connect users, organizations,
+                        workflows, subscriptions, and data in one scalable product.</p>
+                    <p class="ar">نصمم ونبني منتجات SaaS والمنصات الرقمية التي تربط المستخدمين والمؤسسات ومسارات العمل
+                        والاشتراكات والبيانات في منتج واحد قابل للتوسع.</p>
+                    <p class="fr">Nous concevons et développons des produits SaaS et des plateformes numériques qui relient
+                        utilisateurs, les organisations, les processus, les abonnements et les données dans un seul produit
+                        évolutif.</p>
+                    <div class="actions"><a class="button primary" href="#start"><span class="en">Start a
+                                conversation →</span><span class="ar">اتصل بنا →</span><span
+                                class="fr">Démarrer une conversation →</span></a></div>
+                </div>
+                <div class="svc-art" role="img"
+                    data-i18n="One platform serving three separate customer workspaces, each with its own team members, dashboard, subscription plan and usage, read and managed from a platform administration layer|منصة واحدة تخدم ثلاث مساحات عمل منفصلة للعملاء، لكل منها أعضاء الفريق ولوحة تحكم وباقة اشتراك واستخدام خاص بها، تُدار جميعها من طبقة إدارة المنصة|Une plateforme unique au service de trois espaces de travail clients distincts, chacun avec ses membres, son tableau de bord, son abonnement et son usage, le tout piloté depuis une couche d'administration de la plateforme"
+                    aria-label="One platform serving three separate customer workspaces, each with its own team members, dashboard, subscription plan and usage, read and managed from a platform administration layer">
+                    <div class="gridlines"></div>
+                    <div class="wedge" aria-hidden="true"></div>
+                    <div class="art-frame" aria-hidden="true"></div>
+
+                    <div class="saas-diagram" aria-hidden="true">
+                        <div class="saas-hub">PLATFORM</div>
+                        <i class="saas-drop"></i>
+                        <i class="saas-rail"></i>
+                        <div class="saas-tenants">
+                            <article class="saas-ws">
+                                <div class="saas-ws-top"><b>Workspace A</b><i></i></div>
+                                <div class="saas-members"><i></i><i></i><i></i><i class="more">+4</i></div>
+                                <div class="saas-dash"><span></span><span></span><span></span></div>
+                                <div class="saas-plan">
+                                    <div class="saas-plan-top"><b>Pro plan</b><em>12 / 20 seats</em></div>
+                                    <div class="saas-usage"><i class="u60"></i></div>
+                                </div>
+                            </article>
+                            <article class="saas-ws">
+                                <div class="saas-ws-top"><b>Workspace B</b><i></i></div>
+                                <div class="saas-members"><i></i><i></i><i class="more">+6</i></div>
+                                <div class="saas-dash"><span></span><span></span><span></span></div>
+                                <div class="saas-plan">
+                                    <div class="saas-plan-top"><b>Team plan</b><em>4 / 10 seats</em></div>
+                                    <div class="saas-usage"><i class="u40"></i></div>
+                                </div>
+                            </article>
+                            <article class="saas-ws">
+                                <div class="saas-ws-top"><b>Workspace C</b><i></i></div>
+                                <div class="saas-members"><i></i><i class="more">+2</i></div>
+                                <div class="saas-dash"><span></span><span></span><span></span></div>
+                                <div class="saas-plan">
+                                    <div class="saas-plan-top"><b>Growth plan</b><em>17 / 20 seats</em></div>
+                                    <div class="saas-usage"><i class="u85"></i></div>
+                                </div>
+                            </article>
+                        </div>
+                        <i class="saas-rail bot"></i>
+                        <i class="saas-drop"></i>
+                        <div class="saas-admin">PLATFORM ADMIN</div>
+                    </div>
+
+                    <div class="corner-note">PLATFORM / 04</div>
+                    <div class="axis">TENANTS · PLANS · USAGE · PERMISSIONS</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================= 02 BUSINESS NEED ========================= -->
+        <section class="section" id="need">
+            <div class="wrap">
+                <div class="section-head">
+                    <div class="eyebrow en">02 / BUSINESS NEED</div>
+                    <div class="eyebrow ar">02 / حاجة العمل</div>
+                    <div class="eyebrow fr">02 / BESOIN MÉTIER</div>
+                    <h2 class="section-title en">An idea becomes a different product when other people need to use
+                        it.</h2>
+                    <h2 class="section-title ar">تصبح الفكرة منتجًا مختلفًا حين يحتاج آخرون إلى استخدامها.</h2>
+                    <h2 class="section-title fr">Une idée devient un autre produit lorsque d'autres doivent
+                        l'utiliser.</h2>
+                    <p class="section-intro en">Building the first version of a digital product is only part of the
+                        challenge. A platform also needs to manage users, organizations, access, onboarding,
+                        subscriptions, data, administration, and the infrastructure behind the experience.</p>
+                    <p class="section-intro ar">بناء الإصدار الأول من منتج رقمي جزء فقط من التحدي. تحتاج المنصة أيضًا إلى
+                        إدارة المستخدمين والمؤسسات والوصول والإعداد الأولي والاشتراكات والبيانات والإدارة والبنية التحتية
+                        خلف التجربة.</p>
+                    <p class="section-intro fr">Construire la première version d'un produit numérique ne représente qu'une
+                        partie du défi. Une plateforme doit aussi gérer les utilisateurs, les organisations, les accès,
+                        l'intégration, les abonnements, les données, l'administration et l'infrastructure sous-jacente à
+                        l'expérience.</p>
+                </div>
+                <div class="need-list">
+                    <article class="need">
+                        <div class="need-no">01</div>
+                        <div>
+                            <h3 class="en">The idea needs to become a real product</h3>
+                            <h3 class="ar">الفكرة تحتاج إلى أن تصبح منتجًا حقيقيًا</h3>
+                            <h3 class="fr">L'idée doit devenir un vrai produit</h3>
+                            <p class="en">You have a business concept or product idea, but need to turn it into
+                                    something customers can actually use.</p>
+                            <p class="ar">لديك فكرة منتج أو مفهوم عمل، وتحتاج إلى تحويله إلى شيء يستطيع العملاء
+                                    استخدامه فعليًا.</p>
+                            <p class="fr">Vous avez une idée de produit ou un concept, mais vous devez le transformer en
+                                    quelque chose que vos clients peuvent réellement utiliser.</p>
+                        </div>
+                    </article>
+                    <article class="need">
+                        <div class="need-no">02</div>
+                        <div>
+                            <h3 class="en">The internal tool could become a product</h3>
+                            <h3 class="ar">الأداة الداخلية يمكن أن تصبح منتجًا</h3>
+                            <h3 class="fr">L'outil interne peut devenir un produit</h3>
+                            <p class="en">Your company already uses a tool or workflow that could potentially serve other
+                                    businesses or customers as a product.</p>
+                            <p class="ar">تستخدم شركتك بالفعل أداة أو مسار عمل يمكن أن يخدم شركات أو عملاء آخرين
+                                    كمنتج.</p>
+                            <p class="fr">Votre entreprise utilise déjà un outil ou un processus qui pourrait être
+                                    proposé à d'autres entreprises ou à vos clients sous forme de produit.</p>
+                        </div>
+                    </article>
+                    <article class="need">
+                        <div class="need-no">03</div>
+                        <div>
+                            <h3 class="en">The product needs multiple customers</h3>
+                            <h3 class="ar">المنتج يحتاج إلى عدة عملاء</h3>
+                            <h3 class="fr">Le produit doit accueillir plusieurs clients</h3>
+                            <p class="en">The platform needs to support multiple organizations while keeping their users,
+                                    data, settings, and access properly separated.</p>
+                            <p class="ar">تحتاج المنصة إلى دعم عدة مؤسسات مع فصل مستخدميها وبياناتها وإعداداتها
+                                    وصلاحياتها بشكل صحيح.</p>
+                            <p class="fr">La plateforme doit gérer plusieurs organisations tout en séparant correctement
+                                    leurs utilisateurs, leurs données, leurs paramètres et leurs accès.</p>
+                        </div>
+                    </article>
+                    <article class="need">
+                        <div class="need-no">04</div>
+                        <div>
+                            <h3 class="en">The product has outgrown its foundation</h3>
+                            <h3 class="ar">المنتج تجاوز حدود بنيته الحالية</h3>
+                            <h3 class="fr">Le produit a dépassé sa fondation</h3>
+                            <p class="en">The existing application works, but its architecture, permissions, billing,
+                                    integrations, or infrastructure are becoming difficult to evolve.</p>
+                            <p class="ar">التطبيق القائم يعمل، لكن بنيته أو صلاحياته أو فوترته أو تكاملاته أو بنيته
+                                    التحتية أصبحت صعبة التطوير.</p>
+                            <p class="fr">L'application existante fonctionne, mais son architecture, ses permissions, sa
+                                    facturation, ses intégrations ou son infrastructure deviennent difficiles à faire
+                                    évoluer.</p>
+                        </div>
+                    </article>
+                    <article class="need">
+                        <div class="need-no">05</div>
+                        <div>
+                            <h3 class="en">The platform needs a business model</h3>
+                            <h3 class="ar">المنصة تحتاج إلى نموذج عمل</h3>
+                            <h3 class="fr">La plateforme a besoin d'un modèle économique</h3>
+                            <p class="en">The product needs plans, subscriptions, usage limits, onboarding, or other
+                                    mechanisms to support a commercial SaaS model.</p>
+                            <p class="ar">يحتاج المنتج إلى باقات واشتراكات وحدود استخدام وآلية إعداد أولي أو آليات أخرى
+                                    تدعم نموذج SaaS تجاريًا.</p>
+                            <p class="fr">Le produit a besoin de forfaits, d'abonnements, de limites d'usage, d'un
+                                    parcours d'intégration ou d'autres mécanismes pour soutenir un modèle SaaS
+                                    commercial.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="section-cta"><a class="button ghost" href="#start"><span class="en">Contact us
+                                        →</span><span class="ar">اتصل بنا →</span><span class="fr">Nous contacter
+                                        →</span></a></div>
+            </div>
+        </section>
+
+        <!-- =========================== 03 SOLUTION =========================== -->
+        <section class="section" id="solution">
+            <div class="wrap">
+                <div class="section-head">
+                    <div class="eyebrow en">03 / THE SOLUTION</div>
+                    <div class="eyebrow ar">03 / الحل</div>
+                    <div class="eyebrow fr">03 / LA SOLUTION</div>
+                    <h2 class="section-title en">One product. Many users. A foundation designed for the business
+                        model behind it.</h2>
+                    <h2 class="section-title ar">منتج واحد. مستخدمون متعددون. بنية مصممة لنموذج العمل خلفه.</h2>
+                    <h2 class="section-title fr">Un produit. Plusieurs utilisateurs. Une fondation pensée pour le modèle
+                        économique qui la porte.</h2>
+                    <p class="section-intro en">BITA combines product strategy, UX/UI design, software development, and
+                        platform architecture to turn digital ideas into products that can serve real customers.</p>
+                    <p class="section-intro ar">تجمع BITA بين استراتيجية المنتج وتصميم تجربة المستخدم وتطوير البرمجيات
+                        وبنية المنصات لتحويل الأفكار الرقمية إلى منتجات تخدم عملاء حقيقيين.</p>
+                    <p class="section-intro fr">BITA combine stratégie produit, design UX/UI, développement logiciel et
+                        architecture de plateforme pour transformer des idées numériques en produits capables de servir
+                        de vrais clients.</p>
+                    <p class="section-intro en">We design the foundations around how the platform will be used, managed,
+                        monetized, and evolved.</p>
+                    <p class="section-intro ar">نصمم البنيات الأساسية وفق طريقة استخدام المنصة وإدارتها وتحقيق إيراداتها
+                        وتطويرها.</p>
+                    <p class="section-intro fr">Nous concevons les fondations selon la façon dont la plateforme sera
+                        utilisée, gérée, monétisée et amenée à évoluer.</p>
+                </div>
+                <div class="solutions svc-solutions">
+                    <article class="solution">
+                        <div class="num">01</div>
+                        <h3 class="en">Product</h3>
+                        <h3 class="ar">المنتج</h3>
+                        <h3 class="fr">Produit</h3>
+                        <p class="en">Define the product around the problem it needs to solve. Features, users,
+                                workflows, priorities, and product structure are defined before development.</p>
+                        <p class="ar">حدد المنتج حول المشكلة التي يجب أن يحلها. تُحدد الميزات والمستخدمون ومسارات العمل
+                                والأولويات وهيكل المنتج قبل بدء التطوير.</p>
+                        <p class="fr">Définissez le produit autour du problème à résoudre. Fonctionnalités, utilisateurs,
+                                processus, priorités et structure produit sont définis avant le développement.</p>
+                    </article>
+                    <article class="solution">
+                        <div class="num">02</div>
+                        <h3 class="en">Platform</h3>
+                        <h3 class="ar">المنصة</h3>
+                        <h3 class="fr">Plateforme</h3>
+                        <p class="en">Create the foundation that allows one product to serve multiple customers or user
+                                groups. Organizations, workspaces, users, permissions, data boundaries, and platform
+                                configuration are designed around the product model.</p>
+                        <p class="ar">أنشئ البنية التي تتيح لمنتج واحد خدمة عملاء أو مجموعات مستخدمين متعددة. تُصمم
+                                المؤسسات ومساحات العمل والمستخدمون والصلاحيات وحدود البيانات وإعدادات المنصة وفق نموذج
+                                المنتج.</p>
+                        <p class="fr">Créez la fondation qui permet à un seul produit de servir plusieurs clients ou groupes
+                                d'utilisateurs. Organisations, espaces de travail, utilisateurs, permissions, frontières
+                                de données et configuration sont conçus autour du modèle produit.</p>
+                    </article>
+                    <article class="solution">
+                        <div class="num">03</div>
+                        <h3 class="en">Monetization</h3>
+                        <h3 class="ar">تحقيق الإيرادات</h3>
+                        <h3 class="fr">Monétisation</h3>
+                        <p class="en">Connect the product to the business model. Plans, subscriptions, trials, seats,
+                                usage limits, invoices, and billing workflows can be incorporated where required.</p>
+                        <p class="ar">اربط المنتج بنموذج العمل. يمكن إدراج الباقات والاشتراكات والفترات التجريبية
+                                والمقاعد وحدود الاستخدام والفواتير ومسارات الفوترة حيث يلزم.</p>
+                        <p class="fr">Reliez le produit au modèle économique. Forfaits, abonnements, essais, sièges,
+                                limites d'usage, factures et processus de facturation peuvent être intégrés lorsque cela est
+                                nécessaire.</p>
+                    </article>
+                    <article class="solution">
+                        <div class="num">04</div>
+                        <h3 class="en">Operation</h3>
+                        <h3 class="ar">التشغيل</h3>
+                        <h3 class="fr">Opération</h3>
+                        <p class="en">Give the team behind the platform the tools to run it. Platform administration,
+                                customer management, support workflows, usage visibility, logs, and operational controls
+                                can be built into the system.</p>
+                        <p class="ar">امنح الفريق الذي يقف خلف المنصة الأدوات لتشغيلها. يمكن بناء إدارة المنصة وإدارة
+                                العملاء ومسارات الدعم ورؤية الاستخدام والسجلات وضوابط التشغيل داخل النظام.</p>
+                        <p class="fr">Donnez à l'équipe qui opère la plateforme les outils pour la piloter. Administration,
+                                gestion client, processus de support, visibilité sur l'usage, journaux et contrôles
+                                opérationnels peuvent être intégrés au système.</p>
+                    </article>
+                </div>
+
+                <!-- Platform types: a subsection of 03, not a separate section -->
+                <div class="subhead">
+                    <div class="eyebrow en">PLATFORM TYPES</div>
+                    <div class="eyebrow ar">أنواع المنصات</div>
+                    <div class="eyebrow fr">TYPES DE PLATEFORMES</div>
+                    <h2 class="section-title en">Different products require different platform models.</h2>
+                    <h2 class="section-title ar">المنتجات المختلفة تتطلب نماذج منصات مختلفة.</h2>
+                    <h2 class="section-title fr">Différents produits exigent différents modèles de plateforme.</h2>
+                    <p class="section-intro en">The platform models below are not all part of every project. The product
+                            model is defined during discovery, based on who uses the product and how it is
+                            commercialized.</p>
+                    <p class="section-intro ar">نماذج المنصات أدناه ليست جميعها جزءًا من كل مشروع. يُحدَّد نموذج المنتج خلال
+                            مرحلة الاستكشاف، بناءً على من يستخدم المنتج وكيف يُتجاري به.</p>
+                    <p class="section-intro fr">Les modèles ci-dessous ne font pas partie de tous les projets. Le modèle de
+                            produit est défini pendant la phase de découverte, selon les utilisateurs visés et la façon dont
+                            le produit est commercialisé.</p>
+                </div>
+                <div class="models three">
+                    <article class="model">
+                        <div class="model-code">B2B</div>
+                        <h3 class="en">B2B SaaS</h3>
+                        <h3 class="ar">SaaS للشركات</h3>
+                        <h3 class="fr">SaaS B2B</h3>
+                        <p class="en">Software sold to businesses through subscriptions or other recurring commercial
+                                models.</p>
+                        <p class="ar">برمجيات تُباع للشركات عبر الاشتراكات أو نماذج تجارية متكررة أخرى.</p>
+                        <p class="fr">Logiciels vendus aux entreprises par abonnement ou via d'autres modèles
+                                commerciaux récurrents.</p>
+                    </article>
+                    <article class="model">
+                        <div class="model-code">VERTICAL</div>
+                        <h3 class="en">Vertical SaaS</h3>
+                        <h3 class="ar">SaaS قطاعي</h3>
+                        <h3 class="fr">SaaS vertical</h3>
+                        <p class="en">Software designed around the specific workflows of a particular industry or
+                                business category.</p>
+                        <p class="ar">برمجيات مصممة حول مسارات عمل قطاع أو فئة أعمال محددة.</p>
+                        <p class="fr">Logiciel conçu autour des processus spécifiques d'un secteur ou d'une catégorie
+                                d'activité.</p>
+                    </article>
+                    <article class="model">
+                        <div class="model-code">PORTAL</div>
+                        <h3 class="en">Customer Portal</h3>
+                        <h3 class="ar">بوابة عملاء</h3>
+                        <h3 class="fr">Portail client</h3>
+                        <p class="en">A platform where customers can access information, services, documents, requests,
+                                orders, or other self-service capabilities.</p>
+                        <p class="ar">منصة يتيح فيها للعملاء الوصول إلى المعلومات والخدمات والمستندات والطلبات أو غيرها
+                                من خصائص الخدمة الذاتية.</p>
+                        <p class="fr">Une plateforme où les clients accèdent à des informations, services, documents,
+                                demandes, commandes ou autres fonctions en libre-service.</p>
+                    </article>
+                    <article class="model">
+                        <div class="model-code">MARKET</div>
+                        <h3 class="en">Marketplace</h3>
+                        <h3 class="ar">سوق إلكتروني</h3>
+                        <h3 class="fr">Place de marché</h3>
+                        <p class="en">A platform connecting multiple sides of a transaction such as buyers and sellers
+                                or providers and customers.</p>
+                        <p class="ar">منصة تربط أطرافًا متعددة في عملية المعاملة مثل المشترين والبائعين أو مقدمي الخدمة
+                                والعملاء.</p>
+                        <p class="fr">Une plateforme reliant plusieurs parties d'une transaction, par exemple acheteurs
+                                et vendeurs, ou prestataires et clients.</p>
+                    </article>
+                    <article class="model">
+                        <div class="model-code">MULTI</div>
+                        <h3 class="en">Multi-Organization Platform</h3>
+                        <h3 class="ar">منصة متعددة المؤسسات</h3>
+                        <h3 class="fr">Plateforme multi-organisations</h3>
+                        <p class="en">A product where multiple companies or organizations operate inside the same
+                                platform while maintaining separated users, data, settings, and permissions.</p>
+                        <p class="ar">منتج تعمل فيه عدة شركات أو مؤسسات داخل المنصة نفسها مع فصل المستخدمين والبيانات
+                                والإعدادات والصلاحيات.</p>
+                        <p class="fr">Un produit où plusieurs entreprises ou organisations opèrent dans la même
+                                plateforme tout en gardant utilisateurs, données, paramètres et permissions séparés.</p>
+                    </article>
+                    <article class="model">
+                        <div class="model-code">SUBSCRIPTION</div>
+                        <h3 class="en">Subscription Product</h3>
+                        <h3 class="ar">منتج اشتراكي</h3>
+                        <h3 class="fr">Produit par abonnement</h3>
+                        <p class="en">A digital product where access or functionality is provided through plans,
+                                recurring subscriptions, or usage-based models.</p>
+                        <p class="ar">منتج رقمي يُقدَّم الوصول أو الوظائف فيه عبر باقات أو اشتراكات متكررة أو نماذج
+                                قائمة على الاستخدام.</p>
+                        <p class="fr">Un produit numérique dont l'accès ou les fonctionnalités sont fournis via des
+                                forfaits, des abonnements récurrents ou des modèles à l'usage.</p>
+                    </article>
+                    <article class="model">
+                        <div class="model-code">TO SaaS</div>
+                        <h3 class="en">Internal Product → SaaS</h3>
+                        <h3 class="ar">منتج داخلي ← SaaS</h3>
+                        <h3 class="fr">Produit interne → SaaS</h3>
+                        <p class="en">An internal business tool that is transformed into a product capable of serving
+                                external customers. "SaaS" is a business and product model as well as a technical
+                                delivery model, so this transition is a product decision, not only an engineering
+                                one.</p>
+                        <p class="ar">أداة عمل داخلية تتحول إلى منتج قادر على خدمة عملاء خارجيين. «SaaS» نموذج عمل
+                                ونموذج منتج وليس نموذج تسليم تقني فقط، لذا فإن هذا التحويل قرار منتج لا هندسة فقط.</p>
+                        <p class="fr">Un outil métier interne transformé en produit capable de servir des clients
+                                externes. Le SaaS est un modèle économique et produit autant qu'un modèle technique :
+                                cette transition est donc une décision produit, pas seulement un choix d'ingénierie.</p>
+                    </article>
+                </div>
+                <p class="models-note en">A product does not have to support every model listed here. The scope is
+                    defined during discovery, based on the product, the market, and the commercial model. How far the
+                    platform is designed to scale is an engineering objective shaped by your expected growth, not a
+                    guarantee about a particular number of users.</p>
+                <p class="models-note ar">لا يجب أن يدعم المنتج كل النماذج المذكورة هنا. يُحدَّد النطاق خلال مرحلة الاستكشاف،
+                    بناءً على المنتج والسوق ونموذج العمل التجاري. أما مدى تصميم المنصة للتوسع فهو هدف هندسي يتحدد وفق
+                    النمو المتوقع، وليس ضمانًا بعدد مستخدمين محدد.</p>
+                <p class="models-note fr">Un produit n'est pas obligé de prendre en charge tous les modèles listés ici. Le
+                    périmètre est défini pendant la phase de découverte, selon le produit, le marché et le modèle
+                    économique. L'ampleur de la montée en charge prévue est un objectif technique déterminé par la
+                    croissance attendue, et non une garantie portant sur un nombre d'utilisateurs.</p>
+                <div class="section-cta"><a class="button ghost" href="#start"><span class="en">Contact us
+                                        →</span><span class="ar">اتصل بنا →</span><span class="fr">Nous contacter
+                                        →</span></a></div>
+            </div>
+        </section>
+
+        <!-- ========================= 04 CAPABILITIES ========================= -->
+        <section class="section dark" id="capabilities">
+            <div class="wrap">
+                <div class="section-head">
+                    <div class="eyebrow en">04 / CAPABILITIES</div>
+                    <div class="eyebrow ar">04 / القدرات</div>
+                    <div class="eyebrow fr">04 / COMPÉTENCES</div>
+                    <h2 class="section-title en">The foundations behind a real digital platform.</h2>
+                    <h2 class="section-title ar">البنيات الأساسية خلف منصة رقمية حقيقية.</h2>
+                    <h2 class="section-title fr">Les fondations d'une véritable plateforme numérique.</h2>
+                    <p class="section-intro en">Subscription billing is only one part of SaaS. These are the areas BITA
+                        covers, structured around the chain from identity and tenancy to permissions, plans, usage,
+                        administration, and integrations.</p>
+                    <p class="section-intro ar">الاشتراك والفوترة جزء واحد فقط من SaaS. وهذه هي المجالات التي تغطيها
+                        BITA، مهيكلة حول السلسلة من الهوية والعزل إلى الصلاحيات والباقات والاستخدام والإدارة
+                        والتكاملات.</p>
+                    <p class="section-intro fr">L'abonnement et la facturation ne représentent qu'une partie du SaaS.
+                        Voici les domaines couverts par BITA, structurés autour de la chaîne allant de l'identité et de
+                        l'isolation aux permissions, forfaits, usage, administration et intégrations.</p>
+                </div>
+                <div class="cap-grid ten four dense">
+                    <article class="cap">
+                        <div class="cap-no">01</div>
+                        <h3 class="en">Product Architecture</h3>
+                        <h3 class="ar">بنية المنتج</h3>
+                        <h3 class="fr">Architecture produit</h3>
+                        <ul>
+                            <li class="en">Product definition</li>
+                            <li class="ar">تعريف المنتج</li>
+                            <li class="fr">Définition du produit</li>
+                            <li class="en">Feature architecture</li>
+                            <li class="ar">بنية الميزات</li>
+                            <li class="fr">Architecture fonctionnelle</li>
+                            <li class="en">User journeys</li>
+                            <li class="ar">رحلات المستخدم</li>
+                            <li class="fr">Parcours utilisateur</li>
+                            <li class="en">Information architecture</li>
+                            <li class="ar">بنية المعلومات</li>
+                            <li class="fr">Architecture de l'information</li>
+                            <li class="en">Platform workflows</li>
+                            <li class="ar">مسارات عمل المنصة</li>
+                            <li class="fr">Processus de la plateforme</li>
+                            <li class="en">MVP scope</li>
+                            <li class="ar">نطاق النسخة الأولى</li>
+                            <li class="fr">Périmètre du MVP</li>
+                            <li class="en">Product roadmap foundations</li>
+                            <li class="ar">أساسيات خارطة الطريق</li>
+                            <li class="fr">Fondations de la feuille de route</li>
+                        </ul>
+                    </article>
+                    <article class="cap">
+                        <div class="cap-no">02</div>
+                        <h3 class="en">Multi-Tenant Architecture</h3>
+                        <h3 class="ar">بنية متعددة المستأجرين</h3>
+                        <h3 class="fr">Architecture multi-locataires</h3>
+                        <ul>
+                            <li class="en">Organizations</li>
+                            <li class="ar">المؤسسات</li>
+                            <li class="fr">Organisations</li>
+                            <li class="en">Workspaces</li>
+                            <li class="ar">مساحات العمل</li>
+                            <li class="fr">Espaces de travail</li>
+                            <li class="en">Tenant isolation</li>
+                            <li class="ar">عزل المستأجرين</li>
+                            <li class="fr">Isolation des locataires</li>
+                            <li class="en">Organization-level data</li>
+                            <li class="ar">بيانات على مستوى المؤسسة</li>
+                            <li class="fr">Données au niveau organisation</li>
+                            <li class="en">Tenant-specific settings</li>
+                            <li class="ar">إعدادات خاصة بكل مستأجر</li>
+                            <li class="fr">Paramètres par locataire</li>
+                            <li class="en">Tenant configuration</li>
+                            <li class="ar">تهيئة المستأجر</li>
+                            <li class="fr">Configuration du locataire</li>
+                            <li class="en">Workspace management</li>
+                            <li class="ar">إدارة مساحات العمل</li>
+                            <li class="fr">Gestion des espaces de travail</li>
+                        </ul>
+                    </article>
+                    <article class="cap">
+                        <div class="cap-no">03</div>
+                        <h3 class="en">Authentication &amp; Access</h3>
+                        <h3 class="ar">المصادقة والوصول</h3>
+                        <h3 class="fr">Authentification et accès</h3>
+                        <ul>
+                            <li class="en">User registration</li>
+                            <li class="ar">تسجيل المستخدمين</li>
+                            <li class="fr">Inscription</li>
+                            <li class="en">Login</li>
+                            <li class="ar">تسجيل الدخول</li>
+                            <li class="fr">Connexion</li>
+                            <li class="en">Password recovery</li>
+                            <li class="ar">استعادة كلمة المرور</li>
+                            <li class="fr">Récupération de mot de passe</li>
+                            <li class="en">Email verification</li>
+                            <li class="ar">تأكيد البريد الإلكتروني</li>
+                            <li class="fr">Vérification par e-mail</li>
+                            <li class="en">Social authentication</li>
+                            <li class="ar">الدخول عبر средства الاجتماعية</li>
+                            <li class="fr">Authentification sociale</li>
+                            <li class="en">Invitations</li>
+                            <li class="ar">الدعوات</li>
+                            <li class="fr">Invitations</li>
+                            <li class="en">Roles</li>
+                            <li class="ar">الأدوار</li>
+                            <li class="fr">Rôles</li>
+                            <li class="en">Permissions</li>
+                            <li class="ar">الصلاحيات</li>
+                            <li class="fr">Permissions</li>
+                            <li class="en">Organization membership</li>
+                            <li class="ar">العضوية في المؤسسة</li>
+                            <li class="fr">Appartenance à une organisation</li>
+                            <li class="en">SSO where required</li>
+                            <li class="ar">الدخول الموحد عند الحاجة</li>
+                            <li class="fr">SSO si nécessaire</li>
+                        </ul>
+                    </article>
+                    <article class="cap">
+                        <div class="cap-no">04</div>
+                        <h3 class="en">Subscription &amp; Billing</h3>
+                        <h3 class="ar">الاشتراك والفوترة</h3>
+                        <h3 class="fr">Abonnement et facturation</h3>
+                        <ul>
+                            <li class="en">Subscription plans</li>
+                            <li class="ar">باقات الاشتراك</li>
+                            <li class="fr">Forfaits d'abonnement</li>
+                            <li class="en">Free trials</li>
+                            <li class="ar">فترات تجريبية مجانية</li>
+                            <li class="fr">Essais gratuits</li>
+                            <li class="en">Monthly and annual plans</li>
+                            <li class="ar">باقات شهرية وسنوية</li>
+                            <li class="fr">Forfaits mensuels et annuels</li>
+                            <li class="en">Seat-based plans</li>
+                            <li class="ar">باقات قائمة على المقاعد</li>
+                            <li class="fr">Forfaits par siège</li>
+                            <li class="en">Usage-based models</li>
+                            <li class="ar">نماذج قائمة على الاستخدام</li>
+                            <li class="fr">Modèles à l'usage</li>
+                            <li class="en">Plan limits</li>
+                            <li class="ar">حدود الباقات</li>
+                            <li class="fr">Limites des forfaits</li>
+                            <li class="en">Upgrades and downgrades</li>
+                            <li class="ar">الترقية والتخفيض</li>
+                            <li class="fr">Changements de forfait</li>
+                            <li class="en">Invoices</li>
+                            <li class="ar">الفواتير</li>
+                            <li class="fr">Factures</li>
+                            <li class="en">Payment status</li>
+                            <li class="ar">حالة الدفع</li>
+                            <li class="fr">Statut du paiement</li>
+                            <li class="en">Billing portal</li>
+                            <li class="ar">بوابة الفوترة</li>
+                            <li class="fr">Portail de facturation</li>
+                            <li class="en">Webhook-driven updates</li>
+                            <li class="ar">تحديثات عبر webhooks</li>
+                            <li class="fr">Mises à jour par webhooks</li>
+                        </ul>
+                    </article>
+                    <article class="cap">
+                        <div class="cap-no">05</div>
+                        <h3 class="en">Usage &amp; Product Analytics</h3>
+                        <h3 class="ar">الاستخدام وتحليلات المنتج</h3>
+                        <h3 class="fr">Usage et analytique produit</h3>
+                        <ul>
+                            <li class="en">Usage tracking</li>
+                            <li class="ar">تتبع الاستخدام</li>
+                            <li class="fr">Suivi de l'usage</li>
+                            <li class="en">Feature usage</li>
+                            <li class="ar">استخدام الميزات</li>
+                            <li class="fr">Usage des fonctionnalités</li>
+                            <li class="en">Seats</li>
+                            <li class="ar">المقاعد</li>
+                            <li class="fr">Sièges</li>
+                            <li class="en">Storage</li>
+                            <li class="ar">التخزين</li>
+                            <li class="fr">Stockage</li>
+                            <li class="en">API usage</li>
+                            <li class="ar">استخدام واجهة API</li>
+                            <li class="fr">Usage de l'API</li>
+                            <li class="en">Activity</li>
+                            <li class="ar">النشاط</li>
+                            <li class="fr">Activité</li>
+                            <li class="en">Product analytics</li>
+                            <li class="ar">تحليلات المنتج</li>
+                            <li class="fr">Analytique produit</li>
+                            <li class="en">Usage limits</li>
+                            <li class="ar">حدود الاستخدام</li>
+                            <li class="fr">Limites d'usage</li>
+                            <li class="en">Account-level metrics</li>
+                            <li class="ar">مؤشرات على مستوى الحساب</li>
+                            <li class="fr">Métriques par compte</li>
+                        </ul>
+                    </article>
+                    <article class="cap">
+                        <div class="cap-no">06</div>
+                        <h3 class="en">Platform Administration</h3>
+                        <h3 class="ar">إدارة المنصة</h3>
+                        <h3 class="fr">Administration de la plateforme</h3>
+                        <ul>
+                            <li class="en">Customer management</li>
+                            <li class="ar">إدارة العملاء</li>
+                            <li class="fr">Gestion des clients</li>
+                            <li class="en">Organization management</li>
+                            <li class="ar">إدارة المؤسسات</li>
+                            <li class="fr">Gestion des organisations</li>
+                            <li class="en">User management</li>
+                            <li class="ar">إدارة المستخدمين</li>
+                            <li class="fr">Gestion des utilisateurs</li>
+                            <li class="en">Subscription management</li>
+                            <li class="ar">إدارة الاشتراكات</li>
+                            <li class="fr">Gestion des abonnements</li>
+                            <li class="en">Usage monitoring</li>
+                            <li class="ar">مراقبة الاستخدام</li>
+                            <li class="fr">Suivi de l'usage</li>
+                            <li class="en">Support tools</li>
+                            <li class="ar">أدوات الدعم</li>
+                            <li class="fr">Outils de support</li>
+                            <li class="en">Feature flags</li>
+                            <li class="ar">مفاتيح تفعيل الميزات</li>
+                            <li class="fr">Feature flags</li>
+                            <li class="en">Platform settings</li>
+                            <li class="ar">إعدادات المنصة</li>
+                            <li class="fr">Paramètres de la plateforme</li>
+                            <li class="en">Audit logs</li>
+                            <li class="ar">سجلات التدقيق</li>
+                            <li class="fr">Journaux d'audit</li>
+                        </ul>
+                    </article>
+                    <article class="cap">
+                        <div class="cap-no">07</div>
+                        <h3 class="en">APIs &amp; Integrations</h3>
+                        <h3 class="ar">واجهات API والتكاملات</h3>
+                        <h3 class="fr">API et intégrations</h3>
+                        <ul>
+                            <li class="en">REST APIs</li>
+                            <li class="ar">واجهات REST</li>
+                            <li class="fr">API REST</li>
+                            <li class="en">Webhooks</li>
+                            <li class="ar">Webhooks</li>
+                            <li class="fr">Webhooks</li>
+                            <li class="en">Third-party integrations</li>
+                            <li class="ar">تكاملات الطرف الثالث</li>
+                            <li class="fr">Intégrations tierces</li>
+                            <li class="en">CRM</li>
+                            <li class="ar">إدارة علاقات العملاء</li>
+                            <li class="fr">CRM</li>
+                            <li class="en">ERP</li>
+                            <li class="ar">تخطيط موارد المؤسسات</li>
+                            <li class="fr">ERP</li>
+                            <li class="en">Payment providers</li>
+                            <li class="ar">مزودو الدفع</li>
+                            <li class="fr">Prestataires de paiement</li>
+                            <li class="en">Communication tools</li>
+                            <li class="ar">أدوات التواصل</li>
+                            <li class="fr">Outils de communication</li>
+                            <li class="en">Analytics</li>
+                            <li class="ar">أدوات التحليل</li>
+                            <li class="fr">Analytique</li>
+                            <li class="en">External data sources</li>
+                            <li class="ar">مصادر بيانات خارجية</li>
+                            <li class="fr">Sources de données externes</li>
+                        </ul>
+                    </article>
+                    <article class="cap">
+                        <div class="cap-no">08</div>
+                        <h3 class="en">Notifications</h3>
+                        <h3 class="ar">الإشعارات</h3>
+                        <h3 class="fr">Notifications</h3>
+                        <ul>
+                            <li class="en">Email</li>
+                            <li class="ar">البريد الإلكتروني</li>
+                            <li class="fr">E-mail</li>
+                            <li class="en">In-app notifications</li>
+                            <li class="ar">إشعارات داخل التطبيق</li>
+                            <li class="fr">Notifications in-app</li>
+                            <li class="en">Push notifications</li>
+                            <li class="ar">الإشعارات الفورية</li>
+                            <li class="fr">Notifications push</li>
+                            <li class="en">Transactional notifications</li>
+                            <li class="ar">الإشعارات التعاملية</li>
+                            <li class="fr">Notifications transactionnelles</li>
+                            <li class="en">System alerts</li>
+                            <li class="ar">تنبيهات النظام</li>
+                            <li class="fr">Alertes système</li>
+                        </ul>
+                    </article>
+                    <article class="cap">
+                        <div class="cap-no">09</div>
+                        <h3 class="en">File &amp; Data Management</h3>
+                        <h3 class="ar">إدارة الملفات والبيانات</h3>
+                        <h3 class="fr">Gestion des fichiers et des données</h3>
+                        <ul>
+                            <li class="en">File uploads</li>
+                            <li class="ar">رفع الملفات</li>
+                            <li class="fr">Téléversement de fichiers</li>
+                            <li class="en">Document management</li>
+                            <li class="ar">إدارة المستندات</li>
+                            <li class="fr">Gestion documentaire</li>
+                            <li class="en">Tenant-scoped storage</li>
+                            <li class="ar">تخزين محدد لكل مستأجر</li>
+                            <li class="fr">Stockage par locataire</li>
+                            <li class="en">Export</li>
+                            <li class="ar">التصدير</li>
+                            <li class="fr">Export</li>
+                            <li class="en">Import</li>
+                            <li class="ar">الاستيراد</li>
+                            <li class="fr">Import</li>
+                            <li class="en">Data retention</li>
+                            <li class="ar">الاحتفاظ بالبيانات</li>
+                            <li class="fr">Conservation des données</li>
+                            <li class="en">Data management tools</li>
+                            <li class="ar">أدوات إدارة البيانات</li>
+                            <li class="fr">Outils de gestion des données</li>
+                        </ul>
+                    </article>
+                    <article class="cap">
+                        <div class="cap-no">10</div>
+                        <h3 class="en">Platform Infrastructure</h3>
+                        <h3 class="ar">بنية المنصة التحتية</h3>
+                        <h3 class="fr">Infrastructure de la plateforme</h3>
+                        <ul>
+                            <li class="en">Deployment</li>
+                            <li class="ar">النشر</li>
+                            <li class="fr">Déploiement</li>
+                            <li class="en">CI/CD</li>
+                            <li class="ar">التكامل والنشر المستمر</li>
+                            <li class="fr">CI/CD</li>
+                            <li class="en">Monitoring</li>
+                            <li class="ar">المراقبة</li>
+                            <li class="fr">Supervision</li>
+                            <li class="en">Logging</li>
+                            <li class="ar">التسجيل</li>
+                            <li class="fr">Journalisation</li>
+                            <li class="en">Error tracking</li>
+                            <li class="ar">تتبع الأخطاء</li>
+                            <li class="fr">Suivi des erreurs</li>
+                            <li class="en">Backups</li>
+                            <li class="ar">النسخ الاحتياطية</li>
+                            <li class="fr">Sauvegardes</li>
+                            <li class="en">Performance optimization</li>
+                            <li class="ar">تحسين الأداء</li>
+                            <li class="fr">Optimisation des performances</li>
+                            <li class="en">Environment management</li>
+                            <li class="ar">إدارة البيئات</li>
+                            <li class="fr">Gestion des environnements</li>
+                        </ul>
+                    </article>
+                </div>
+                <p class="cap-note en">Multi-tenancy is an architectural decision, not a feature to add later. It affects
+                    security, billing, permissions, and future scalability, so who owns which data is defined early. The
+                    payment and billing architecture depends on the market and business model, so no specific provider
+                    is assumed here. Cloud infrastructure supports the product; it is not the reason to choose it.</p>
+                <p class="cap-note ar">العزل متعدد المستأجرين قرار معماري وليس ميزة تضاف لاحقًا. فهو يؤثر على الأمان
+                    والفوترة والصلاحيات وقابلية التوسع المستقبلية، لذا يُحدد ملكية البيانات مبكرًا. وتعتمد بنية الدفع
+                    والفوترة على السوق ونموذج العمل، لذا لا نفترض هنا مقدمًا بعينه. البنية السحابية تدعم المنتج وليست سبب
+                    اختياره.</p>
+                <p class="cap-note fr">Le multi-locataire est une décision d'architecture, pas une fonctionnalité à
+                    ajouter plus tard. Il conditionne la sécurité, la facturation, les permissions et l'évolutivité
+                    future : la propriété des données est donc définie tôt. L'architecture de paiement et de facturation
+                    dépend du marché et du modèle économique, donc aucun prestataire n'est supposé ici. L'infrastructure
+                    cloud soutient le produit ; ce n'est pas une raison de le choisir.</p>
+                <div class="section-cta"><a class="button ghost" href="#start"><span class="en">Contact us
+                                        →</span><span class="ar">اتصل بنا →</span><span class="fr">Nous contacter
+                                        →</span></a></div>
+            </div>
+        </section>
+
+        <!-- ========================= 05 DELIVERABLES ========================= -->
+        <section class="section" id="deliverables">
+            <div class="wrap">
+                <div class="section-head">
+                    <div class="eyebrow en">05 / DELIVERABLES</div>
+                    <div class="eyebrow ar">05 / المخرجات</div>
+                    <div class="eyebrow fr">05 / LIVRABLES</div>
+                    <h2 class="section-title en">What you get.</h2>
+                    <h2 class="section-title ar">ما الذي تحصل عليه.</h2>
+                    <h2 class="section-title fr">Ce que vous obtenez.</h2>
+                    <p class="section-intro en">Each engagement is scoped, so the exact set is confirmed during
+                        discovery. These are the parts of the platform BITA is responsible for.</p>
+                    <p class="section-intro ar">يُحدَّد نطاق كل مشروع، لذا تُؤكَّد القائمة الدقيقة خلال مرحلة الاستكشاف.
+                        وهذه هي أجزاء المنصة التي تتحمل BITA مسؤوليتها.</p>
+                    <p class="section-intro fr">Chaque mission est cadrée : le périmètre exact est confirmé pendant la
+                        phase de découverte. Voici les parties de la plateforme dont BITA est responsable.</p>
+                </div>
+                <div class="deliver-grid">
+                    <article class="deliver"><i aria-hidden="true"></i>
+                        <div>
+                            <h3 class="en">Product Definition</h3>
+                            <h3 class="ar">تعريف المنتج</h3>
+                            <h3 class="fr">Définition du produit</h3>
+                            <p class="en">A clear product scope, target users, workflows, core features, and MVP
+                                direction.</p>
+                            <p class="ar">نطاق منتج واضح، والمستخدمون المستهدفون، ومسارات العمل، والميزات الأساسية، واتجاه
+                                النسخة الأولى.</p>
+                            <p class="fr">Un périmètre de produit clair, des utilisateurs cibles, des processus, des
+                                fonctionnalités centrales et une orientation MVP.</p>
+                        </div>
+                    </article>
+                    <article class="deliver"><i aria-hidden="true"></i>
+                        <div>
+                            <h3 class="en">UX/UI Design</h3>
+                            <h3 class="ar">تصميم تجربة المستخدم والواجهة</h3>
+                            <h3 class="fr">Design UX/UI</h3>
+                            <p class="en">Interfaces for the core product experience including onboarding, dashboards,
+                                settings, account areas, and platform workflows.</p>
+                            <p class="ar">واجهات لتجربة المنتج الأساسية تشمل الإعداد الأولي ولوحات التحكم والإعدادات
+                                ومناطق الحساب ومسارات عمل المنصة.</p>
+                            <p class="fr">Des interfaces pour l'expérience produit centrale : intégration, tableaux de
+                                bord, paramètres, espaces compte et processus de la plateforme.</p>
+                        </div>
+                    </article>
+                    <article class="deliver"><i aria-hidden="true"></i>
+                        <div>
+                            <h3 class="en">SaaS Architecture</h3>
+                            <h3 class="ar">بنية SaaS</h3>
+                            <h3 class="fr">Architecture SaaS</h3>
+                            <p class="en">A platform architecture covering organizations, users, roles, permissions,
+                                data boundaries, and other requirements relevant to the business model.</p>
+                            <p class="ar">بنية منصة تغطي المؤسسات والمستخدمين والأدوار والصلاحيات وحدود البيانات
+                                والمتطلبات الأخرى المرتبطة بنموذج العمل.</p>
+                            <p class="fr">Une architecture de plateforme couvrant organisations, utilisateurs, rôles,
+                                permissions, frontières de données et autres exigences liées au modèle économique.</p>
+                        </div>
+                    </article>
+                    <article class="deliver"><i aria-hidden="true"></i>
+                        <div>
+                            <h3 class="en">Customer Workspace</h3>
+                            <h3 class="ar">مساحة عمل العميل</h3>
+                            <h3 class="fr">Espace de travail client</h3>
+                            <p class="en">A structured environment where each organization or customer can manage its
+                                own users, information, settings, and product features where required.</p>
+                            <p class="ar">بيئة منظمة تدير فيها كل مؤسسة أو عميل مستخدميها ومعلوماتها وإعداداتها وميزات
+                                المنتج الخاصة بها عند الحاجة.</p>
+                            <p class="fr">Un environnement structuré où chaque organisation ou client gère ses propres
+                                utilisateurs, informations, paramètres et fonctionnalités produit.</p>
+                        </div>
+                    </article>
+                    <article class="deliver"><i aria-hidden="true"></i>
+                        <div>
+                            <h3 class="en">Authentication &amp; Access</h3>
+                            <h3 class="ar">المصادقة والوصول</h3>
+                            <h3 class="fr">Authentification et accès</h3>
+                            <p class="en">User registration, login, invitations, roles, permissions, and other required
+                                access mechanisms.</p>
+                            <p class="ar">تسجيل المستخدمين وتسجيل الدخول والدعوات والأدوار والصلاحيات وآليات الوصول
+                                الأخرى المطلوبة.</p>
+                            <p class="fr">Inscription, connexion, invitations, rôles, permissions et autres
+                                mécanismes d'accès requis.</p>
+                        </div>
+                    </article>
+                    <article class="deliver"><i aria-hidden="true"></i>
+                        <div>
+                            <h3 class="en">Subscription &amp; Billing</h3>
+                            <h3 class="ar">الاشتراك والفوترة</h3>
+                            <h3 class="fr">Abonnement et facturation</h3>
+                            <p class="en">Plans, subscriptions, billing workflows, usage limits, invoices, and payment
+                                integration according to the project scope.</p>
+                            <p class="ar">الباقات والاشتراكات ومسارات الفوترة وحدود الاستخدام والفواتير وتكامل الدفع
+                                وفق نطاق المشروع.</p>
+                            <p class="fr">Forfaits, abonnements, processus de facturation, limites d'usage, factures et
+                                intégration de paiement selon le périmètre du projet.</p>
+                        </div>
+                    </article>
+                    <article class="deliver"><i aria-hidden="true"></i>
+                        <div>
+                            <h3 class="en">Platform Administration</h3>
+                            <h3 class="ar">إدارة المنصة</h3>
+                            <h3 class="fr">Administration de la plateforme</h3>
+                            <p class="en">A dedicated administration environment for the team operating the platform,
+                                separate from the admin area inside a customer organization.</p>
+                            <p class="ar">بيئة إدارة مخصصة للفريق الذي يشغّل المنصة، منفصلة عن منطقة الإدارة داخل مؤسسة
+                                العميل.</p>
+                            <p class="fr">Un environnement d'administration dédié à l'équipe qui opère la plateforme,
+                                distinct de l'espace d'administration d'une organisation cliente.</p>
+                        </div>
+                    </article>
+                    <article class="deliver"><i aria-hidden="true"></i>
+                        <div>
+                            <h3 class="en">APIs &amp; Integrations</h3>
+                            <h3 class="ar">واجهات API والتكاملات</h3>
+                            <h3 class="fr">API et intégrations</h3>
+                            <p class="en">The API layer and external integrations required to connect the platform to
+                                other systems.</p>
+                            <p class="ar">طبقة واجهات API والتكاملات الخارجية اللازمة لربط المنصة بأنظمة أخرى.</p>
+                            <p class="fr">La couche API et les intégrations externes nécessaires pour relier la
+                                plateforme à d'autres systèmes.</p>
+                        </div>
+                    </article>
+                    <article class="deliver"><i aria-hidden="true"></i>
+                        <div>
+                            <h3 class="en">Analytics &amp; Usage</h3>
+                            <h3 class="ar">التحليلات والاستخدام</h3>
+                            <h3 class="fr">Analytique et usage</h3>
+                            <p class="en">The usage tracking and product analytics required to understand product
+                                activity and enforce limits where applicable.</p>
+                            <p class="ar">تتبع الاستخدام وتحليلات المنتج اللازمة لفهم نشاط المنتج وفرض الحدود عند
+                                انطباقها.</p>
+                            <p class="fr">Le suivi de l'usage et l'analytique produit nécessaires pour comprendre
+                                l'activité et appliquer les limites le cas échéant.</p>
+                        </div>
+                    </article>
+                    <article class="deliver"><i aria-hidden="true"></i>
+                        <div>
+                            <h3 class="en">Deployment &amp; Infrastructure</h3>
+                            <h3 class="ar">النشر والبنية التحتية</h3>
+                            <h3 class="fr">Déploiement et infrastructure</h3>
+                            <p class="en">Production deployment, environments, monitoring foundations, and operational
+                                configuration.</p>
+                            <p class="ar">النشر الإنتاجي والبيئات وأساسيات المراقبة والإعدادات التشغيلية.</p>
+                            <p class="fr">Déploiement en production, environnements, fondations de supervision et
+                                configuration opérationnelle.</p>
+                        </div>
+                    </article>
+                    <article class="deliver wide"><i aria-hidden="true"></i>
+                        <div>
+                            <h3 class="en">Documentation &amp; Handover</h3>
+                            <h3 class="ar">التوثيق وتسليم المشروع</h3>
+                            <h3 class="fr">Documentation et transmission</h3>
+                            <p class="en">The relevant technical and operational documentation, including how the
+                                platform is configured, operated, and handed over.</p>
+                            <p class="ar">التوثيق الفني والتشغيلي ذي الصلة، بما في ذلك كيفية تهيئة المنصة وتشغيلها وتسليم
+                                المشروع.</p>
+                            <p class="fr">La documentation technique et opérationnelle pertinente, y compris la
+                                configuration, l'exploitation et la transmission de la plateforme.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="section-cta"><a class="button ghost" href="#start"><span class="en">Contact us
+                                        →</span><span class="ar">اتصل بنا →</span><span class="fr">Nous contacter
+                                        →</span></a></div>
+            </div>
+        </section>
+
+        <!-- =========================== 06 PROCESS =========================== -->
+        <section class="section" id="process">
+            <div class="wrap">
+                <div class="section-head">
+                    <div class="eyebrow en">06 / PROCESS</div>
+                    <div class="eyebrow ar">06 / المنهجية</div>
+                    <div class="eyebrow fr">06 / MÉTHODE</div>
+                    <h2 class="section-title en">From product idea to platform.</h2>
+                    <h2 class="section-title ar">من فكرة المنتج إلى منصة.</h2>
+                    <h2 class="section-title fr">De l'idée produit à la plateforme.</h2>
+                    <p class="section-intro en">Five stages. The first two define the product and its architecture, the
+                        next two design and build it, and the last one puts it in front of real users.</p>
+                    <p class="section-intro ar">خمس مراحل. تحدد الأولى والثانية المنتج وبنيته، وتُصممان التاليتان
+                        وتبنيانه، والأخيرة تضعه أمام مستخدمين حقيقيين.</p>
+                    <p class="section-intro fr">Cinq étapes. Les deux premières définissent le produit et son
+                        architecture, les deux suivantes le conçoivent et le construisent, la dernière le met devant de
+                        vrais utilisateurs.</p>
+                </div>
+                <div class="process five dense">
+                    <article class="step"><b>01</b>
+                        <h3 class="en">Understand</h3>
+                        <h3 class="ar">نفهم</h3>
+                        <h3 class="fr">Comprendre</h3>
+                        <p class="en">Define the product before defining the technology.</p>
+                        <p class="ar">حدد المنتج قبل تحديد التقنية.</p>
+                        <p class="fr">Définissez le produit avant de définir la technologie.</p>
+                        <ul class="step-list">
+                            <li class="en">Target users</li>
+                            <li class="ar">المستخدمون المستهدفون</li>
+                            <li class="fr">Utilisateurs cibles</li>
+                            <li class="en">Customer type</li>
+                            <li class="ar">نوع العميل</li>
+                            <li class="fr">Type de client</li>
+                            <li class="en">Business model</li>
+                            <li class="ar">نموذج العمل</li>
+                            <li class="fr">Modèle économique</li>
+                            <li class="en">Problem</li>
+                            <li class="ar">المشكلة</li>
+                            <li class="fr">Problème</li>
+                            <li class="en">Workflows</li>
+                            <li class="ar">مسارات العمل</li>
+                            <li class="fr">Processus</li>
+                            <li class="en">Product goals</li>
+                            <li class="ar">أهداف المنتج</li>
+                            <li class="fr">Objectifs produit</li>
+                            <li class="en">Competition</li>
+                            <li class="ar">المنافسة</li>
+                            <li class="fr">Concurrence</li>
+                            <li class="en">Constraints</li>
+                            <li class="ar">القيود</li>
+                            <li class="fr">Contraintes</li>
+                            <li class="en">MVP requirements</li>
+                            <li class="ar">متطلبات النسخة الأولى</li>
+                            <li class="fr">Exigences du MVP</li>
+                        </ul>
+                        <div class="step-out"><span class="en">Deliverable</span><span class="ar">المخرج</span><span
+                                class="fr">Livrable</span>
+                            <div class="en">Product direction and initial scope.</div>
+                            <div class="ar">اتجاه المنتج والنطاق الأولي.</div>
+                            <div class="fr">Direction du produit et périmètre initial.</div>
+                        </div>
+                    </article>
+                    <article class="step"><b>02</b>
+                        <h3 class="en">Architect</h3>
+                        <h3 class="ar">نُصمّم البنية</h3>
+                        <h3 class="fr">Architecturer</h3>
+                        <p class="en">Design the foundations the product will depend on.</p>
+                        <p class="ar">صمّم البنيات التي سيعتمد عليها المنتج.</p>
+                        <p class="fr">Concevez les fondations dont le produit dépendra.</p>
+                        <ul class="step-list">
+                            <li class="en">Users</li>
+                            <li class="ar">المستخدمون</li>
+                            <li class="fr">Utilisateurs</li>
+                            <li class="en">Organizations</li>
+                            <li class="ar">المؤسسات</li>
+                            <li class="fr">Organisations</li>
+                            <li class="en">Workspaces</li>
+                            <li class="ar">مساحات العمل</li>
+                            <li class="fr">Espaces de travail</li>
+                            <li class="en">Roles and permissions</li>
+                            <li class="ar">الأدوار والصلاحيات</li>
+                            <li class="fr">Rôles et permissions</li>
+                            <li class="en">Tenancy</li>
+                            <li class="ar">العزل متعدد المستأجرين</li>
+                            <li class="fr">Multi-locataire</li>
+                            <li class="en">Data model</li>
+                            <li class="ar">نموذج البيانات</li>
+                            <li class="fr">Modèle de données</li>
+                            <li class="en">Billing model</li>
+                            <li class="ar">نموذج الفوترة</li>
+                            <li class="fr">Modèle de facturation</li>
+                            <li class="en">Integrations</li>
+                            <li class="ar">التكاملات</li>
+                            <li class="fr">Intégrations</li>
+                            <li class="en">Platform administration</li>
+                            <li class="ar">إدارة المنصة</li>
+                            <li class="fr">Administration de la plateforme</li>
+                        </ul>
+                        <div class="step-out"><span class="en">Deliverable</span><span class="ar">المخرج</span><span
+                                class="fr">Livrable</span>
+                            <div class="en">Platform architecture and implementation plan.</div>
+                            <div class="ar">بنية المنصة وخطة التنفيذ.</div>
+                            <div class="fr">Architecture de la plateforme et plan d'implémentation.</div>
+                        </div>
+                    </article>
+                    <article class="step"><b>03</b>
+                        <h3 class="en">Design</h3>
+                        <h3 class="ar">نُصمّم التجربة</h3>
+                        <h3 class="fr">Concevoir</h3>
+                        <p class="en">Design the product experience.</p>
+                        <p class="ar">صمّم تجربة المنتج.</p>
+                        <p class="fr">Concevez l'expérience produit.</p>
+                        <ul class="step-list">
+                            <li class="en">Onboarding</li>
+                            <li class="ar">الإعداد الأولي</li>
+                            <li class="fr">Intégration</li>
+                            <li class="en">Dashboards</li>
+                            <li class="ar">لوحات التحكم</li>
+                            <li class="fr">Tableaux de bord</li>
+                            <li class="en">Core product flows</li>
+                            <li class="ar">مسارات المنتج الأساسية</li>
+                            <li class="fr">Parcours produit principaux</li>
+                            <li class="en">Workspace</li>
+                            <li class="ar">مساحة العمل</li>
+                            <li class="fr">Espace de travail</li>
+                            <li class="en">Account settings</li>
+                            <li class="ar">إعدادات الحساب</li>
+                            <li class="fr">Paramètres du compte</li>
+                            <li class="en">Billing</li>
+                            <li class="ar">الفوترة</li>
+                            <li class="fr">Facturation</li>
+                            <li class="en">Administration</li>
+                            <li class="ar">الإدارة</li>
+                            <li class="fr">Administration</li>
+                            <li class="en">Responsive interfaces</li>
+                            <li class="ar">واجهات متجاوبة</li>
+                            <li class="fr">Interfaces responsive</li>
+                        </ul>
+                        <div class="step-out"><span class="en">Deliverable</span><span class="ar">المخرج</span><span
+                                class="fr">Livrable</span>
+                            <div class="en">Complete product UX/UI direction.</div>
+                            <div class="ar">اتجاه كامل لتجربة المستخدم والواجهة.</div>
+                            <div class="fr">Direction UX/UI complète du produit.</div>
+                        </div>
+                    </article>
+                    <article class="step"><b>04</b>
+                        <h3 class="en">Build</h3>
+                        <h3 class="ar">نبني</h3>
+                        <h3 class="fr">Construire</h3>
+                        <p class="en">Develop the platform in working increments.</p>
+                        <p class="ar">طوّر المنصة على دفعات عاملة.</p>
+                        <p class="fr">Développez la plateforme par incréments fonctionnels.</p>
+                        <ul class="step-list">
+                            <li class="en">Product features</li>
+                            <li class="ar">ميزات المنتج</li>
+                            <li class="fr">Fonctionnalités</li>
+                            <li class="en">Authentication</li>
+                            <li class="ar">المصادقة</li>
+                            <li class="fr">Authentification</li>
+                            <li class="en">Platform foundation</li>
+                            <li class="ar">بنية المنصة</li>
+                            <li class="fr">Fondation de la plateforme</li>
+                            <li class="en">Backend</li>
+                            <li class="ar">الواجهة الخلفية</li>
+                            <li class="fr">Backend</li>
+                            <li class="en">Database</li>
+                            <li class="ar">قاعدة البيانات</li>
+                            <li class="fr">Base de données</li>
+                            <li class="en">Permissions</li>
+                            <li class="ar">الصلاحيات</li>
+                            <li class="fr">Permissions</li>
+                            <li class="en">Billing</li>
+                            <li class="ar">الفوترة</li>
+                            <li class="fr">Facturation</li>
+                            <li class="en">Integrations</li>
+                            <li class="ar">التكاملات</li>
+                            <li class="fr">Intégrations</li>
+                            <li class="en">Administration</li>
+                            <li class="ar">الإدارة</li>
+                            <li class="fr">Administration</li>
+                        </ul>
+                        <div class="step-out"><span class="en">Deliverable</span><span class="ar">المخرج</span><span
+                                class="fr">Livrable</span>
+                            <div class="en">Working platform increments.</div>
+                            <div class="ar">دفعات منصة عاملة.</div>
+                            <div class="fr">Incréments de plateforme fonctionnels.</div>
+                        </div>
+                    </article>
+                    <article class="step"><b>05</b>
+                        <h3 class="en">Launch &amp; Evolve</h3>
+                        <h3 class="ar">الإطلاق والتطوير</h3>
+                        <h3 class="fr">Lancer et évoluer</h3>
+                        <p class="en">Launch with the foundation needed to learn from real users.</p>
+                        <p class="ar">أطلق المنتج بالبنية اللازمة للتعلم من مستخدمين حقيقيين.</p>
+                        <p class="fr">Lancez avec la fondation nécessaire pour apprendre de vrais utilisateurs.</p>
+                        <ul class="step-list">
+                            <li class="en">Deployment</li>
+                            <li class="ar">النشر</li>
+                            <li class="fr">Déploiement</li>
+                            <li class="en">Usage monitoring</li>
+                            <li class="ar">مراقبة الاستخدام</li>
+                            <li class="fr">Suivi de l'usage</li>
+                            <li class="en">System behavior</li>
+                            <li class="ar">سلوك النظام</li>
+                            <li class="fr">Comportement système</li>
+                            <li class="en">Feedback</li>
+                            <li class="ar">الملاحظات</li>
+                            <li class="fr">Retours</li>
+                            <li class="en">Fixes and improvements</li>
+                            <li class="ar">الإصلاحات والتحسينات</li>
+                            <li class="fr">Correctifs et améliorations</li>
+                            <li class="en">Roadmap expansion</li>
+                            <li class="ar">توسيع خارطة الطريق</li>
+                            <li class="fr">Extension de la feuille de route</li>
+                        </ul>
+                        <div class="step-out"><span class="en">Deliverable</span><span class="ar">المخرج</span><span
+                                class="fr">Livrable</span>
+                            <div class="en">Production platform and a path for continued product evolution.</div>
+                            <div class="ar">منصة إنتاجية ومسار لتطور المنتج المستمر.</div>
+                            <div class="fr">Plateforme en production et trajectoire d'évolution du produit.</div>
+                        </div>
+                    </article>
+                </div>
+                <p class="cap-note on-light en">Start with the smallest product that can prove the idea, and build the foundation
+                    for what comes next. An MVP can contain the core user problem, the essential user flow, the essential
+                    platform foundation, authentication, the required organization and user structure, the required
+                    billing model if monetization is part of the MVP, basic administration, and deployment. Everything
+                    else is prioritized later, based on what the product actually teaches you.</p>
+                <p class="cap-note on-light ar">ابدأ بأصغر منتج يمكنه إثبات الفكرة، وابنِ البنية لما يأتي بعده. يمكن أن تحتوي
+                    النسخة الأولى على مشكلة المستخدم الأساسية ومسار المستخدم الضروري والبنية الأساسية للمنصة
+                    والمصادقة وهيكل المؤسسات والمستخدمين المطلوب ونموذج الفوترة المطلوب إذا كان التحصيل جزءًا من
+                    النسخة الأولى، وإدارة أساسية والنشر. وكل ما عداه يُرتَّب لاحقًا بناءً على ما يعلّمه المنتج
+                    فعليًا.</p>
+                <p class="cap-note on-light fr">Commencez par le plus petit produit capable de valider l'idée, et construisez la
+                    fondation pour la suite. Un MVP peut contenir le problème utilisateur central, le parcours
+                    indispensable, la fondation plateforme, l'authentification, la structure organisation et
+                    utilisateurs requise, le modèle de facturation requis si la monétisation fait partie du MVP, une
+                    administration de base et le déploiement. Le reste est priorisé plus tard, selon ce que le produit
+                    enseigne réellement.</p>
+                <div class="section-cta"><a class="button ghost" href="#start"><span class="en">Contact us
+                                        →</span><span class="ar">اتصل بنا →</span><span class="fr">Nous contacter
+                                        →</span></a></div>
+            </div>
+        </section>
+
+        <!-- =========================== 07 OUTCOMES =========================== -->
+        <section class="section" id="outcomes">
+            <div class="wrap">
+                <div class="section-head">
+                    <div class="eyebrow en">07 / OUTCOMES</div>
+                    <div class="eyebrow ar">07 / النتائج</div>
+                    <div class="eyebrow fr">07 / RÉSULTATS</div>
+                    <h2 class="section-title en">A product designed to become a platform.</h2>
+                    <h2 class="section-title ar">منتج مصمم ليصبح منصة.</h2>
+                    <h2 class="section-title fr">Un produit conçu pour devenir une plateforme.</h2>
+                    <p class="section-intro en">These are the structural outcomes a well-scoped platform can support.
+                        They describe what the architecture makes possible, not a measured result. What the product
+                        achieves still depends on your market, your users, and how the platform is used.</p>
+                    <p class="section-intro ar">هذه هي النتائج البنيوية التي يمكن لمنصة محددة النطاق أن تدعمها. وهي تصف ما
+                        تتيحه البنية، لا نتيجة مقاسة. أما ما يحققه المنتج فيعتمد على سوقك ومستخدميك وكيفية استخدام
+                        المنصة.</p>
+                    <p class="section-intro fr">Voici les résultats structurels qu'une plateforme bien cadrée peut
+                        soutenir. Ils décrivent ce que l'architecture rend possible, pas un résultat mesuré. Ce que le
+                        produit accomplit dépend de votre marché, de vos utilisateurs et de l'usage de la plateforme.</p>
+                </div>
+                <div class="out-grid">
+                    <article class="out">
+                        <div class="out-no">01</div>
+                        <h3 class="en">Serve multiple customers</h3>
+                        <h3 class="ar">خدمة عملاء متعددين</h3>
+                        <h3 class="fr">Servir plusieurs clients</h3>
+                        <p class="en">Create a product structure capable of supporting multiple customers, organizations,
+                                or user groups according to the platform model.</p>
+                        <p class="ar">أنشئ هيكل منتج قادرًا على دعم عملاء أو مؤسسات أو مجموعات مستخدمين متعددة وفق
+                                نموذج المنصة.</p>
+                        <p class="fr">Créez une structure de produit capable de prendre en charge plusieurs clients,
+                                organisations ou groupes d'utilisateurs selon le modèle de la plateforme.</p>
+                    </article>
+                    <article class="out">
+                        <div class="out-no">02</div>
+                        <h3 class="en">Clear customer boundaries</h3>
+                        <h3 class="ar">حدود واضحة بين العملاء</h3>
+                        <h3 class="fr">Des frontières clients claires</h3>
+                        <p class="en">Keep customer data, users, settings, and permissions appropriately separated
+                                according to the chosen architecture.</p>
+                        <p class="ar">أبقِ بيانات العملاء والمستخدمين والإعدادات والصلاحيات مفصولة بشكل مناسب وفق البنية
+                            المختارة.</p>
+                        <p class="fr">Séparez correctement les données, les utilisateurs, les paramètres et les
+                                permissions de chaque client selon l'architecture retenue.</p>
+                    </article>
+                    <article class="out">
+                        <div class="out-no">03</div>
+                        <h3 class="en">Easier onboarding</h3>
+                        <h3 class="ar">إعداد أولي أسهل</h3>
+                        <h3 class="fr">Une intégration plus simple</h3>
+                        <p class="en">Create structured signup, invitations, workspace creation, and initial product
+                                setup.</p>
+                        <p class="ar">أنشئ تسجيلًا منظمًا ودعوات وإنشاء مساحات عمل وإعدادًا أوليًا للمنتج.</p>
+                        <p class="fr">Mettez en place une inscription structurée, des invitations, la création
+                                d'espaces de travail et la configuration initiale du produit.</p>
+                    </article>
+                    <article class="out">
+                        <div class="out-no">04</div>
+                        <h3 class="en">A business model inside the product</h3>
+                        <h3 class="ar">نموذج عمل داخل المنتج</h3>
+                        <h3 class="fr">Un modèle économique dans le produit</h3>
+                        <p class="en">Connect plans, subscriptions, usage, and billing to the product where
+                                required.</p>
+                        <p class="ar">اربط الباقات والاشتراكات والاستخدام والفوترة بالمنتج عند الحاجة.</p>
+                        <p class="fr">Reliez forfaits, abonnements, usage et facturation au produit lorsque cela est
+                                nécessaire.</p>
+                    </article>
+                    <article class="out">
+                        <div class="out-no">05</div>
+                        <h3 class="en">Better platform visibility</h3>
+                        <h3 class="ar">رؤية أفضل للمنصة</h3>
+                        <h3 class="fr">Une meilleure visibilité de la plateforme</h3>
+                        <p class="en">Give the team operating the platform tools to understand customers, usage,
+                                subscriptions, and system activity.</p>
+                        <p class="ar">امنح الفريق المشغّل للمنصة أدوات لفهم العملاء والاستخدام والاشتراكات ونشاط
+                                النظام.</p>
+                        <p class="fr">Donnez à l'équipe qui opère la plateforme les outils pour comprendre les clients,
+                                l'usage, les abonnements et l'activité du système.</p>
+                    </article>
+                    <article class="out">
+                        <div class="out-no">06</div>
+                        <h3 class="en">A foundation for iteration</h3>
+                        <h3 class="ar">بنية للتكرار والتطوير</h3>
+                        <h3 class="fr">Une fondation pour l'itération</h3>
+                        <p class="en">Build the product so future features, integrations, plans, and improvements can be
+                                added without treating every change as a new product.</p>
+                        <p class="ar">ابنِ المنتج بحيث يمكن إضافة الميزات والتكاملات والباقات والتحسينات المستقبلية دون
+                                اعتبار كل تغيير منتجًا جديدًا.</p>
+                        <p class="fr">Construisez le produit pour que fonctionnalités, intégrations, forfaits et
+                                améliorations futures s'ajoutent sans transformer chaque changement en un nouveau
+                                produit.</p>
+                    </article>
+                </div>
+                <div class="section-cta"><a class="button ghost" href="#start"><span class="en">Contact us
+                                        →</span><span class="ar">اتصل بنا →</span><span class="fr">Nous contacter
+                                        →</span></a></div>
+            </div>
+        </section>
+
+                <!-- ============================== 09 FAQ ============================== -->
+        <section class="section" id="faq">
+            <div class="wrap">
+                <div class="section-head">
+                    <div class="eyebrow en">08 / FAQ</div>
+                    <div class="eyebrow ar">08 / الأسئلة الشائعة</div>
+                    <div class="eyebrow fr">08 / FAQ</div>
+                    <h2 class="section-title en">Questions before we build.</h2>
+                    <h2 class="section-title ar">أسئلة قبل أن نبدأ البناء.</h2>
+                    <h2 class="section-title fr">Les questions avant de commencer.</h2>
+                    <p class="section-intro en">The questions we are asked most often at the start of a platform
+                        project.</p>
+                    <p class="section-intro ar">الأسئلة التي تُطرح علينا أكثر في بداية مشروع منصة.</p>
+                    <p class="section-intro fr">Les questions les plus fréquentes au démarrage d'un projet de
+                        plateforme.</p>
+                </div>
+                <div class="faq" data-faq>
+                    <div class="faq-item">
+                        <h3 class="faq-h">
+                            <button class="faq-q" type="button" id="faq1" aria-expanded="false"
+                                aria-controls="faq1-a"><span><span class="faq-no">01</span><span class="en">What is the
+                                        difference between a SaaS product and a normal web application?</span><span
+                                        class="ar">ما الفرق بين منتج SaaS وتطبيق ويب عادي؟</span><span
+                                        class="fr">Quelle est la différence entre un produit SaaS et une application web
+                                        classique ?</span></span><span class="faq-sign"
+                                    aria-hidden="true"></span></button>
+                        </h3>
+                        <div class="faq-a" id="faq1-a" role="region" aria-labelledby="faq1" hidden>
+                            <p class="en">A normal web application may serve a specific business or user group. A SaaS
+                                product is typically designed as a product operated by its provider and made available to
+                                multiple customers, often through subscriptions or another recurring commercial model.
+                                This introduces requirements such as tenant separation, customer onboarding, billing,
+                                permissions, and platform administration.</p>
+                            <p class="ar">قد يخدم تطبيق الويب العادي عملًا أو مجموعة مستخدمين محددة. أما منتج SaaS فيصمم
+                                عادة كمنتج يشغله مزوده ويتاح لعملاء متعددين، غالبًا عبر الاشتراكات أو نموذج تجاري متكرر
+                                آخر. وهذا يضيف متطلبات مثل فصل المستأجرين وإعداد العملاء والفوترة والصلاحيات وإدارة
+                                المنصة.</p>
+                            <p class="fr">Une application web classique peut servir une entreprise ou un groupe
+                                d'utilisateurs précis. Un produit SaaS est généralement conçu comme un produit opéré par
+                                son fournisseur et proposé à plusieurs clients, souvent par abonnement ou via un autre
+                                modèle commercial récurrent. Cela introduit des exigences telles que l'isolation des
+                                locataires, l'intégration des clients, la facturation, les permissions et
+                                l'administration de la plateforme.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-h">
+                            <button class="faq-q" type="button" id="faq2" aria-expanded="false"
+                                aria-controls="faq2-a"><span><span class="faq-no">02</span><span class="en">Can you build a
+                                        SaaS product from an idea?</span><span class="ar">هل يمكنكم بناء منتج SaaS من
+                                        فكرة؟</span><span class="fr">Pouvez-vous construire un produit SaaS à partir d'une
+                                        idée ?</span></span><span class="faq-sign" aria-hidden="true"></span></button>
+                        </h3>
+                        <div class="faq-a" id="faq2-a" role="region" aria-labelledby="faq2" hidden>
+                            <p class="en">Yes. BITA can help define the product, scope the MVP, design the experience,
+                                architect the platform, and build the first production version.</p>
+                            <p class="ar">نعم. يمكن لـ BITA المساعدة في تعريف المنتج وتحديد نطاق النسخة الأولى وتصميم
+                                التجربة وتصميم بنية المنصة وبناء أول نسخة إنتاجية.</p>
+                            <p class="fr">Oui. BITA peut vous aider à définir le produit, cadrer le MVP, concevoir
+                                l'expérience, architecturer la plateforme et construire la première version en
+                                production.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-h">
+                            <button class="faq-q" type="button" id="faq3" aria-expanded="false"
+                                aria-controls="faq3-a"><span><span class="faq-no">03</span><span class="en">Can you turn
+                                        our existing internal software into a SaaS product?</span><span class="ar">هل
+                                        يمكنكم تحويل برمجياتنا الداخلية إلى منتج SaaS؟</span><span class="fr">Pouvez-vous
+                                        transformer notre logiciel interne en produit SaaS ?</span></span><span
+                                    class="faq-sign" aria-hidden="true"></span></button>
+                        </h3>
+                        <div class="faq-a" id="faq3-a" role="region" aria-labelledby="faq3" hidden>
+                            <p class="en">Potentially, yes. The existing system must first be assessed to determine what
+                                needs to change in its architecture, data model, permissions, customer separation,
+                                onboarding, billing, and product experience.</p>
+                            <p class="ar">قد يكون ذلك ممكنًا. يجب أولًا تقييم النظام القائم لتحديد ما يحتاج إلى تغيير في
+                                بنيته ونموذج بياناته وصلاحياته وفصل العملاء وإعداده الأولي وفوترته وتجربة المنتج.</p>
+                            <p class="fr">C'est possible. Le système existant doit d'abord être évalué pour déterminer ce
+                                qui doit changer dans son architecture, son modèle de données, ses permissions, la
+                                séparation des clients, l'intégration, la facturation et l'expérience produit.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-h">
+                            <button class="faq-q" type="button" id="faq4" aria-expanded="false"
+                                aria-controls="faq4-a"><span><span class="faq-no">04</span><span class="en">What is
+                                        multi-tenancy?</span><span class="ar">ما هو العزل متعدد المستأجرين؟</span><span
+                                        class="fr">Qu'est-ce que le multi-locataire ?</span></span><span class="faq-sign"
+                                    aria-hidden="true"></span></button>
+                        </h3>
+                        <div class="faq-a" id="faq4-a" role="region" aria-labelledby="faq4" hidden>
+                            <p class="en">Multi-tenancy is an architecture in which multiple customers or organizations use
+                                the same product while their users, data, permissions, configuration, and other resources
+                                are appropriately separated. The exact isolation strategy depends on security, compliance,
+                                scale, and business requirements.</p>
+                            <p class="ar">العزل متعدد المستأجرين بنية يستخدم فيها عملاء أو مؤسسات متعددة المنتج نفسه مع
+                                فصل مناسب لمستخدميهم وبياناتهم وصلاحياتهم وإعداداتهم ومواردهم الأخرى. تعتمد
+                                استراتيجية العزل الدقيقة على الأمان والامتثال وحجم النمو ومتطلبات العمل.</p>
+                            <p class="fr">Le multi-locataire est une architecture dans laquelle plusieurs clients ou
+                                organisations utilisent le même produit, tout en séparant correctement leurs
+                                utilisateurs, données, permissions, configurations et autres ressources. La stratégie
+                                d'isolement exacte dépend de la sécurité, de la conformité, de l'échelle et des exigences
+                                métier.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-h">
+                            <button class="faq-q" type="button" id="faq5" aria-expanded="false"
+                                aria-controls="faq5-a"><span><span class="faq-no">05</span><span class="en">Can each
+                                        company have its own workspace?</span><span class="ar">هل يمكن لكل شركة أن
+                                        تكون لها مساحة عمل خاصة؟</span><span class="fr">Chaque entreprise peut-elle avoir
+                                        son propre espace de travail ?</span></span><span class="faq-sign"
+                                    aria-hidden="true"></span></button>
+                        </h3>
+                        <div class="faq-a" id="faq5-a" role="region" aria-labelledby="faq5" hidden>
+                            <p class="en">Yes. Organization or workspace structures can be designed so each customer
+                                manages its own users, data, settings, and product activity.</p>
+                            <p class="ar">نعم. يمكن تصميم هيكل المؤسسات أو مسارات العمل بحيث يدير كل عميل مستخدميه
+                                وبياناته وإعداداته ونشاطه على المنتج.</p>
+                            <p class="fr">Oui. Des structures d'organisation ou d'espace de travail peuvent être conçues
+                                afin que chaque client gère ses propres utilisateurs, données, paramètres et activité.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-h">
+                            <button class="faq-q" type="button" id="faq6" aria-expanded="false"
+                                aria-controls="faq6-a"><span><span class="faq-no">06</span><span class="en">Can you build
+                                        subscription plans and billing?</span><span class="ar">هل يمكنكم بناء باقات
+                                        اشتراك وفوترة؟</span><span class="fr">Pouvez-vous gérer les forfaits et la
+                                        facturation ?</span></span><span class="faq-sign" aria-hidden="true"></span></button>
+                        </h3>
+                        <div class="faq-a" id="faq6-a" role="region" aria-labelledby="faq6" hidden>
+                            <p class="en">Yes. Subscription plans, trials, seat-based or usage-based models, invoices,
+                                payment integration, and billing workflows can be included when required. Which payment
+                                architecture is used depends on the market and the business model.</p>
+                            <p class="ar">نعم. يمكن إدراج باقات الاشتراك والفترات التجريبية والنماذج القائمة على المقاعد
+                                أو الاستخدام والفواتير وتكامل الدفع ومسارات الفوترة عند الحاجة. وتعتمد بنية الدفع
+                                المستخدمة على السوق ونموذج العمل.</p>
+                            <p class="fr">Oui. Forfaits, essais, modèles par siège ou à l'usage, factures, intégration
+                                de paiement et processus de facturation peuvent être inclus lorsque c'est nécessaire.
+                                L'architecture de paiement retenue dépend du marché et du modèle économique.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-h">
+                            <button class="faq-q" type="button" id="faq7" aria-expanded="false"
+                                aria-controls="faq7-a"><span><span class="faq-no">07</span><span class="en">Can users have
+                                        different roles and permissions?</span><span class="ar">هل يمكن للمستخدمين أن
+                                        يكون لهم أدوار وصلاحيات مختلفة؟</span><span class="fr">Les utilisateurs peuvent-ils
+                                        avoir des rôles et permissions différents ?</span></span><span class="faq-sign"
+                                    aria-hidden="true"></span></button>
+                        </h3>
+                        <div class="faq-a" id="faq7-a" role="region" aria-labelledby="faq7" hidden>
+                            <p class="en">Yes. Role-based access can be designed around the responsibilities of users,
+                                teams, organizations, or subscription levels.</p>
+                            <p class="ar">نعم. يمكن تصميم الوصول القائم على الأدوار وفق مسؤوليات المستخدمين أو الفرق أو
+                                المؤسسات أو مستويات الاشتراك.</p>
+                            <p class="fr">Oui. Un accès basé sur les rôles peut être conçu autour des responsabilités des
+                                utilisateurs, des équipes, des organisations ou des niveaux d'abonnement.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-h">
+                            <button class="faq-q" type="button" id="faq8" aria-expanded="false"
+                                aria-controls="faq8-a"><span><span class="faq-no">08</span><span class="en">Can the
+                                        platform have a separate admin area?</span><span class="ar">هل يمكن أن تكون
+                                        للمنصة منطقة إدارة منفصلة؟</span><span class="fr">La plateforme peut-elle avoir une
+                                        zone d'administration séparée ?</span></span><span class="faq-sign"
+                                    aria-hidden="true"></span></button>
+                        </h3>
+                        <div class="faq-a" id="faq8-a" role="region" aria-labelledby="faq8" hidden>
+                            <p class="en">Yes. A platform-level administration interface can be created for the team
+                                operating the SaaS, separate from the customer or organization admin area. The platform
+                                admin manages all customers; the organization admin manages one.</p>
+                            <p class="ar">نعم. يمكن إنشاء واجهة إدارة على مستوى المنصة للفريق الذي يشغل SaaS، منفصلة عن
+                                منطقة إدارة العميل أو المؤسسة. مدير المنصة يدير جميع العملاء، بينما مدير المؤسسة يدير
+                                مؤسسة واحدة.</p>
+                            <p class="fr">Oui. Une interface d'administration au niveau de la plateforme peut être créée
+                                pour l'équipe qui opère le SaaS, distincte de l'espace d'administration client ou
+                                organisation. L'administrateur de la plateforme gère tous les clients ; celui de
+                                l'organisation en gère un seul.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-h">
+                            <button class="faq-q" type="button" id="faq9" aria-expanded="false"
+                                aria-controls="faq9-a"><span><span class="faq-no">09</span><span class="en">Can the
+                                        platform connect to external services?</span><span class="ar">هل يمكن للمنصة
+                                        الاتصال بخدمات خارجية؟</span><span class="fr">La plateforme peut-elle se connecter
+                                        à des services externes ?</span></span><span class="faq-sign"
+                                    aria-hidden="true"></span></button>
+                        </h3>
+                        <div class="faq-a" id="faq9-a" role="region" aria-labelledby="faq9" hidden>
+                            <p class="en">Yes. APIs, webhooks, and third-party integrations can connect the platform to
+                                external systems according to the project's requirements.</p>
+                            <p class="ar">نعم. يمكن لواجهات API وwebhooks وتكاملات الطرف الثالث ربط المنصة بأنظمة خارجية
+                                وفق متطلبات المشروع.</p>
+                            <p class="fr">Oui. Des API, des webhooks et des intégrations tierces peuvent relier la
+                                plateforme à des systèmes externes selon les exigences du projet.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-h">
+                            <button class="faq-q" type="button" id="faq10" aria-expanded="false"
+                                aria-controls="faq10-a"><span><span class="faq-no">10</span><span class="en">Can BITA
+                                        take over an existing SaaS product?</span><span class="ar">هل يمكن لـ BITA استلام
+                                        منتج SaaS قائم؟</span><span class="fr">BITA peut-elle reprendre un produit SaaS
+                                        existant ?</span></span><span class="faq-sign" aria-hidden="true"></span></button>
+                        </h3>
+                        <div class="faq-a" id="faq10-a" role="region" aria-labelledby="faq10" hidden>
+                            <p class="en">Yes. An existing codebase can be assessed and, depending on its condition,
+                                refactored, extended, modernized, or migrated.</p>
+                            <p class="ar">نعم. يمكن تقييم الشيفرة القائمة، وحسب حالتها، إعادة تصميمها أو توسيعها أو
+                                تحديثها أو ترحيلها.</p>
+                            <p class="fr">Oui. Un code existant peut être évalué puis, selon son état, refactoré,
+                                étendu, modernisé ou migré.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-h">
+                            <button class="faq-q" type="button" id="faq11" aria-expanded="false"
+                                aria-controls="faq11-a"><span><span class="faq-no">11</span><span class="en">Do I need to
+                                        build the entire platform before launching?</span><span class="ar">هل أحتاج إلى بناء
+                                        المنصة بالكامل قبل الإطلاق؟</span><span class="fr">Dois-je construire toute la
+                                        plateforme avant le lancement ?</span></span><span class="faq-sign"
+                                    aria-hidden="true"></span></button>
+                        </h3>
+                        <div class="faq-a" id="faq11-a" role="region" aria-labelledby="faq11" hidden>
+                            <p class="en">Not necessarily. An MVP can focus on the core problem and the smallest product
+                                scope required to test the business proposition with real users. The exact MVP scope
+                                should be defined based on the product and business model.</p>
+                            <p class="ar">ليس بالضرورة. يمكن للنسخة الأولى أن تركز على المشكلة الأساسية وأصغر نطاق
+                                منتج لاختبار فرضية العمل مع مستخدمين حقيقيين. ويُحدد نطاق النسخة الأولى بدقة بناءً على
+                                المنتج ونموذج العمل.</p>
+                            <p class="fr">Pas nécessairement. Un MVP peut se concentrer sur le problème central et sur le
+                                périmètre produit minimal nécessaire pour tester la proposition de valeur auprès de vrais
+                                utilisateurs. Le périmètre exact du MVP doit être défini selon le produit et le modèle
+                                économique.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-cta"><a class="button ghost" href="#start"><span class="en">Contact us
+                                        →</span><span class="ar">اتصل بنا →</span><span class="fr">Nous contacter
+                                        →</span></a></div>
+            </div>
+        </section>
+
+        <!-- ========================== 10 START A PROJECT ========================== -->
+        <section class="contact svc-contact" id="start">
+            <div class="wrap contact-grid">
+                <div>
+                    <div class="eyebrow en">09 / START A PROJECT</div>
+                    <div class="eyebrow ar">09 / ابدأ مشروعًا</div>
+                    <div class="eyebrow fr">09 / DÉMARRER UN PROJET</div>
+                    <h2 class="en">Have a product idea? Let's turn it into a platform.</h2>
+                    <h2 class="ar">لديك فكرة منتج؟ لنحوّلها إلى منصة.</h2>
+                    <h2 class="fr">Vous avez une idée produit ? Transformons-la en plateforme.</h2>
+                    <p class="en">Tell us what you're building, who it's for, and how you want the product to work.
+                        We'll help define the right path from idea to working platform.</p>
+                    <p class="ar">أخبرنا بما تبنيه ولمن وكيف تريد أن يعمل المنتج. سنساعدك في تحديد المسار المناسب من
+                        الفكرة إلى منصة عاملة.</p>
+                    <p class="fr">Dites-nous ce que vous construisez, pour qui, et comment vous souhaitez que le produit
+                        fonctionne. Nous vous aiderons à définir le bon chemin, de l'idée à la plateforme
+                        fonctionnelle.</p>
+                    <div class="actions"><a class="button" href="#brief"><span class="en">Start a
+                                conversation →</span><span class="ar">اتصل بنا →</span><span
+                                class="fr">Démarrer une conversation →</span></a></div>
+                    <p class="note en">Not sure whether a platform is the right model yet? That is a fair question. We
+                        will start with the product and its users, and the platform foundations follow from the business
+                        model rather than leading it.</p>
+                    <p class="note ar">لست متأكدًا بعد إن كانت المنصة هي النموذج المناسب؟ هذا سؤال مشروع. سنبدأ بالمنتج
+                        ومستخدميه، وتأتي بنيات المنصة نتيجة لنموذج العمل لا قبله.</p>
+                    <p class="note fr">Vous ne savez pas encore si le modèle plateforme est le bon ? La question est
+                        légitime. Nous commencerons par le produit et ses utilisateurs, et les fondations de la
+                        plateforme découleront du modèle économique plutôt que l'inverse.</p>
+                </div>
+                <aside class="contact-side" id="brief">
+                    <form class="contact-form" novalidate>
+                        <div class="field"><label for="cf-name"><span class="en">Full name</span><span class="ar">الاسم
+                                    الكامل</span><span class="fr">Nom complet</span></label><input id="cf-name"
+                                name="name" type="text" autocomplete="name" required
+                                data-ph="Your full name|اسمك الكامل|Votre nom complet"></div>
+                        <div class="field"><label for="cf-phone"><span class="en">Phone</span><span class="ar">رقم
+                                    الهاتف</span><span class="fr">Téléphone</span></label><input id="cf-phone"
+                                name="phone" type="tel" autocomplete="tel"
+                                data-ph="+00 000 000 000|+00 000 000 000|+33 6 00 00 00 00"></div>
+                        <div class="field"><label for="cf-email"><span class="en">Email</span><span
+                                class="ar">البريد الإلكتروني</span><span class="fr">E-mail</span></label><input
+                                id="cf-email" name="email" type="email" autocomplete="email" required
+                                data-ph="you@company.com|you@company.com|vous@entreprise.fr"></div>
+                        <div class="field"><label for="cf-focus"><span class="en">Primary focus</span><span
+                                class="ar">محور التركيز</span><span class="fr">Priorité principale</span></label><span
+                                class="sel"><select id="cf-focus" name="focus">
+                                    <option value="apps"
+                                        data-t="Custom Web &amp; Mobile Apps|تطبيقات الويب والجوال المخصصة|Applications Web &amp; Mobile sur mesure">
+                                        Custom Web &amp; Mobile Apps</option>
+                                    <option value="ecommerce" data-t="E-commerce|التجارة الإلكترونية|E-commerce">
+                                        E-commerce</option>
+                                    <option value="business-software"
+                                        data-t="Business Software|برمجيات الأعمال|Logiciels de gestion">Business
+                                        Software</option>
+                                    <option value="saas" selected
+                                        data-t="SaaS &amp; Digital Platforms|منصات SaaS والمنتجات الرقمية|SaaS &amp; Plateformes numériques">
+                                        SaaS &amp; Digital Platforms</option>
+                                    <option value="automation"
+                                        data-t="Automation &amp; Integrations|الأتمتة والتكاملات|Automatisation &amp; Intégrations">
+                                        Automation &amp; Integrations</option>
+                                    <option value="other" data-t="Other|أخرى|Autre">Other</option>
+                                </select></span></div>
+                        <div class="field"><label for="cf-message"><span class="en">Message</span><span
+                                class="ar">الرسالة</span><span class="fr">Message</span></label><textarea
+                                id="cf-message" name="message" rows="4" required
+                                data-ph="Tell us briefly what you're building, and for whom…|أخبرنا باختصار بما تبنيه ولمن…|Dites-nous brièvement ce que vous construisez, et pour qui…"></textarea></div>
+                        <button class="button contact-submit" type="submit"><span class="en">Send
+                                message</span><span class="ar">إرسال الرسالة</span><span class="fr">Envoyer le
+                                message</span></button>
+                        <p class="sample-note en">This form is a starting point. Add an email address before
+                            launch.</p>
+                        <p class="sample-note ar">هذا النموذج نقطة بداية. أضف عنوان بريد إلكتروني قبل الإطلاق.</p>
+                        <p class="sample-note fr">Ce formulaire est un point de départ. Ajoutez une adresse e-mail
+                            avant la mise en ligne.</p>
+                    </form>
+                </aside>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="wrap">
+            <span class="mark-foot">
+                <svg viewBox="0 0 128 142" width="128" height="142" aria-hidden="true" focusable="false">
+                    <g transform="translate(20 20)">
+                        <path fill="#FFFFFF" d="M0 0H61L88 28L75 46H30L0 18Z" />
+                        <path fill="#FFFFFF" d="M30 56H75L88 74L61 102H0V84Z" />
+                        <path fill="#3157FF" d="M0 25L30 51L0 77Z" />
+                        <path fill="none" stroke="#111318" stroke-width="3" stroke-linejoin="miter"
+                            d="M0 20L36 52L0 82" />
+                    </g>
+                </svg>
+            </span>
+            <span>© BITA AGENCY</span><span class="en">DIGITAL SOLUTIONS / 2026</span><span class="ar">حلول رقمية /
+                2026</span><span class="fr">SOLUTIONS DIGITALES / 2026</span>
+        </div>
+    </footer>
+    <script src="../../assets/js/bita.js"></script>
+</body>
+
+</html>

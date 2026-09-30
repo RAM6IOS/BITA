@@ -895,6 +895,49 @@
             color: #fff
         }
 
+        .field input.is-invalid,
+        .field select.is-invalid,
+        .field textarea.is-invalid {
+            border-bottom-color: #FF6B6B;
+            box-shadow: 0 1px 0 0 #FF6B6B
+        }
+
+        .field-error,
+        .contact-form-error {
+            display: block;
+            font-size: 12px;
+            line-height: 1.5;
+            color: #FF9B9B
+        }
+
+        .field-error:empty {
+            display: none
+        }
+
+        /* Outcome line for the submit. aria-live announces it, so it stays in
+           flow rather than overlaying anything the reader has to dismiss. */
+        .contact-status {
+            display: grid;
+            gap: 2px;
+            margin: 0 0 14px;
+            padding: 11px 14px;
+            border-inline-start: 2px solid #FF9B9B;
+            background: rgba(255, 155, 155, .1);
+            color: #FFD4D4;
+            font-size: 13px;
+            line-height: 1.5
+        }
+
+        .contact-status:empty {
+            display: none
+        }
+
+        .contact-status.is-ok {
+            border-inline-start-color: #7BE0A8;
+            background: rgba(123, 224, 168, .1);
+            color: #CFF5E0
+        }
+
         .contact-form .contact-submit {
             justify-self: start;
             margin: 4px 0 0;
@@ -904,6 +947,25 @@
             color: var(--ink);
             font-weight: 650;
             cursor: pointer
+        }
+
+        .contact-form.is-sending .contact-submit {
+            opacity: .72;
+            cursor: progress
+        }
+
+        /* One label at a time. The loading copy is present in the markup from
+           the start so the swap costs no layout shift and no reflow. */
+        .submit-loading {
+            display: none
+        }
+
+        .is-sending .submit-loading {
+            display: inline
+        }
+
+        .is-sending .submit-normal {
+            display: none
         }
 
         .contact-form .sample-note {

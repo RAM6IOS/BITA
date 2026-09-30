@@ -234,7 +234,170 @@
             a.remove();
         });
 
-        document.querySelectorAll('.contact-form').forEach(form => form.addEventListener('submit', e => e.preventDefault()));
+        /* Contact form.
+           Formspree owns delivery, so the only work here is to post the fields
+           and reflect the outcome in the hooks the page already ships but never
+           styled: #contact-status for the page-level result, [data-fs-error]
+           for the field Formspree rejected, and .submit-loading for the
+           in-flight state. The endpoint stays on the form's action, so the form
+           id keeps a single home.
+
+           Every message is stored pipe-delimited and handed to the existing
+           data-t binding as well as the current language, so a visitor who
+           reads the result and then switches language still sees it. */
+        (() => {
+            const MSGS = {
+                success: 'Message sent. We reply within one business day.|تم الإرسال. نرد خلال يوم عمل واحد.|Message envoyé. Nous répondons sous un jour ouvré.',
+                fail: 'Something went wrong. Please try again.|حدث خطأ ما. حاول مرة أخرى.|Une erreur est survenue. Réessayez.',
+                offline: 'No connection. Check your network and try again.|لا يوجد اتصال. تحقق من الشبكة وحاول مجددًا.|Pas de connexion. Vérifiez votre réseau.',
+                required: 'This field is required.|هذا الحقل مطلوب.|Ce champ est requis.',
+                email: 'Enter a valid email address.|أدخل بريدًا إلكترونيًا صالحًا.|Saisissez une adresse e-mail valide.'
+            };
+            const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+            document.querySelectorAll('.contact-form').forEach(form => {
+                const action = form.getAttribute('action');
+
+                /* The service pages reuse .contact-form as a static mockup: they
+                   ship no action, so there is nowhere to post. They stay inert
+                   rather than reloading the page on an empty submit. */
+                if (!action) {
+                    form.addEventListener('submit', e => e.preventDefault());
+                    return;
+                }
+
+                const btn = form.querySelector('[data-fs-submit-btn]'),
+                    status = document.getElementById('contact-status'),
+                    formError = form.querySelector('.contact-form-error'),
+                    slots = form.querySelectorAll('[data-fs-field]');
+                let busy = false;
+
+                /* Writes text into a slot and registers it for the data-t binding,
+                   so a message stays correct in the language the visitor is
+                   reading even if they switch after it appears. A string with no
+                   pipe is language-neutral and survives the same split. */
+                const put = (slot, text) => {
+                    if (!slot) return;
+                    slot.setAttribute('data-t', text);
+                    slot.textContent = text.split('|')[tr(root.dataset.lang)];
+                };
+
+                const clear = () => {
+                    form.querySelectorAll('[data-fs-error]').forEach(s => {
+                        s.removeAttribute('data-t');
+                        s.textContent = '';
+                    });
+                    slots.forEach(s => s.classList.remove('is-invalid'));
+                };
+
+                /* Blames one control: message in its own slot, red underline on
+                   the field, and a polite live region so the reason is announced
+                   as soon as focus arrives there. */
+                const flag = (slot, text) => {
+                    if (!slot) return null;
+                    put(slot, text);
+                    slot.setAttribute('aria-live', 'polite');
+                    const control = form.querySelector('[name="' + slot.dataset.fsError + '"]');
+                    if (control) control.classList.add('is-invalid');
+                    return control;
+                };
+
+                /* Mirrors what the browser would have refused to submit, so the
+                   visitor reads the reason in the field's own language instead of
+                   a native bubble that does not match the page. */
+                const validate = () => {
+                    let first = null;
+                    slots.forEach(s => {
+                        const slot = form.querySelector('[data-fs-error="' + s.name + '"]');
+                        if (s.required && !s.value.trim()) {
+                            first = first || flag(slot, MSGS.required);
+                            return;
+                        }
+                        if (s.type === 'email' && s.value.trim() && !EMAIL.test(s.value.trim())) {
+                            first = first || flag(slot, MSGS.email);
+                        }
+                    });
+                    return first;
+                };
+
+                form.addEventListener('submit', async e => {
+                    e.preventDefault();
+                    /* A double tap would post the enquiry twice, and Formspree
+                       has no dedupe to catch it. */
+                    if (busy) return;
+                    clear();
+
+                    const bad = validate();
+                    if (bad) {
+                        bad.focus();
+                        return;
+                    }
+
+                    busy = true;
+                    form.classList.add('is-sending');
+                    if (btn) {
+                        btn.disabled = true;
+                        btn.setAttribute('aria-busy', 'true');
+                    }
+
+                    try {
+                        const body = new FormData(form);
+                        /* Replies should reach the person who wrote in, not the
+                           account the form is tied to. */
+                        const mail = form.querySelector('[name="email"]');
+                        if (mail) body.set('_replyto', mail.value.trim());
+
+                        const res = await fetch(action, {
+                            method: 'POST',
+                            body,
+                            headers: { Accept: 'application/json' }
+                        });
+                        const data = await res.json().catch(() => ({}));
+
+                        if (res.ok) {
+                            form.reset();
+                            clear();
+                            put(status, MSGS.success);
+                            if (status) status.classList.add('is-ok');
+                            return;
+                        }
+
+                        /* Formspree names the field it objected to, so the reason
+                           lands where the correction has to be made. Anything it
+                           rejects without a name we can place has no field to
+                           blame, and the form itself becomes the honest slot. */
+                        const orphans = [];
+                        let placed = false;
+                        (Array.isArray(data.errors) ? data.errors : []).forEach(er => {
+                            const slot = er.field && form.querySelector('[data-fs-error="' + er.field + '"]');
+                            if (slot) {
+                                placed = true;
+                                flag(slot, er.message || MSGS.required);
+                            } else if (er.message) {
+                                orphans.push(er.message);
+                            }
+                        });
+
+                        if (status) status.classList.remove('is-ok');
+                        put(status, MSGS.fail);
+                        if (!placed) put(formError, orphans.join(' ') || MSGS.fail);
+
+                        const firstBad = form.querySelector('.is-invalid');
+                        if (firstBad) firstBad.focus();
+                    } catch (err) {
+                        if (status) status.classList.remove('is-ok');
+                        put(status, MSGS.offline);
+                    } finally {
+                        busy = false;
+                        form.classList.remove('is-sending');
+                        if (btn) {
+                            btn.disabled = false;
+                            btn.removeAttribute('aria-busy');
+                        }
+                    }
+                });
+            });
+        })();
 
         /* Single-open accordion. One panel visible at a time keeps long FAQ lists scannable. */
         document.querySelectorAll('[data-faq]').forEach(group => {
